@@ -1,7 +1,6 @@
 import React from "react";
+import Wrapper from "./Wrapper/Wrapper";
 
-const Contact = () => {
-  return <h1>Here will be a contact form</h1>;
-};
+const Contact = () => <Wrapper />;
 
 export default Contact;
