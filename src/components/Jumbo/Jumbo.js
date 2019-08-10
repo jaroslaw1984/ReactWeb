@@ -37,7 +37,7 @@ const Styles = styled.div`
     }
   }
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   p {
     font-size: 1rem;
