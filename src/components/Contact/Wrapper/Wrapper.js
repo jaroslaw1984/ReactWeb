@@ -1,10 +1,9 @@
 import React from "react";
+import Item from "../Item/Item";
 
 const Wrapper = () => (
   <ul>
-    <li>list item 1</li>
-    <li>list item 2</li>
-    <li>list item 3</li>
+    <Item />
   </ul>
 );
 
