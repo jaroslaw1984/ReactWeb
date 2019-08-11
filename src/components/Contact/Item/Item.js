@@ -1,16 +1,30 @@
 import React from "react";
 import { Button, Image } from "react-bootstrap";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = () => keyframes`
+  0% {
+    opacity: 0;
+    top: 35px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+
+`;
 
 const Li = styled.li`
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   height: 70vh;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  animation: ${fadeIn} 0.5s ease;
   @media (min-width: 768px) {
     padding: 40px 30px;
     flex-wrap: nowrap;

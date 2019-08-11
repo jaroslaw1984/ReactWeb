@@ -28,7 +28,9 @@ const About = () => (
           >
             <Card.Header>Jarosław Sochacki</Card.Header>
             <Card.Body>
-              <Card.Text>Hard working to become Frontend Developer</Card.Text>
+              <Card.Text>
+                Hard working person to become Frontend Developer
+              </Card.Text>
             </Card.Body>
           </Card>
         </Col>
