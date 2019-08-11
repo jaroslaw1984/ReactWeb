@@ -4,15 +4,13 @@ import styled from "styled-components";
 import laptop from "../../images/laptop.jpg";
 
 const Style = styled.div`
-
-h2 {
-  padding: 10px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  font-weight: 700
-  text-align: center;
-}
-
+  h2 {
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    text-align: center;
+  }
 `;
 
 const Home = () => {

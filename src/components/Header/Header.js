@@ -18,6 +18,7 @@ const Styles = styled.div`
       color: #c82333;
       transition: 0.5s;
     }
+  }
 `;
 
 class Header extends Component {

@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import styled from "styled-components";
-import avatar from "../../../images/avatar.jpg";
 
 const Li = styled.li`
   display: flex;
@@ -23,6 +22,7 @@ const Img = styled.img`
   width: 150px;
   height: 150px;
   padding-bottom: 10px;
+  margin-top: 15px;
   border-radius: 50%;
   @media (min-width: 768px) {
     padding-bottom: 0;
@@ -31,7 +31,8 @@ const Img = styled.img`
 `;
 
 const H2 = styled.h2`
-  color: #1e58ff;
+  color: #0b7bf4;
+  text-align: center;
   font-size: 1.3rem;
   font-weight: 700;
 `;
@@ -40,17 +41,15 @@ const P = styled.p`
   font-weight: 400;
 `;
 
-const Item = () => (
+const Item = ({ name, image, description_en, facebookLink }) => (
   <Li>
-    <Img src={avatar} />
+    <Img src={image} />
     <div>
-      <H2>Jarosław Sochacki</H2>
-      <P>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias,
-        hic? Cum enim natus, autem porro obcaecati possimus odit quam at tenetur
-        quis placeat nemo quia. Beatae harum soluta corrupti in?
-      </P>
-      <Button variant="outline-primary">Visit Facebook</Button>
+      <H2>{name || "Jarosław Sochacki"}</H2>
+      <P>{description_en}</P>
+      <Button href={facebookLink} variant="outline-primary">
+        Visit Facebook
+      </Button>
     </div>
   </Li>
 );
