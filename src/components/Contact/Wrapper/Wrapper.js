@@ -1,21 +1,15 @@
 import React from "react";
 import Item from "../Item/Item";
 import styled from "styled-components";
-import { dataContact } from "../../../data/data";
+import { data } from "../../../data/data";
 
 const Ul = styled.ul`
-  width: 80vw;
+  width: 100%;
   margin: 0 auto;
 `;
-const Wrapper = () => (
-  <Ul>
-    <Item
-      name={dataContact[0].name}
-      image={dataContact[0].image}
-      description_en={dataContact[0].description_en}
-      facebookLink={dataContact[0].facebookLink}
-    />
-  </Ul>
-);
+const Wrapper = () => {
+  const listItems = data.contact.map(item => <Item key={item.id} {...item} />);
+  return <Ul>{listItems}</Ul>;
+};
 
 export default Wrapper;

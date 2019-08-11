@@ -7,7 +7,6 @@ const Li = styled.li`
   margin-bottom: 50px;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   list-style-type: none;
   padding: 0;
   margin: 0;

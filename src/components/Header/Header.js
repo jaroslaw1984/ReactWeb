@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import { data } from "../../data/data";
 import styled from "styled-components";
 
 const Styles = styled.div`
@@ -23,6 +24,18 @@ const Styles = styled.div`
 
 class Header extends Component {
   render() {
+    const menu = data.menu.map(item => (
+      <Nav.Link
+        key={item.id}
+        exact={item.exact ? item.exact : false}
+        as={NavLink}
+        to={item.path}
+        eventKey={item.id}
+        className="menuText"
+      >
+        {item.name_en}
+      </Nav.Link>
+    ));
     return (
       <Styles>
         <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark">
@@ -34,41 +47,7 @@ class Header extends Component {
             className="justify-content-end"
             id="responsive-navbar-nav"
           >
-            <Nav className="justify-content-end">
-              <Nav.Link
-                exact
-                as={NavLink}
-                to="/"
-                eventKey={1}
-                className="menuText"
-              >
-                Home
-              </Nav.Link>
-              <Nav.Link
-                as={NavLink}
-                to="/projects"
-                eventKey={2}
-                className="menuText"
-              >
-                Projects
-              </Nav.Link>
-              <Nav.Link
-                as={NavLink}
-                to="/contact"
-                eventKey={3}
-                className="menuText"
-              >
-                Contact
-              </Nav.Link>
-              <Nav.Link
-                as={NavLink}
-                to="/about"
-                eventKey={4}
-                className="menuText"
-              >
-                About
-              </Nav.Link>
-            </Nav>
+            <Nav className="justify-content-end">{menu}</Nav>
           </Navbar.Collapse>
         </Navbar>
       </Styles>
