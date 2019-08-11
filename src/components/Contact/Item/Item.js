@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Li = styled.li`
@@ -52,5 +53,16 @@ const Item = ({ name, image, description_en, facebookLink }) => (
     </div>
   </Li>
 );
+
+Item.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  description_en: PropTypes.string,
+  facebookLink: PropTypes.string.isRequired
+};
+
+Item.defaultProps = {
+  description_en: "This description is default because you didn't type any"
+};
 
 export default Item;
