@@ -30,11 +30,30 @@ class Contact extends Component {
   state = {
     items: [...dataArrayItems]
   };
+
+  handleAddItem = e => {
+    e.preventDefault();
+
+    const AddItem = {
+      id: this.state.items.length + 1,
+      name: e.target[0].value,
+      facebookLink: e.target[1].value,
+      image: e.target[2].value,
+      description_en: e.target[3].value
+    };
+
+    this.setState(prevState => ({
+      items: [...prevState.items, AddItem]
+    }));
+
+    e.target.reset();
+  };
+
   render() {
     return (
       <>
         <Wrapper items={this.state.items} />
-        <AddContact />
+        <AddContact submitItem={this.handleAddItem} />
       </>
     );
   }
