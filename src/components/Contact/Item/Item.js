@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Image } from "react-bootstrap";
-import PropTypes from "prop-types";
 import styled, { keyframes } from "styled-components";
 
 const fadeIn = () => keyframes`
@@ -52,8 +51,11 @@ const Item = ({ name, image, description_en, facebookLink }) => (
       style={{ width: 150, height: 150, alignSelf: "center" }}
       roundedCircle
     />
-    <H2>{name || "Jarosław Sochacki"}</H2>
-    <P>{description_en}</P>
+    <H2>{name || "Jon Doe"}</H2>
+    <P>
+      {description_en ||
+        "This description is default because you didn't type any"}
+    </P>
     <Button
       style={{ width: 180 }}
       href={facebookLink}
@@ -65,16 +67,5 @@ const Item = ({ name, image, description_en, facebookLink }) => (
     </Button>
   </Li>
 );
-
-Item.propTypes = {
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  description_en: PropTypes.string,
-  facebookLink: PropTypes.string.isRequired
-};
-
-Item.defaultProps = {
-  description_en: "This description is default because you didn't type any"
-};
 
 export default Item;
