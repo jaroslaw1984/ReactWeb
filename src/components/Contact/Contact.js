@@ -20,6 +20,7 @@ const dataArrayItems = [
     id: 2,
     image: avatar2,
     name: "Jerry",
+    email: "inz.jaroslawsochacki@gmail.com",
     description_en: "This is second description",
     description_pl:
       "Witam na mojej stronie, jeśli sobie życzysz możesz zostawić tu wiadomość",
