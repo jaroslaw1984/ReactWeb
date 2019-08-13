@@ -28,12 +28,30 @@ const dataArrayItems = [
 
 class Contact extends Component {
   state = {
-    items: [...dataArrayItems]
+    items: [...dataArrayItems],
+    username: "",
+    email: "",
+    errors: {
+      username: false,
+      email: false
+    }
+  };
+
+  handleChange = e => {
+    const type = e.target.type;
+    const value = e.target.value;
+    const name = e.target.name;
+    if (type === "text" || type === "email") {
+      this.setState({
+        [name]: value
+      });
+    }
   };
 
   handleAddItem = e => {
     e.preventDefault();
 
+    const validation = this.handleValidation();
     const AddItem = {
       id: this.state.items.length + 1,
       name: e.target[0].value,
@@ -42,18 +60,56 @@ class Contact extends Component {
       description_en: e.target[3].value
     };
 
-    this.setState(prevState => ({
-      items: [...prevState.items, AddItem]
-    }));
+    if (validation.correct) {
+      this.setState(prevState => ({
+        items: [...prevState.items, AddItem],
+        username: "",
+        email: "",
+        errors: {
+          username: false,
+          email: false
+        }
+      }));
+    } else {
+      this.setState({
+        errors: {
+          username: !validation.username,
+          email: !validation.email
+        }
+      });
+    }
+  };
 
-    e.target.reset();
+  handleValidation = () => {
+    let username = false;
+    let email = false;
+    let correct = false;
+
+    if (this.state.username.length > 3) {
+      username = true;
+    }
+    if (this.state.email.indexOf("@") !== -1) {
+      email = true;
+    }
+    if (username && email) {
+      correct = true;
+    }
+    return {
+      username,
+      email,
+      correct
+    };
   };
 
   render() {
     return (
       <>
         <Wrapper items={this.state.items} />
-        <AddContact submitItem={this.handleAddItem} />
+        <AddContact
+          value={this.state}
+          change={this.handleChange}
+          submitItem={this.handleAddItem}
+        />
       </>
     );
   }
