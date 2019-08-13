@@ -38,13 +38,21 @@ const H2 = styled.h2`
   font-size: 1.3rem;
   font-weight: 700;
 `;
+
+const H6 = styled.h6`
+  width: 100%;
+  text-align: center;
+  color: #0b7bf4;
+  font-size: 0.8rem;
+`;
 const P = styled.p`
   width: 100%;
+  margin-top: 10px;
   font-size: 1rem;
   font-weight: 400;
 `;
 
-const Item = ({ name, image, description_en, facebookLink }) => (
+const Item = ({ name, image, email, description_en, facebookLink }) => (
   <Li>
     <Image
       src={image}
@@ -52,6 +60,7 @@ const Item = ({ name, image, description_en, facebookLink }) => (
       roundedCircle
     />
     <H2>{name || "Jon Doe"}</H2>
+    <H6>{email}</H6>
     <P>
       {description_en ||
         "This description is default because you didn't type any"}

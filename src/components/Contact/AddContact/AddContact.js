@@ -1,5 +1,19 @@
 import React, { Component } from "react";
 import { Button, Form, Alert } from "react-bootstrap";
+import ReactCssTransitionGroup from "react-addons-css-transition-group";
+import styled from "styled-components";
+
+const Style = styled.div`
+  .alert-enter {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  .alert-enter.alert-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.3s ease-in;
+  }
+`;
 
 const styleTitle = {
   color: "#0b7bf4"
@@ -34,9 +48,17 @@ class AddContact extends Component {
             placeholder="Name"
           />
         </Form.Group>
-
-        {usernameValid && <Alert variant="danger">{username_faild_en}</Alert>}
-
+        <Style>
+          <ReactCssTransitionGroup
+            transitionName="alert"
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={300}
+          >
+            {usernameValid && (
+              <Alert variant="danger">{username_faild_en}</Alert>
+            )}
+          </ReactCssTransitionGroup>
+        </Style>
         <Form.Group>
           <Form.Control
             type="email"
@@ -46,9 +68,15 @@ class AddContact extends Component {
             placeholder="Email"
           />
         </Form.Group>
-
-        {emailValid && <Alert variant="danger">{email_faild_en}</Alert>}
-
+        <Style>
+          <ReactCssTransitionGroup
+            transitionName="alert"
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={300}
+          >
+            {emailValid && <Alert variant="danger">{email_faild_en}</Alert>}
+          </ReactCssTransitionGroup>
+        </Style>
         <Form.Group>
           <Form.Control type="text" placeholder="Link" />
         </Form.Group>

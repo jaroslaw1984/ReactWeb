@@ -9,6 +9,7 @@ const dataArrayItems = [
     id: 1,
     image: avatar,
     name: "Jarosław Sochacki",
+    email: "inz.jaroslawsochacki@gmail.com",
     description_en:
       "Hey, welcome on my website if u like you can leave the message here. Thank you so much!",
     description_pl:
@@ -55,9 +56,10 @@ class Contact extends Component {
     const AddItem = {
       id: this.state.items.length + 1,
       name: e.target[0].value,
-      facebookLink: e.target[1].value,
-      image: e.target[2].value,
-      description_en: e.target[3].value
+      email: e.target[1].value,
+      facebookLink: e.target[2].value,
+      image: e.target[3].value,
+      description_en: e.target[4].value
     };
 
     if (validation.correct) {
