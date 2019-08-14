@@ -20,7 +20,7 @@ const Projects = () => (
     <Row>
       <Col>
         <Style>
-          <Card className="text-center cardWidth">
+          <Card id="start" className="text-center cardWidth">
             <Card.Img variant="top" src={page} />
             <Card.Body>
               <Card.Title>Card Title</Card.Title>

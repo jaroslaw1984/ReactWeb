@@ -17,7 +17,6 @@ const removePadding = {
 };
 
 class App extends Component {
-  state = {};
   render() {
     return (
       <Router>

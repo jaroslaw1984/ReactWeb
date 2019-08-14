@@ -16,7 +16,7 @@ const Style = styled.div`
 const Home = () => {
   return (
     <Style>
-      <h2>Web Design</h2>
+      <h2 id="start">Web Design</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore
         iste ullam iure id asperiores sunt nihil sit cum nulla, vitae ex ratione

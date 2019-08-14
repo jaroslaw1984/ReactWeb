@@ -1,6 +1,6 @@
 import React from "react";
 import { Jumbotron, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import ScrollIntoView from "react-scroll-into-view";
 import styled from "styled-components";
 import waves from "../../images/waves.jpg";
 import wave from "../../images/wave.jpg";
@@ -54,11 +54,16 @@ const Jumbo = () => (
             This is a simple hero unit, a simple jumbotron-style component for
             calling extra attention to featured content or information.
           </p>
-          <p>
-            <Button as={Link} to="/about" variant="primary">
-              Let's start
-            </Button>
-          </p>
+          <ScrollIntoView selector="#start">
+            <p>
+              <Button
+                className="mdl-button mdl-js-button mdl-button--raised"
+                variant="primary"
+              >
+                Let's start
+              </Button>
+            </p>
+          </ScrollIntoView>
         </div>
       </div>
     </Jumbotron>

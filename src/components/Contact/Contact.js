@@ -17,6 +17,15 @@ const dataArrayItems = [
     facebookLink: "https://www.facebook.com/profile.php?id=100001667016208"
   }
 ];
+const options_en = [
+  "Thank you for adding",
+  "I hope you will check some other pages",
+  "My gratitude for visit and interested",
+  "Thank you so much!",
+  "I hope you like here",
+  "Hey how are you feel today ?",
+  "Nice to see you"
+];
 
 class Contact extends Component {
   state = {
@@ -44,15 +53,6 @@ class Contact extends Component {
     e.preventDefault();
 
     const validation = this.handleValidation();
-    const options_en = [
-      "Thank you for adding",
-      "I hope you will check some other pages",
-      "My gratitude for visit and interested",
-      "Thank you so much!",
-      "I hope you like here",
-      "Hey how are you feel today ?",
-      "Nice to see you"
-    ];
     const random = Math.floor(Math.random() * options_en.length);
     const reply = [
       {
@@ -123,14 +123,14 @@ class Contact extends Component {
 
   render() {
     return (
-      <>
+      <div id="start">
         <Wrapper items={this.state.items} />
         <AddContact
           value={this.state}
           change={this.handleChange}
           submitItem={this.handleAddItem}
         />
-      </>
+      </div>
     );
   }
 }

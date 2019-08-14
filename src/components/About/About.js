@@ -19,7 +19,7 @@ const About = () => (
   <Style>
     <Container fluid>
       <Row>
-        <Col className="center">
+        <Col id="start" className="center">
           <Image src={me} className="imgSize" fluid roundedCircle />
           <Card
             className="text-center"
