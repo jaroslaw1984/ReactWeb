@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
-import { data } from "../../data/data";
+import data from "../../data/data";
 import styled from "styled-components";
 
 const Styles = styled.div`
