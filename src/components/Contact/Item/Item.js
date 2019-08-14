@@ -55,7 +55,7 @@ const P = styled.p`
 const Item = ({ name, image, email, description_en, facebookLink }) => (
   <Li>
     <Image
-      src={image}
+      src={image || "http://unsplash.it/150/150"}
       style={{ width: 150, height: 150, alignSelf: "center" }}
       roundedCircle
     />

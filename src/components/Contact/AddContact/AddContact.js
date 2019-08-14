@@ -37,7 +37,11 @@ class AddContact extends Component {
     } = this.props.value;
     const { username_faild_en, email_faild_en } = this.alertMessages;
     return (
-      <Form onSubmit={this.props.submitItem} noValidate>
+      <Form
+        style={{ paddingTop: 20 }}
+        onSubmit={this.props.submitItem}
+        noValidate
+      >
         <Form.Label style={styleTitle}>Send me a message</Form.Label>
         <Form.Group>
           <Form.Control
@@ -45,7 +49,7 @@ class AddContact extends Component {
             name="username"
             value={username}
             onChange={this.props.change}
-            placeholder="Name"
+            placeholder="Name (requierd)"
           />
         </Form.Group>
         <Style>
@@ -65,7 +69,7 @@ class AddContact extends Component {
             name="email"
             value={email}
             onChange={this.props.change}
-            placeholder="Email"
+            placeholder="Email (requierd)"
           />
         </Form.Group>
         <Style>
@@ -81,7 +85,7 @@ class AddContact extends Component {
           <Form.Control type="text" placeholder="Link" />
         </Form.Group>
         <Form.Group>
-          <Form.Control type="text" placeholder="Image" />
+          <Form.Control type="text" placeholder="Image from http://" />
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Control as="textarea" rows="3" placeholder="Description" />
