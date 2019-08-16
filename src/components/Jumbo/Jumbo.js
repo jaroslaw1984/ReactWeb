@@ -5,18 +5,10 @@ import styled from "styled-components";
 import waves from "../../images/waves.jpg";
 import wave from "../../images/wave.jpg";
 
-// const fadieInText = [
-//   { name: "jumboTextHeader", appaer: true, timeout: 300 },
-//   { name: "jumboTextParagraph", appaer: true, timeout: 300, delay: "1s" },
-//   { name: "button", appaer: true, timeout: 300, delay: "1s" }
-// ];
-// const selectName = fadieInText.map(item => item.name);
-// const selectDelay = fadieInText.map(item => item.delay);
-
 const Styles = styled.div`
   .jumbo {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     color: #efefef;
     background-size: cover;
     background: url(${wave}) no-repeat;
@@ -35,7 +27,7 @@ const Styles = styled.div`
     z-index: -1;
   }
   .center {
-    width: 80%;
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,9 +36,8 @@ const Styles = styled.div`
       width: auto;
     }
   }
-  h1 {
-    font-size: 1.8rem;
-    /* animation: fadeIn 1s ease; */
+  .title {
+    font-size: 2rem;
     animation: fadeInTitle 2s ease;
   }
   @keyframes fadeInTitle {
@@ -59,8 +50,8 @@ const Styles = styled.div`
       transform: translateX(0);
     }
   }
-  p {
-    font-size: 1rem;
+  .titleParagraph {
+    font-size: 1.2rem;
     animation: fadeInParagraph 2s 1s both;
   }
   @keyframes fadeInParagraph {
@@ -74,7 +65,7 @@ const Styles = styled.div`
     }
   }
   .button {
-    animation: fadeInButton 2s 2.5s both;
+    animation: fadeInButton 2s 2s both;
   }
   @keyframes fadeInButton {
     0% {
@@ -92,8 +83,8 @@ const Jumbo = () => {
       <Jumbotron fluid className="jumbo">
         <div className="overlay">
           <div className="center">
-            <h1>Hello, world!</h1>
-            <p>
+            <h1 className="title">Hello, world!</h1>
+            <p className="titleParagraph">
               This is a simple hero unit, a simple jumbotron-style component for
               calling extra attention to featured content or information.
             </p>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import styled from "styled-components";
 import Header from "../Header/Header";
 import Home from "../Home/Home";
 import Contact from "../Contact/Contact";
@@ -10,34 +11,35 @@ import ErrorSite from "../ErrorSite/ErrorSite";
 import Footer from "../Footer/Footer";
 import Projects from "../Projects/Projects";
 
-const removePadding = {
-  // this remove padding's from <Container />
-  paddingLeft: 0,
-  paddingRight: 0
-};
-
+const Style = styled.div`
+  .removePadding {
+    padding: 0;
+  }
+`;
 class App extends Component {
   render() {
     return (
       <Router>
-        <Container>
-          <Row>
-            <Col style={removePadding}>
-              <Header />
-              <Jumbo />
-            </Col>
-          </Row>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/about" component={About} />
-            <Route component={ErrorSite} />
-          </Switch>
-        </Container>
-        <Container style={removePadding} fluid>
-          <Footer />
-        </Container>
+        <Style>
+          <Container>
+            <Row>
+              <Col className="removePadding">
+                <Header />
+                <Jumbo />
+              </Col>
+            </Row>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/projects" component={Projects} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/about" component={About} />
+              <Route component={ErrorSite} />
+            </Switch>
+          </Container>
+          <Container className="removePadding" fluid>
+            <Footer />
+          </Container>
+        </Style>
       </Router>
     );
   }

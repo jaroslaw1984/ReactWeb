@@ -13,11 +13,13 @@ const Style = styled.div`
     transform: translateX(0);
     transition: 0.3s ease-in;
   }
+  .styleTitle {
+    color: #0b7bf4;
+  }
+  .formPadding {
+    padding-top: 20px;
+  }
 `;
-
-const styleTitle = {
-  color: "#0b7bf4"
-};
 
 class AddContact extends Component {
   alertMessages = {
@@ -37,22 +39,22 @@ class AddContact extends Component {
     } = this.props.value;
     const { username_faild_en, email_faild_en } = this.alertMessages;
     return (
-      <Form
-        style={{ paddingTop: 20 }}
-        onSubmit={this.props.submitItem}
-        noValidate
-      >
-        <Form.Label style={styleTitle}>Send me a message</Form.Label>
-        <Form.Group>
-          <Form.Control
-            type="text"
-            name="username"
-            value={username}
-            onChange={this.props.change}
-            placeholder="Name (requierd)"
-          />
-        </Form.Group>
-        <Style>
+      <Style>
+        <Form
+          className="formPadding"
+          onSubmit={this.props.submitItem}
+          noValidate
+        >
+          <Form.Label className="styleTitle">Send me a message</Form.Label>
+          <Form.Group>
+            <Form.Control
+              type="text"
+              name="username"
+              value={username}
+              onChange={this.props.change}
+              placeholder="Name (requierd)"
+            />
+          </Form.Group>
           <ReactCssTransitionGroup
             transitionName="alert"
             transitionEnterTimeout={300}
@@ -62,17 +64,15 @@ class AddContact extends Component {
               <Alert variant="danger">{username_faild_en}</Alert>
             )}
           </ReactCssTransitionGroup>
-        </Style>
-        <Form.Group>
-          <Form.Control
-            type="email"
-            name="email"
-            value={email}
-            onChange={this.props.change}
-            placeholder="Email (requierd)"
-          />
-        </Form.Group>
-        <Style>
+          <Form.Group>
+            <Form.Control
+              type="email"
+              name="email"
+              value={email}
+              onChange={this.props.change}
+              placeholder="Email (requierd)"
+            />
+          </Form.Group>
           <ReactCssTransitionGroup
             transitionName="alert"
             transitionEnterTimeout={300}
@@ -80,20 +80,20 @@ class AddContact extends Component {
           >
             {emailValid && <Alert variant="danger">{email_faild_en}</Alert>}
           </ReactCssTransitionGroup>
-        </Style>
-        <Form.Group>
-          <Form.Control type="text" placeholder="Link" />
-        </Form.Group>
-        <Form.Group>
-          <Form.Control type="text" placeholder="Image from http://" />
-        </Form.Group>
-        <Form.Group controlId="exampleForm.ControlTextarea1">
-          <Form.Control as="textarea" rows="3" placeholder="Description" />
-        </Form.Group>
-        <Button type="submit" variant="primary">
-          Send
-        </Button>
-      </Form>
+          <Form.Group>
+            <Form.Control type="text" placeholder="Link" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Control type="text" placeholder="Image from http://" />
+          </Form.Group>
+          <Form.Group controlId="exampleForm.ControlTextarea1">
+            <Form.Control as="textarea" rows="3" placeholder="Description" />
+          </Form.Group>
+          <Button type="submit" variant="primary">
+            Send
+          </Button>
+        </Form>
+      </Style>
     );
   }
 }
