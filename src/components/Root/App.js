@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Container fluid>
+        <Container>
           <Row>
             <Col style={removePadding}>
               <Header />

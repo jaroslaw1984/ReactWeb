@@ -1,4 +1,5 @@
 import avatar from "../images/avatar.jpg";
+import laptop from "../images/laptop.jpg";
 
 const data = {
   menu: [
@@ -28,6 +29,24 @@ const data = {
     "I hope you like here",
     "Hey how are you feel today ?",
     "Nice to see you"
+  ],
+  homeContent: [
+    {
+      key: 0,
+      id: "start",
+      h2: "Web Design",
+      p:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore iste ullam iure id asperiores sunt nihil sit cum nulla, vitae ex ratione quos nemo obcaecati sed. Repudiandae, corrupti odio.",
+      img: laptop
+    },
+    {
+      key: 1,
+      id: "1",
+      h2: "Web Second",
+      p:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore iste ullam iure id asperiores sunt nihil sit cum nulla, vitae ex ratione quos nemo obcaecati sed. Repudiandae, corrupti odio.",
+      img: laptop
+    }
   ]
 };
 

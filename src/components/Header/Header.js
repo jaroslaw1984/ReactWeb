@@ -38,7 +38,13 @@ class Header extends Component {
     ));
     return (
       <Styles>
-        <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark">
+        <Navbar
+          collapseOnSelect
+          expand="sm"
+          bg="dark"
+          variant="dark"
+          fixed="top"
+        >
           <Navbar.Brand as={Link} to="/">
             Omegiumfix
           </Navbar.Brand>
