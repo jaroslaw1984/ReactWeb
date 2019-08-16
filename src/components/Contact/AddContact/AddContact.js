@@ -23,11 +23,10 @@ const Style = styled.div`
 
 class AddContact extends Component {
   alertMessages = {
-    username_faild_en:
-      "Your name that you type is to short. Must have at least 3 signs.",
+    username_faild_en: "Typed name is to short. Must have at least 3 signs.",
     username_faild_pl:
-      "Imię jakie podałeś jest za krótkie. Powinno składać się przynajmniej z 3 znaków",
-    email_faild_en: "Sorry, but you miss @ at your email",
+      "Imię  podane jest za krótkie. Powinno składać się przynajmniej z 3 znaków",
+    email_faild_en: 'Sorry, but you miss "@" at your email',
     email_faild_pl: "Przepraszam ale brakuje znaku @ w emailu"
   };
 

@@ -67,7 +67,7 @@ const Item = ({ name, image, email, description_en, facebookLink }) => (
       className="imgStyle"
       roundedCircle
     />
-    <H2>{name || "Jon Doe"}</H2>
+    <H2>{name}</H2>
     <H6>{email}</H6>
     <P>
       {description_en ||

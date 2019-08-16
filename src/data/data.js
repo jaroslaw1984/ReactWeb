@@ -25,7 +25,7 @@ const data = {
     "Thank you for adding",
     "I hope you will check some other pages",
     "My gratitude for visit and interested",
-    "Thank you so much!",
+    "Thank you so much for a post!",
     "I hope you like here",
     "Hey how are you feel today ?",
     "Nice to see you"

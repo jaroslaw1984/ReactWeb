@@ -34,9 +34,9 @@ class Contact extends Component {
     const reply = [
       {
         id: this.state.items.length + 2,
-        name: "Jarosław Sochacki",
-        email: "inz.jaroslawsochacki@gmail.com",
-        facebookLink: "https://www.facebook.com/profile.php?id=100001667016208",
+        name: data.dataArrayItems[0].name,
+        email: data.dataArrayItems[0].email,
+        facebookLink: data.dataArrayItems[0].facebookLink,
         image: avatar2,
         description_en: data.options_en[random]
       }
