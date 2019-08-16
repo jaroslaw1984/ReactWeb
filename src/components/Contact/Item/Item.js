@@ -28,6 +28,14 @@ const Li = styled.li`
     padding: 40px 30px;
     flex-wrap: nowrap;
   }
+  .imgStyle {
+    width: 150px;
+    height: 150px;
+    align-self: center;
+  }
+  .buttonWidth {
+    width: 180px;
+  }
 `;
 
 const H2 = styled.h2`
@@ -53,10 +61,10 @@ const P = styled.p`
 `;
 
 const Item = ({ name, image, email, description_en, facebookLink }) => (
-  <Li>
+  <Li id="start">
     <Image
       src={image || "http://unsplash.it/150/150"}
-      style={{ width: 150, height: 150, alignSelf: "center" }}
+      className="imgStyle"
       roundedCircle
     />
     <H2>{name || "Jon Doe"}</H2>
@@ -66,7 +74,7 @@ const Item = ({ name, image, email, description_en, facebookLink }) => (
         "This description is default because you didn't type any"}
     </P>
     <Button
-      style={{ width: 180 }}
+      className="buttonWidth"
       href={facebookLink}
       target="_blank"
       rel="noopener noreferrer"

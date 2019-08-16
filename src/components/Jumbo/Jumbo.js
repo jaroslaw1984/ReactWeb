@@ -1,9 +1,19 @@
 import React from "react";
 import { Jumbotron, Button } from "react-bootstrap";
 import ScrollIntoView from "react-scroll-into-view";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import waves from "../../images/waves.jpg";
 import wave from "../../images/wave.jpg";
+
+const fadieIn = key => keyframes`
+    0% {
+      opacity: 0;
+      ${key ? { transform: "translateX(-50px)" } : null} ;
+    }
+    100% {
+      opacity: 1;
+    }
+`;
 
 const Styles = styled.div`
   .jumbo {
@@ -38,42 +48,15 @@ const Styles = styled.div`
   }
   .title {
     font-size: 2rem;
-    animation: fadeInTitle 2s ease;
+    animation: ${fadieIn} 2s ease;
   }
-  @keyframes fadeInTitle {
-    0% {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+
   .titleParagraph {
     font-size: 1.2rem;
-    animation: fadeInParagraph 2s 1s both;
-  }
-  @keyframes fadeInParagraph {
-    0% {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    animation: ${fadieIn} 2s 1s both;
   }
   .button {
-    animation: fadeInButton 2s 2s both;
-  }
-  @keyframes fadeInButton {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+    animation: ${fadieIn()} 2s 2s both;
   }
 `;
 

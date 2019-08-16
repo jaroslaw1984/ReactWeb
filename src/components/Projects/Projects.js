@@ -3,15 +3,14 @@ import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import page from "../../images/my_page1.jpg";
 
-const buttonMargin = {
-  margin: 20
-};
-
 const Style = styled.div`
   .cardWidth {
     @media (min-width: 768px) {
       width: auto;
     }
+  }
+  .buttonMargin {
+    margin: 20px;
   }
 `;
 
@@ -29,7 +28,7 @@ const Projects = () => (
                 the bulk of the card's content.
               </Card.Text>
               <Button
-                style={buttonMargin}
+                className="buttonMargin"
                 href="https://github.com/jaroslaw1984/web"
                 variant="outline-primary"
               >

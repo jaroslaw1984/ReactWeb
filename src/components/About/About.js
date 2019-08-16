@@ -21,11 +21,7 @@ const About = () => (
       <Row>
         <Col id="start" className="center">
           <Image src={me} className="imgSize" fluid roundedCircle />
-          <Card
-            className="text-center"
-            border="info"
-            style={{ width: "18rem" }}
-          >
+          <Card className="text-center" border="info">
             <Card.Header>Jarosław Sochacki</Card.Header>
             <Card.Body>
               <Card.Text>
