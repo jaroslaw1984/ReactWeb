@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Image, Card } from "react-bootstrap";
+import { Col, Image, Card } from "react-bootstrap";
 import styled from "styled-components";
 import me from "../../images/mini_me.jpg";
 
@@ -17,21 +17,17 @@ const Style = styled.div`
 `;
 const About = () => (
   <Style>
-    <Container fluid>
-      <Row>
-        <Col id="start" className="center">
-          <Image src={me} className="imgSize" fluid roundedCircle />
-          <Card className="text-center" border="info">
-            <Card.Header>Jarosław Sochacki</Card.Header>
-            <Card.Body>
-              <Card.Text>
-                Hard working person to become Frontend Developer
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <Col id="start" className="center">
+      <Image src={me} className="imgSize" fluid roundedCircle />
+      <Card className="text-center" border="info">
+        <Card.Header>Jarosław Sochacki</Card.Header>
+        <Card.Body>
+          <Card.Text>
+            Hard working person to become Frontend Developer
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </Col>
   </Style>
 );
 

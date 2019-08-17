@@ -1,5 +1,6 @@
 import avatar from "../images/avatar.jpg";
 import laptop from "../images/laptop.jpg";
+import page1 from "../images/my_page1.jpg";
 
 const data = {
   menu: [
@@ -40,7 +41,6 @@ const data = {
   homeContent: [
     {
       key: 0,
-      id: "start",
       h2: "Web Design",
       p:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore iste ullam iure id asperiores sunt nihil sit cum nulla, vitae ex ratione quos nemo obcaecati sed. Repudiandae, corrupti odio.",
@@ -48,11 +48,29 @@ const data = {
     },
     {
       key: 1,
-      id: "1",
       h2: "Web Second",
       p:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore iste ullam iure id asperiores sunt nihil sit cum nulla, vitae ex ratione quos nemo obcaecati sed. Repudiandae, corrupti odio.",
       img: laptop
+    }
+  ],
+  projectsContent: [
+    {
+      key: 0,
+      img: page1,
+      cardTitle: "Omegiufix.pl",
+      descriptionCard:
+        "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      urlGitCard: "https://github.com/jaroslaw1984/web",
+      urlLiveCard: "http://omegiumfix.pl"
+    },
+    {
+      key: 1,
+      img: page1,
+      cardTitle: "Portfolio",
+      descriptionCard: "Here will be description about my portfolio",
+      urlGitCard: "https://github.com/jaroslaw1984/web",
+      urlLiveCard: "http://omegiumfix.pl"
     }
   ]
 };

@@ -7,7 +7,7 @@ const Home = () => {
     <HomeContent key={item.key} {...item} />
   ));
 
-  return <>{home}</>;
+  return <div id="start">{home}</div>;
 };
 
 export default Home;

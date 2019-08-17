@@ -69,7 +69,7 @@ const Jumbo = () => {
           <div className="center">
             <h1 className="title">{data.jumboContent.title}</h1>
             <p className="titleParagraph">{data.jumboContent.titleParagraph}</p>
-            <ScrollIntoView selector="#start" alignToTop="true">
+            <ScrollIntoView selector="#start">
               <Button className="button" variant="primary">
                 {data.jumboContent.button}
               </Button>

@@ -100,7 +100,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div>
+      <div id="start">
         <Wrapper items={this.state.items} />
         <AddContact
           value={this.state}

@@ -30,11 +30,12 @@ const Li = styled.li`
     flex-wrap: nowrap;
   }
   .imgStyle {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     align-self: center;
-    background: lightgray;
+    background: lightgray no-repeat;
+    background-size: cover;
   }
   .imgNone {
     width: 150px;
@@ -77,7 +78,7 @@ const Item = ({ name, image, email, description_en, facebookLink }) => {
   const button_en = "Go to Facebook";
   const ImgTag = image ? "img" : "div";
   return (
-    <Li id="start">
+    <Li>
       <ImgTag src={image} className={image ? "imgStyle" : "imgNone"} />
       <H2>{name}</H2>
       <H6>{email}</H6>
