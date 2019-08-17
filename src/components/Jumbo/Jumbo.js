@@ -4,6 +4,7 @@ import ScrollIntoView from "react-scroll-into-view";
 import styled, { keyframes } from "styled-components";
 import waves from "../../images/waves.jpg";
 import wave from "../../images/wave.jpg";
+import data from "../../data/data";
 
 const fadieIn = key => keyframes`
     0% {
@@ -66,14 +67,11 @@ const Jumbo = () => {
       <Jumbotron fluid className="jumbo">
         <div className="overlay">
           <div className="center">
-            <h1 className="title">Hello, world!</h1>
-            <p className="titleParagraph">
-              This is a simple hero unit, a simple jumbotron-style component for
-              calling extra attention to featured content or information.
-            </p>
+            <h1 className="title">{data.jumboContent.title}</h1>
+            <p className="titleParagraph">{data.jumboContent.titleParagraph}</p>
             <ScrollIntoView selector="#start" alignToTop="true">
               <Button className="button" variant="primary">
-                Let's start
+                {data.jumboContent.button}
               </Button>
             </ScrollIntoView>
           </div>

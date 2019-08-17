@@ -37,6 +37,8 @@ class AddContact extends Component {
       errors: { username: usernameValid, email: emailValid }
     } = this.props.value;
     const { username_faild_en, email_faild_en } = this.alertMessages;
+    const message = "Send me a message";
+    const sendButton = "Send";
     return (
       <Style>
         <Form
@@ -44,7 +46,7 @@ class AddContact extends Component {
           onSubmit={this.props.submitItem}
           noValidate
         >
-          <Form.Label className="styleTitle">Send me a message</Form.Label>
+          <Form.Label className="styleTitle">{message}</Form.Label>
           <Form.Group>
             <Form.Control
               type="text"
@@ -89,7 +91,7 @@ class AddContact extends Component {
             <Form.Control as="textarea" rows="3" placeholder="Description" />
           </Form.Group>
           <Button type="submit" variant="primary">
-            Send
+            {sendButton}
           </Button>
         </Form>
       </Style>

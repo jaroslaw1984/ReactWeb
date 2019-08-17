@@ -1,6 +1,8 @@
 import React from "react";
-import { Button, Image } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
+
+const defaultImg = "http://unsplash.it/150/150";
 
 const fadeIn = () => keyframes`
   0% {
@@ -13,7 +15,6 @@ const fadeIn = () => keyframes`
   }
 
 `;
-
 const Li = styled.li`
   display: flex;
   position: relative;
@@ -31,7 +32,17 @@ const Li = styled.li`
   .imgStyle {
     width: 150px;
     height: 150px;
+    border-radius: 50%;
     align-self: center;
+    background: lightgray;
+  }
+  .imgNone {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    align-self: center;
+    background: url(${defaultImg}) no-repeat;
+    background-size: cover;
   }
   .buttonWidth {
     width: 180px;
@@ -60,29 +71,28 @@ const P = styled.p`
   font-weight: 400;
 `;
 
-const Item = ({ name, image, email, description_en, facebookLink }) => (
-  <Li id="start">
-    <Image
-      src={image || "http://unsplash.it/150/150"}
-      className="imgStyle"
-      roundedCircle
-    />
-    <H2>{name}</H2>
-    <H6>{email}</H6>
-    <P>
-      {description_en ||
-        "This description is default because you didn't type any"}
-    </P>
-    <Button
-      className="buttonWidth"
-      href={facebookLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      variant="outline-primary"
-    >
-      Go to Facebook
-    </Button>
-  </Li>
-);
+const Item = ({ name, image, email, description_en, facebookLink }) => {
+  const defaultDescription =
+    "This description is default because you didn't type any";
+  const button_en = "Go to Facebook";
+  const ImgTag = image ? "img" : "div";
+  return (
+    <Li id="start">
+      <ImgTag src={image} className={image ? "imgStyle" : "imgNone"} />
+      <H2>{name}</H2>
+      <H6>{email}</H6>
+      <P>{description_en || defaultDescription}</P>
+      <Button
+        className="buttonWidth"
+        href={facebookLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="outline-primary"
+      >
+        {button_en}
+      </Button>
+    </Li>
+  );
+};
 
 export default Item;

@@ -8,7 +8,13 @@ const data = {
     { id: 3, name_en: "Contact", name_pl: "Kontakt", path: "/contact" },
     { id: 4, name_en: "About", name_pl: "O mnie", path: "/about" }
   ],
-  dataArrayItems: [
+  jumboContent: {
+    title: "Hello, world!",
+    titleParagraph:
+      "This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.",
+    button: "Let's start"
+  },
+  dataContactItems: [
     {
       id: 0,
       image: avatar,
@@ -30,6 +36,7 @@ const data = {
     "Hey how are you feel today ?",
     "Nice to see you"
   ],
+
   homeContent: [
     {
       key: 0,

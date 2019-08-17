@@ -6,7 +6,7 @@ import data from "../../data/data";
 
 class Contact extends Component {
   state = {
-    items: [...data.dataArrayItems],
+    items: [...data.dataContactItems],
     username: "",
     email: "",
     errors: {
@@ -34,9 +34,9 @@ class Contact extends Component {
     const reply = [
       {
         id: this.state.items.length + 2,
-        name: data.dataArrayItems[0].name,
-        email: data.dataArrayItems[0].email,
-        facebookLink: data.dataArrayItems[0].facebookLink,
+        name: data.dataContactItems[0].name,
+        email: data.dataContactItems[0].email,
+        facebookLink: data.dataContactItems[0].facebookLink,
         image: avatar2,
         description_en: data.options_en[random]
       }
