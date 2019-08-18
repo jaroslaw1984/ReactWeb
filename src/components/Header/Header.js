@@ -33,11 +33,10 @@ const Styles = styled.div`
     top: -6px;
     left: -1px;
     display: block;
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
     background: brown;
     border-radius: 50%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0);
     transition: all 0.5s ease;
   }
   .languageChange input[type="checkbox"] {
@@ -49,7 +48,7 @@ const Styles = styled.div`
   }
   .languageChange input[type="checkbox"]:checked + label {
     left: 25px;
-    background-color: #0b7bf4;
+    background: #0b7bf4;
   }
   .languageName {
     position: absolute;
@@ -57,13 +56,14 @@ const Styles = styled.div`
     top: calc(80% - 32px);
     display: flex;
     justify-content: space-between;
-    line-height: 19px;
+    line-height: 20px;
     margin: 20px auto;
     width: 110px;
   }
   .spanActive {
     color: #fff;
     font-weight: bold;
+    transition: all 0.3s ease-in;
   }
 `;
 const Span = styled.span`
@@ -73,6 +73,9 @@ const Span = styled.span`
 class Header extends Component {
   render() {
     const { checked, change } = this.props;
+    const pageTitle = "Omegiumfix";
+    const langPl = "pl";
+    const langEn = "en";
     const menu = data.menu.map(item => (
       <Nav.Link
         key={item.id}
@@ -95,7 +98,7 @@ class Header extends Component {
           fixed="top"
         >
           <Navbar.Brand as={Link} to="/">
-            Omegiumfix
+            {pageTitle}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
@@ -106,8 +109,12 @@ class Header extends Component {
               {menu}
               <div className="languageChange">
                 <div className="languageName">
-                  <Span className={checked ? null : "spanActive"}>pl</Span>
-                  <Span className={checked ? "spanActive" : null}>en</Span>
+                  <Span className={checked ? null : "spanActive"}>
+                    {langPl}
+                  </Span>
+                  <Span className={checked ? "spanActive" : null}>
+                    {langEn}
+                  </Span>
                 </div>
                 <input
                   type="checkbox"
