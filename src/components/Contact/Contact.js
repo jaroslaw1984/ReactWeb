@@ -100,14 +100,14 @@ class Contact extends Component {
 
   render() {
     return (
-      <div id="start">
+      <>
         <Wrapper items={this.state.items} />
         <AddContact
           value={this.state}
           change={this.handleChange}
           submitItem={this.handleAddItem}
         />
-      </div>
+      </>
     );
   }
 }

@@ -6,12 +6,12 @@ import styled from "styled-components";
 const Style = styled.div`
   .alert-enter {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(50px);
   }
   .alert-enter.alert-enter-active {
     opacity: 1;
     transform: translateX(0);
-    transition: 0.3s ease-in;
+    transition: 0.3s ease-in-out;
   }
   .styleTitle {
     color: #0b7bf4;

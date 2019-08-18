@@ -7,7 +7,7 @@ const defaultImg = "http://unsplash.it/150/150";
 const fadeIn = () => keyframes`
   0% {
     opacity: 0;
-    top: 35px;
+    top: 30px;
   }
   100% {
     opacity: 1;
@@ -20,7 +20,6 @@ const Li = styled.li`
   position: relative;
   flex-direction: column;
   justify-content: center;
-  height: 70vh;
   list-style-type: none;
   padding: 0;
   margin: 0;

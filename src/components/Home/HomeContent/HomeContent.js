@@ -3,7 +3,7 @@ import { Image } from "react-bootstrap";
 import styled from "styled-components";
 
 const Div = styled.div`
-  height: 90vh;
+  margin-bottom: 25px;
 `;
 const H2 = styled.h2`
   padding: 10px 0;
