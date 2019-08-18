@@ -20,10 +20,59 @@ const Styles = styled.div`
       transition: 0.5s;
     }
   }
+  .languageChange {
+    position: relative;
+    width: 40px;
+    height: 7px;
+    background: rgb(192, 188, 188);
+    margin: 20px auto;
+    border-radius: 100px;
+  }
+  .languageChange label {
+    position: absolute;
+    top: -6px;
+    left: -1px;
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: brown;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0);
+    transition: all 0.5s ease;
+  }
+  .languageChange input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 50px;
+    opacity: 0;
+  }
+  .languageChange input[type="checkbox"]:checked + label {
+    left: 25px;
+    background-color: #0b7bf4;
+  }
+  .languageName {
+    position: absolute;
+    left: -30px;
+    top: calc(80% - 32px);
+    display: flex;
+    justify-content: space-between;
+    line-height: 19px;
+    margin: 20px auto;
+    width: 110px;
+  }
+  .spanActive {
+    color: #fff;
+    font-weight: bold;
+  }
 `;
-
+const Span = styled.span`
+  color: gray;
+  font-size: 1.3rem;
+`;
 class Header extends Component {
   render() {
+    const { checked, change } = this.props;
     const menu = data.menu.map(item => (
       <Nav.Link
         key={item.id}
@@ -33,7 +82,7 @@ class Header extends Component {
         eventKey={item.id}
         className="menuText"
       >
-        {item.name_en}
+        {checked ? item.name_en : item.name_pl}
       </Nav.Link>
     ));
     return (
@@ -53,7 +102,22 @@ class Header extends Component {
             className="justify-content-end"
             id="responsive-navbar-nav"
           >
-            <Nav className="justify-content-end">{menu}</Nav>
+            <Nav className="justify-content-end">
+              {menu}
+              <div className="languageChange">
+                <div className="languageName">
+                  <Span className={checked ? null : "spanActive"}>pl</Span>
+                  <Span className={checked ? "spanActive" : null}>en</Span>
+                </div>
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  checked={checked}
+                  onChange={change}
+                />
+                <label htmlFor="checkbox" id="checkbox" />
+              </div>
+            </Nav>
           </Navbar.Collapse>
         </Navbar>
       </Styles>

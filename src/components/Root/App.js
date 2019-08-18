@@ -17,6 +17,16 @@ const Style = styled.div`
   }
 `;
 class App extends Component {
+  state = {
+    languageEn: true
+  };
+
+  handelChangeLanguage = e => {
+    this.setState({
+      languageEn: e.target.checked
+    });
+  };
+
   render() {
     return (
       <Router>
@@ -24,7 +34,10 @@ class App extends Component {
           <Container>
             <Row>
               <Col className="removePadding">
-                <Header />
+                <Header
+                  change={this.handelChangeLanguage}
+                  checked={this.state.languageEn}
+                />
                 <Jumbo />
               </Col>
             </Row>
