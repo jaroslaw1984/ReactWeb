@@ -21,11 +21,10 @@ const Styles = styled.div`
     position: relative;
     min-height: 100vh;
     color: #efefef;
-    background-size: cover;
-    background: url(${wave}) no-repeat;
+    background: url(${wave});
     z-index: 0;
     @media (min-width: 768px) {
-      background: url(${waves}) no-repeat;
+      background: url(${waves});
     }
   }
   .overlay {
