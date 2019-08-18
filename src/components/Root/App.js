@@ -42,7 +42,13 @@ class App extends Component {
               </Col>
             </Row>
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route
+                exact
+                path="/"
+                render={props => (
+                  <Home {...props} checked={this.state.languageEn} />
+                )}
+              />
               <Route path="/projects" component={Projects} />
               <Route path="/contact" component={Contact} />
               <Route path="/about" component={About} />

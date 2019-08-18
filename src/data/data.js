@@ -42,15 +42,15 @@ const data = {
     {
       key: 0,
       h2: "Web Design",
-      p:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore iste ullam iure id asperiores sunt nihil sit cum nulla, vitae ex ratione quos nemo obcaecati sed. Repudiandae, corrupti odio.",
+      p_en: "This is the text in english language",
+      p_pl: "To jest tekst po polsku",
       img: laptop
     },
     {
       key: 1,
       h2: "Programming Languages",
-      p:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore iste ullam iure id asperiores sunt nihil sit cum nulla, vitae ex ratione quos nemo obcaecati sed. Repudiandae, corrupti odio.",
+      p_en: "This will be second text in language i hope it will work ",
+      p_pl: "A to będzie drugi tekst mam nadzieję, że zadziała ",
       img: laptop
     }
   ],

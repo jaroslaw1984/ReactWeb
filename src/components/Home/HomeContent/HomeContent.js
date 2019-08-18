@@ -12,10 +12,10 @@ const H2 = styled.h2`
   font-weight: 700;
   text-align: center;
 `;
-const HomeContent = ({ h2, p, img }) => (
+const HomeContent = ({ h2, p_en, p_pl, img, checked }) => (
   <Div>
     <H2>{h2}</H2>
-    <p>{p}</p>
+    <p>{checked ? p_en : p_pl}</p>
     <Image src={img} fluid rounded />
   </Div>
 );
