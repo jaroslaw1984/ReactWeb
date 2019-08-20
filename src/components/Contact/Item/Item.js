@@ -78,7 +78,7 @@ const Item = ({
   email,
   description_en,
   description_pl,
-  facebookLink,
+  link,
   checked
 }) => {
   const defaultDescription_en =
@@ -99,7 +99,7 @@ const Item = ({
       </P>
       <Button
         className="buttonWidth"
-        href={facebookLink}
+        href={link}
         target="_blank"
         rel="noopener noreferrer"
         variant="outline-primary"

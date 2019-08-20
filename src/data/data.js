@@ -27,7 +27,7 @@ const data = {
         "Hello, if you want to talk to me leave a message here and I will answer immediately",
       description_pl:
         "Witam, jeśli chcesz ze mną porozmawiać zostaw tu wiadomość, a odpowiem natychmiast",
-      facebookLink: "https://www.facebook.com/profile.php?id=100001667016208"
+      link: "https://www.facebook.com/profile.php?id=100001667016208"
     }
   ],
   options_en: [

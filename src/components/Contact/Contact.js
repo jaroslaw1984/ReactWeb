@@ -36,7 +36,7 @@ class Contact extends Component {
         id: this.state.items.length + 2,
         name: data.dataContactItems[0].name,
         email: data.dataContactItems[0].email,
-        facebookLink: data.dataContactItems[0].facebookLink,
+        link: data.dataContactItems[0].link,
         image: avatar2,
         description_en: data.options_en[random],
         description_pl: data.options_pl[random]
@@ -46,7 +46,7 @@ class Contact extends Component {
       id: this.state.items.length + 1,
       name: e.target[0].value,
       email: e.target[1].value,
-      facebookLink: e.target[2].value,
+      link: e.target[2].value,
       image: e.target[3].value,
       description_en: e.target[4].value
     };
