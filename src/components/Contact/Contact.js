@@ -38,7 +38,8 @@ class Contact extends Component {
         email: data.dataContactItems[0].email,
         facebookLink: data.dataContactItems[0].facebookLink,
         image: avatar2,
-        description_en: data.options_en[random]
+        description_en: data.options_en[random],
+        description_pl: data.options_pl[random]
       }
     ];
     const addItem = {
@@ -101,11 +102,12 @@ class Contact extends Component {
   render() {
     return (
       <>
-        <Wrapper items={this.state.items} />
+        <Wrapper items={this.state.items} checked={this.props.checked} />
         <AddContact
           value={this.state}
           change={this.handleChange}
           submitItem={this.handleAddItem}
+          checked={this.props.checked}
         />
       </>
     );

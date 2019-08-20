@@ -18,40 +18,46 @@ const Style = styled.div`
 `;
 class App extends Component {
   state = {
-    languageEn: true
+    changeLanguage: true
   };
 
   handelChangeLanguage = e => {
     this.setState({
-      languageEn: e.target.checked
+      changeLanguage: e.target.checked
     });
   };
 
   render() {
+    const change = this.handelChangeLanguage;
+    const checked = this.state.changeLanguage;
     return (
       <Router>
         <Style>
           <Container>
             <Row>
               <Col className="removePadding">
-                <Header
-                  change={this.handelChangeLanguage}
-                  checked={this.state.languageEn}
-                />
-                <Jumbo />
+                <Header change={change} checked={checked} />
+                <Jumbo checked={checked} />
               </Col>
             </Row>
             <Switch>
               <Route
                 exact
                 path="/"
-                render={props => (
-                  <Home {...props} checked={this.state.languageEn} />
-                )}
+                render={props => <Home {...props} checked={checked} />}
               />
-              <Route path="/projects" component={Projects} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/about" component={About} />
+              <Route
+                path="/projects"
+                render={props => <Projects {...props} checked={checked} />}
+              />
+              <Route
+                path="/contact"
+                render={props => <Contact {...props} checked={checked} />}
+              />
+              <Route
+                path="/about"
+                render={props => <About {...props} checked={checked} />}
+              />
               <Route component={ErrorSite} />
             </Switch>
           </Container>

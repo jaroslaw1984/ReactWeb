@@ -9,8 +9,10 @@ const Ul = styled.ul`
   width: 100%;
   margin: 0 auto;
 `;
-const Wrapper = props => {
-  const listItems = props.items.map(item => <Item key={item.id} {...item} />);
+const Wrapper = ({ items, checked }) => {
+  const listItems = items.map(item => (
+    <Item key={item.id} {...item} checked={checked} />
+  ));
   return (
     <Div id="start">
       <Ul>{listItems}</Ul>

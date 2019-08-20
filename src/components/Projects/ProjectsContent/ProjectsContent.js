@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-
 import styled from "styled-components";
 
 const Style = styled.div`
@@ -19,12 +18,15 @@ const Div = styled.div`
 const ProjectsContent = ({
   img,
   cardTitle,
-  descriptionCard,
+  descriptionCard_en,
+  descriptionCard_pl,
   urlGitCard,
-  urlLiveCard
+  urlLiveCard,
+  checked
 }) => {
   const buttonGitName = "GitHub";
-  const buttonLiveName = "Live";
+  const buttonLiveName_en = "Live";
+  const buttonLiveName_pl = "Na żywo";
   return (
     <Style>
       <Div>
@@ -32,7 +34,9 @@ const ProjectsContent = ({
           <Card.Img variant="top" src={img} />
           <Card.Body>
             <Card.Title>{cardTitle}</Card.Title>
-            <Card.Text>{descriptionCard}</Card.Text>
+            <Card.Text>
+              {checked ? descriptionCard_en : descriptionCard_pl}
+            </Card.Text>
             <Button
               className="buttonMargin"
               href={urlGitCard}
@@ -41,7 +45,7 @@ const ProjectsContent = ({
               {buttonGitName}
             </Button>
             <Button href={urlLiveCard} variant="outline-primary">
-              {buttonLiveName}
+              {checked ? buttonLiveName_en : buttonLiveName_pl}
             </Button>
           </Card.Body>
         </Card>

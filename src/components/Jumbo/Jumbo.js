@@ -60,17 +60,27 @@ const Styles = styled.div`
   }
 `;
 
-const Jumbo = () => {
+const Jumbo = ({ checked }) => {
+  const {
+    title_en,
+    title_pl,
+    titleParagraph_en,
+    titleParagraph_pl,
+    button_en,
+    button_pl
+  } = data.jumboContent;
   return (
     <Styles>
       <Jumbotron fluid className="jumbo">
         <div className="overlay">
           <div className="center">
-            <h1 className="title">{data.jumboContent.title}</h1>
-            <p className="titleParagraph">{data.jumboContent.titleParagraph}</p>
+            <h1 className="title">{checked ? title_en : title_pl}</h1>
+            <p className="titleParagraph">
+              {checked ? titleParagraph_en : titleParagraph_pl}
+            </p>
             <ScrollIntoView selector="#start">
               <Button className="button" variant="primary">
-                {data.jumboContent.button}
+                {checked ? button_en : button_pl}
               </Button>
             </ScrollIntoView>
           </div>

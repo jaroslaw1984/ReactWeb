@@ -37,8 +37,8 @@ const Li = styled.li`
     background-size: cover;
   }
   .imgNone {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     align-self: center;
     background: url(${defaultImg}) no-repeat;
@@ -46,6 +46,7 @@ const Li = styled.li`
   }
   .buttonWidth {
     width: 180px;
+    margin-bottom: 25px;
   }
 `;
 
@@ -71,17 +72,31 @@ const P = styled.p`
   font-weight: 400;
 `;
 
-const Item = ({ name, image, email, description_en, facebookLink }) => {
-  const defaultDescription =
-    "This description is default because you didn't type any";
-  const button_en = "Go to Facebook";
+const Item = ({
+  name,
+  image,
+  email,
+  description_en,
+  description_pl,
+  facebookLink,
+  checked
+}) => {
+  const defaultDescription_en =
+    "This description is default because the field message was empty";
+  const defaultDescription_pl =
+    "Ten opis jest domyślny, ponieważ pole wiadomości było puste";
+  const button = "Facebook";
   const ImgTag = image ? "img" : "div";
   return (
     <Li>
       <ImgTag src={image} className={image ? "imgStyle" : "imgNone"} />
       <H2>{name}</H2>
       <H6>{email}</H6>
-      <P>{description_en || defaultDescription}</P>
+      <P>
+        {checked
+          ? description_en || defaultDescription_en
+          : description_pl || defaultDescription_pl}
+      </P>
       <Button
         className="buttonWidth"
         href={facebookLink}
@@ -89,7 +104,7 @@ const Item = ({ name, image, email, description_en, facebookLink }) => {
         rel="noopener noreferrer"
         variant="outline-primary"
       >
-        {button_en}
+        {button}
       </Button>
     </Li>
   );

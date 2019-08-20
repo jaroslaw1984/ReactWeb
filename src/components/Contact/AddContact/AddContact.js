@@ -27,7 +27,7 @@ class AddContact extends Component {
     username_faild_pl:
       "Imię  podane jest za krótkie. Powinno składać się przynajmniej z 3 znaków",
     email_faild_en: 'Sorry, but you miss "@" at your email',
-    email_faild_pl: "Przepraszam ale brakuje znaku @ w emailu"
+    email_faild_pl: 'Przepraszam ale brakuje znaku "@" w emailu'
   };
 
   render() {
@@ -36,9 +36,18 @@ class AddContact extends Component {
       email,
       errors: { username: usernameValid, email: emailValid }
     } = this.props.value;
-    const { username_faild_en, email_faild_en } = this.alertMessages;
-    const message = "Send me a message";
-    const sendButton = "Send";
+    const {
+      username_faild_en,
+      username_faild_pl,
+      email_faild_en,
+      email_faild_pl
+    } = this.alertMessages;
+    const { checked } = this.props;
+    const message_en = "Send me a message";
+    const message_pl = "Wyślij mi wiadomość";
+    const sendButton_en = "Send";
+    const sendButton_pl = "Wyślij";
+
     return (
       <Style>
         <Form
@@ -46,14 +55,16 @@ class AddContact extends Component {
           onSubmit={this.props.submitItem}
           noValidate
         >
-          <Form.Label className="styleTitle">{message}</Form.Label>
+          <Form.Label className="styleTitle">
+            {checked ? message_en : message_pl}
+          </Form.Label>
           <Form.Group>
             <Form.Control
               type="text"
               name="username"
               value={username}
               onChange={this.props.change}
-              placeholder="Name (requierd)"
+              placeholder={checked ? "Name (requierd)" : "Imię (wymagane)"}
             />
           </Form.Group>
           <ReactCssTransitionGroup
@@ -62,7 +73,9 @@ class AddContact extends Component {
             transitionLeaveTimeout={300}
           >
             {usernameValid && (
-              <Alert variant="danger">{username_faild_en}</Alert>
+              <Alert variant="danger">
+                {checked ? username_faild_en : username_faild_pl}
+              </Alert>
             )}
           </ReactCssTransitionGroup>
           <Form.Group>
@@ -71,7 +84,7 @@ class AddContact extends Component {
               name="email"
               value={email}
               onChange={this.props.change}
-              placeholder="Email (requierd)"
+              placeholder={checked ? "Email (requierd)" : "Email (wymagane)"}
             />
           </Form.Group>
           <ReactCssTransitionGroup
@@ -79,19 +92,30 @@ class AddContact extends Component {
             transitionEnterTimeout={300}
             transitionLeaveTimeout={300}
           >
-            {emailValid && <Alert variant="danger">{email_faild_en}</Alert>}
+            {emailValid && (
+              <Alert variant="danger">
+                {checked ? email_faild_en : email_faild_pl}
+              </Alert>
+            )}
           </ReactCssTransitionGroup>
           <Form.Group>
             <Form.Control type="text" placeholder="Link" />
           </Form.Group>
           <Form.Group>
-            <Form.Control type="text" placeholder="Image from http://" />
+            <Form.Control
+              type="text"
+              placeholder={checked ? "Image from http://" : "Obrazek z http://"}
+            />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Control as="textarea" rows="3" placeholder="Description" />
+            <Form.Control
+              as="textarea"
+              rows="3"
+              placeholder={checked ? "Message" : "Wiadomość"}
+            />
           </Form.Group>
           <Button type="submit" variant="primary">
-            {sendButton}
+            {checked ? sendButton_en : sendButton_pl}
           </Button>
         </Form>
       </Style>

@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Image, Card } from "react-bootstrap";
 import styled from "styled-components";
 import me from "../../images/mini_me.jpg";
+import data from "../../data/data";
 
 const Style = styled.div`
   .imgSize {
@@ -15,20 +16,21 @@ const Style = styled.div`
     flex-wrap: wrap;
   }
 `;
-const About = () => (
-  <Style>
-    <Col id="start" className="center">
-      <Image src={me} className="imgSize" fluid roundedCircle />
-      <Card className="text-center" border="info">
-        <Card.Header>Jarosław Sochacki</Card.Header>
-        <Card.Body>
-          <Card.Text>
-            Hard working person to become Frontend Developer
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </Col>
-  </Style>
-);
+const About = ({ checked }) => {
+  const { description_en, description_pl } = data.aboutContent;
+  return (
+    <Style>
+      <Col id="start" className="center">
+        <Image src={me} className="imgSize" fluid roundedCircle />
+        <Card className="text-center" border="info">
+          <Card.Header>{data.dataContactItems[0].name}</Card.Header>
+          <Card.Body>
+            <Card.Text>{checked ? description_en : description_pl}</Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Style>
+  );
+};
 
 export default About;
