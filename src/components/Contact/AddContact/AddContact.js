@@ -34,6 +34,7 @@ class AddContact extends Component {
     const {
       username,
       email,
+      link,
       errors: { username: usernameValid, email: emailValid }
     } = this.props.value;
     const {
@@ -99,7 +100,17 @@ class AddContact extends Component {
             )}
           </ReactCssTransitionGroup>
           <Form.Group>
-            <Form.Control type="text" placeholder="Link" />
+            <Form.Control
+              type="text"
+              name="link"
+              value={link}
+              onChange={this.props.change}
+              placeholder={
+                checked
+                  ? "Link to Facebook or Twitter"
+                  : "Link do Facebook lub Twitter"
+              }
+            />
           </Form.Group>
           <Form.Group>
             <Form.Control

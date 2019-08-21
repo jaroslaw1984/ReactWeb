@@ -24,9 +24,9 @@ const data = {
       name: "Jarosław Sochacki",
       email: "inz.jaroslawsochacki@gmail.com",
       description_en:
-        "Hello, if you want to talk to me leave a message here and I will answer immediately",
+        "Hello, if you want talk to me leave a message and I will answer immediately",
       description_pl:
-        "Witam, jeśli chcesz ze mną porozmawiać zostaw tu wiadomość, a odpowiem natychmiast",
+        "Witam, jeśli chcesz ze mną porozmawiać zostaw wiadomość, a odpowiem natychmiast",
       link: "https://www.facebook.com/profile.php?id=100001667016208"
     }
   ],

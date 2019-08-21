@@ -48,6 +48,13 @@ const Li = styled.li`
     width: 180px;
     margin-bottom: 25px;
   }
+  .buttonDisable {
+    width: 180px;
+    margin-bottom: 25px;
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
 `;
 
 const H2 = styled.h2`
@@ -85,7 +92,11 @@ const Item = ({
     "This description is default because the field message was empty";
   const defaultDescription_pl =
     "Ten opis jest domyślny, ponieważ pole wiadomości było puste";
-  const button = "Facebook";
+  const buttonLink = () => {
+    if (link.indexOf("https://www.facebook.com/") !== -1) return "Facebook";
+    else if (link.indexOf("https://twitter.com/") !== -1) return "Twitter";
+    else return "Page";
+  };
   const ImgTag = image ? "img" : "div";
   return (
     <Li>
@@ -98,13 +109,14 @@ const Item = ({
           : description_pl || defaultDescription_pl}
       </P>
       <Button
-        className="buttonWidth"
+        className={link.length === 0 ? "buttonDisable" : "buttonWidth"}
         href={link}
         target="_blank"
         rel="noopener noreferrer"
         variant="outline-primary"
+        disabled={link.length === 0 ? "disabled" : null}
       >
-        {button}
+        {buttonLink()}
       </Button>
     </Li>
   );

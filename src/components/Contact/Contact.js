@@ -9,6 +9,7 @@ class Contact extends Component {
     items: [...data.dataContactItems],
     username: "",
     email: "",
+    link: "",
     errors: {
       username: false,
       email: false
@@ -19,7 +20,7 @@ class Contact extends Component {
     const type = e.target.type;
     const value = e.target.value;
     const name = e.target.name;
-    if (type === "text" || type === "email") {
+    if (type === "text" || type === "email" || type === "link") {
       this.setState({
         [name]: value
       });
@@ -55,6 +56,7 @@ class Contact extends Component {
         items: [...prevState.items, addItem],
         username: "",
         email: "",
+        link: "",
         errors: {
           username: false,
           email: false
