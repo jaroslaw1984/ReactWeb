@@ -95,7 +95,7 @@ const Item = ({
   const buttonLink = () => {
     if (link.indexOf("https://www.facebook.com/") !== -1) return "Facebook";
     else if (link.indexOf("https://twitter.com/") !== -1) return "Twitter";
-    else return "Page";
+    else return "Disabled";
   };
   const ImgTag = image ? "img" : "div";
   return (

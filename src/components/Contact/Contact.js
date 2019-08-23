@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Wrapper from "./Wrapper/Wrapper";
 import avatar2 from "../../images/mini_me.jpg";
 import AddContact from "./AddContact/AddContact";
+import ScrollIntoView from "react-scroll-into-view";
 import data from "../../data/data";
 
 class Contact extends Component {
@@ -57,6 +58,7 @@ class Contact extends Component {
         username: "",
         email: "",
         link: "",
+        post: this.state.post + 1,
         errors: {
           username: false,
           email: false
@@ -104,7 +106,9 @@ class Contact extends Component {
   render() {
     return (
       <>
-        <Wrapper items={this.state.items} checked={this.props.checked} />
+        <ScrollIntoView selector={this.state.username}>
+          <Wrapper items={this.state.items} checked={this.props.checked} />
+        </ScrollIntoView>
         <AddContact
           value={this.state}
           change={this.handleChange}
