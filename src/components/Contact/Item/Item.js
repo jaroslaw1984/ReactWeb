@@ -44,16 +44,12 @@ const Li = styled.li`
     background: url(${defaultImg}) no-repeat;
     background-size: cover;
   }
-  .buttonWidth {
+  .buttonActive {
     width: 180px;
     margin-bottom: 25px;
   }
   .buttonDisable {
-    width: 180px;
-    margin-bottom: 25px;
-    border: 1px solid #999999;
-    background-color: #cccccc;
-    color: #666666;
+    display: none;
   }
 `;
 
@@ -95,7 +91,6 @@ const Item = ({
   const buttonLink = () => {
     if (link.indexOf("https://www.facebook.com/") !== -1) return "Facebook";
     else if (link.indexOf("https://twitter.com/") !== -1) return "Twitter";
-    else return "Disabled";
   };
   const ImgTag = image ? "img" : "div";
   return (
@@ -109,12 +104,11 @@ const Item = ({
           : description_pl || defaultDescription_pl}
       </P>
       <Button
-        className={link.length === 0 ? "buttonDisable" : "buttonWidth"}
+        className={link.length === 0 ? "buttonDisable" : "buttonActive"}
         href={link}
         target="_blank"
         rel="noopener noreferrer"
         variant="outline-primary"
-        disabled={link.length === 0 ? "disabled" : null}
       >
         {buttonLink()}
       </Button>

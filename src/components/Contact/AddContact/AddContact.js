@@ -35,6 +35,8 @@ class AddContact extends Component {
       username,
       email,
       link,
+      image,
+      textarea,
       errors: { username: usernameValid, email: emailValid }
     } = this.props.value;
     const {
@@ -115,11 +117,18 @@ class AddContact extends Component {
           <Form.Group>
             <Form.Control
               type="text"
+              name="image"
+              value={image}
+              onChange={this.props.change}
               placeholder={checked ? "Image from http://" : "Obrazek z http://"}
             />
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Control
+              type="text"
+              name="textarea"
+              value={textarea}
+              onChange={this.props.change}
               as="textarea"
               rows="3"
               placeholder={checked ? "Message" : "Wiadomość"}

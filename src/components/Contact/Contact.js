@@ -11,6 +11,8 @@ class Contact extends Component {
     username: "",
     email: "",
     link: "",
+    image: "",
+    textarea: "",
     errors: {
       username: false,
       email: false
@@ -21,7 +23,13 @@ class Contact extends Component {
     const type = e.target.type;
     const value = e.target.value;
     const name = e.target.name;
-    if (type === "text" || type === "email" || type === "link") {
+    if (
+      type === "text" ||
+      type === "email" ||
+      type === "link" ||
+      type === "image" ||
+      type === "textarea"
+    ) {
       this.setState({
         [name]: value
       });
@@ -50,6 +58,7 @@ class Contact extends Component {
       email: e.target[1].value,
       link: e.target[2].value,
       image: e.target[3].value,
+      description_pl: e.target[4].value,
       description_en: e.target[4].value
     };
     if (validation.correct) {
@@ -58,6 +67,8 @@ class Contact extends Component {
         username: "",
         email: "",
         link: "",
+        image: "",
+        textarea: "",
         post: this.state.post + 1,
         errors: {
           username: false,
@@ -79,7 +90,6 @@ class Contact extends Component {
         }
       });
     }
-    e.target.reset();
   };
 
   handleValidation = () => {
