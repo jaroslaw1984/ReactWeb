@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Wrapper from "./Wrapper/Wrapper";
 import avatar2 from "../../images/mini_me.jpg";
 import AddContact from "./AddContact/AddContact";
-import ScrollIntoView from "react-scroll-into-view";
 import data from "../../data/data";
 
 class Contact extends Component {
@@ -16,6 +15,23 @@ class Contact extends Component {
     errors: {
       username: false,
       email: false
+    }
+  };
+
+  handleViewAddContact = () => {
+    const x = 800;
+    if (this.state.items.length === 1) {
+      window.scrollTo({
+        top: x,
+        left: 0,
+        behavior: "smooth"
+      });
+    } else if (this.state.items.length !== 1) {
+      window.scrollTo({
+        bottom: 800,
+        left: 0,
+        behavior: "smooth"
+      });
     }
   };
 
@@ -116,14 +132,17 @@ class Contact extends Component {
   render() {
     return (
       <>
-        <ScrollIntoView selector={this.state.username}>
-          <Wrapper items={this.state.items} checked={this.props.checked} />
-        </ScrollIntoView>
+        <Wrapper
+          id={this.state.username}
+          items={this.state.items}
+          checked={this.props.checked}
+        />
         <AddContact
           value={this.state}
           change={this.handleChange}
           submitItem={this.handleAddItem}
           checked={this.props.checked}
+          click={this.handleViewAddContact}
         />
       </>
     );

@@ -134,7 +134,7 @@ class AddContact extends Component {
               placeholder={checked ? "Message" : "Wiadomość"}
             />
           </Form.Group>
-          <Button type="submit" variant="primary">
+          <Button type="submit" variant="primary" onClick={this.props.click}>
             {checked ? sendButton_en : sendButton_pl}
           </Button>
         </Form>
