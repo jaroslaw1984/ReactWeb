@@ -14,21 +14,18 @@ class Contact extends Component {
     textarea: "",
     errors: {
       username: false,
-      email: false
-    }
+      email: false,
+      link: false
+    },
+    x: 800
   };
 
-  handleViewAddContact = () => {
-    const x = 800;
-    if (this.state.items.length === 1) {
+  handleViewAddedContact = () => {
+    const validation = this.handleValidation();
+    const { x } = this.state;
+    if (validation.correct) {
       window.scrollTo({
         top: x,
-        left: 0,
-        behavior: "smooth"
-      });
-    } else if (this.state.items.length !== 1) {
-      window.scrollTo({
-        bottom: 800,
         left: 0,
         behavior: "smooth"
       });
@@ -85,10 +82,11 @@ class Contact extends Component {
         link: "",
         image: "",
         textarea: "",
-        post: this.state.post + 1,
+        x: this.state.x + 650,
         errors: {
           username: false,
-          email: false
+          email: false,
+          link: false
         }
       }));
       setTimeout(
@@ -102,7 +100,8 @@ class Contact extends Component {
       this.setState({
         errors: {
           username: !validation.username,
-          email: !validation.email
+          email: !validation.email,
+          link: !validation.link
         }
       });
     }
@@ -111,6 +110,7 @@ class Contact extends Component {
   handleValidation = () => {
     let username = false;
     let email = false;
+    let link = false;
     let correct = false;
 
     if (this.state.username.length >= 3) {
@@ -119,12 +119,21 @@ class Contact extends Component {
     if (this.state.email.indexOf("@") !== -1) {
       email = true;
     }
-    if (username && email) {
+    if (
+      this.state.link.length === 0 ||
+      ((this.state.link.length !== 0 &&
+        this.state.link.indexOf("https://www.facebook.com/") !== -1) ||
+        this.state.link.indexOf("https://twitter.com/") !== -1)
+    ) {
+      link = true;
+    }
+    if (username && email && link) {
       correct = true;
     }
     return {
       username,
       email,
+      link,
       correct
     };
   };
@@ -142,7 +151,7 @@ class Contact extends Component {
           change={this.handleChange}
           submitItem={this.handleAddItem}
           checked={this.props.checked}
-          click={this.handleViewAddContact}
+          click={this.handleViewAddedContact}
         />
       </>
     );

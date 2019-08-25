@@ -27,7 +27,11 @@ class AddContact extends Component {
     username_faild_pl:
       "Imię  podane jest za krótkie. Powinno składać się przynajmniej z 3 znaków",
     email_faild_en: 'Sorry, but you miss "@" at your email',
-    email_faild_pl: 'Przepraszam ale brakuje znaku "@" w emailu'
+    email_faild_pl: 'Przepraszam ale brakuje znaku "@" w emailu',
+    link_faild_en:
+      'This is not a facebook or twitter link. Please enter correct path like "https://www.twitter.com/..." or leave this field blank',
+    link_faild_pl:
+      "To nie jest link do Facebooka ani Twittera. Wprowadź poprawną ścieżkę, np. „https: //www.twitter.com / ...” lub pozostaw to pole puste"
   };
 
   render() {
@@ -37,13 +41,15 @@ class AddContact extends Component {
       link,
       image,
       textarea,
-      errors: { username: usernameValid, email: emailValid }
+      errors: { username: usernameValid, email: emailValid, link: linkValid }
     } = this.props.value;
     const {
       username_faild_en,
       username_faild_pl,
       email_faild_en,
-      email_faild_pl
+      email_faild_pl,
+      link_faild_en,
+      link_faild_pl
     } = this.alertMessages;
     const { checked } = this.props;
     const message_en = "Send me a message";
@@ -109,11 +115,22 @@ class AddContact extends Component {
               onChange={this.props.change}
               placeholder={
                 checked
-                  ? "Link to Facebook or Twitter"
-                  : "Link do Facebook lub Twitter"
+                  ? "http:// Facebook or Twitter"
+                  : "http:// Facebook lub Twitter"
               }
             />
           </Form.Group>
+          <ReactCssTransitionGroup
+            transitionName="alert"
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={300}
+          >
+            {linkValid && (
+              <Alert variant="danger">
+                {checked ? link_faild_en : link_faild_pl}
+              </Alert>
+            )}
+          </ReactCssTransitionGroup>
           <Form.Group>
             <Form.Control
               type="text"
