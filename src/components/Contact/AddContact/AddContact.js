@@ -17,7 +17,40 @@ const Style = styled.div`
     color: #0b7bf4;
   }
   .formPadding {
+    position: relative;
     padding-top: 20px;
+  }
+  div.addImg {
+    position: relative;
+    top: -30px;
+    left: 260px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #0b7bf4;
+    border-radius: 50%;
+    background: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  .addImg::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 10px;
+    width: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0b7bf4;
+  }
+  .addImg:hover::before {
+    color: #ffff;
+  }
+  .addImg:hover {
+    background: #0b7bf4;
   }
 `;
 
@@ -51,7 +84,7 @@ class AddContact extends Component {
       link_faild_en,
       link_faild_pl
     } = this.alertMessages;
-    const { checked } = this.props;
+    const { checked, submitItem, change, click, modal } = this.props;
     const message_en = "Send me a message";
     const message_pl = "Wyślij mi wiadomość";
     const sendButton_en = "Send";
@@ -59,11 +92,7 @@ class AddContact extends Component {
 
     return (
       <Style>
-        <Form
-          className="formPadding"
-          onSubmit={this.props.submitItem}
-          noValidate
-        >
+        <Form className="formPadding" onSubmit={submitItem} noValidate>
           <Form.Label className="styleTitle">
             {checked ? message_en : message_pl}
           </Form.Label>
@@ -72,7 +101,7 @@ class AddContact extends Component {
               type="text"
               name="username"
               value={username}
-              onChange={this.props.change}
+              onChange={change}
               placeholder={checked ? "Name (requierd)" : "Imię (wymagane)"}
             />
           </Form.Group>
@@ -92,7 +121,7 @@ class AddContact extends Component {
               type="email"
               name="email"
               value={email}
-              onChange={this.props.change}
+              onChange={change}
               placeholder={checked ? "Email (requierd)" : "Email (wymagane)"}
             />
           </Form.Group>
@@ -112,7 +141,7 @@ class AddContact extends Component {
               type="text"
               name="link"
               value={link}
-              onChange={this.props.change}
+              onChange={change}
               placeholder={
                 checked
                   ? "http:// Facebook or Twitter"
@@ -136,22 +165,27 @@ class AddContact extends Component {
               type="text"
               name="image"
               value={image}
-              onChange={this.props.change}
-              placeholder={checked ? "Image from http://" : "Obrazek z http://"}
+              onChange={change}
+              placeholder={
+                checked
+                  ? "Image from http:// or choose"
+                  : "Obrazek z http:// lub wybierz"
+              }
             />
+            <div className="addImg" onClick={modal}></div>
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Control
               type="text"
               name="textarea"
               value={textarea}
-              onChange={this.props.change}
+              onChange={change}
               as="textarea"
               rows="3"
               placeholder={checked ? "Message" : "Wiadomość"}
             />
           </Form.Group>
-          <Button type="submit" variant="primary" onClick={this.props.click}>
+          <Button type="submit" variant="primary" onClick={click}>
             {checked ? sendButton_en : sendButton_pl}
           </Button>
         </Form>

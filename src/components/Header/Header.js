@@ -20,7 +20,7 @@ const Styles = styled.div`
       transition: 0.5s;
     }
   }
-  .languageChange {
+  .languageButtonChange {
     position: relative;
     width: 40px;
     height: 7px;
@@ -28,7 +28,7 @@ const Styles = styled.div`
     margin: 20px auto;
     border-radius: 100px;
   }
-  .languageChange label {
+  .languageButtonChange label {
     position: absolute;
     top: -6px;
     left: -1px;
@@ -39,18 +39,18 @@ const Styles = styled.div`
     border-radius: 50%;
     transition: all 0.5s ease;
   }
-  .languageChange input[type="checkbox"] {
+  .languageButtonChange input[type="checkbox"] {
     position: absolute;
     left: 0;
     top: -2px;
     width: 50px;
     opacity: 0;
   }
-  .languageChange input[type="checkbox"]:checked + label {
+  .languageButtonChange input[type="checkbox"]:checked + label {
     left: 25px;
     background: #0b7bf4;
   }
-  .languageName {
+  .languageButtonName {
     position: absolute;
     left: -30px;
     top: calc(80% - 32px);
@@ -95,7 +95,7 @@ class Header extends Component {
           expand="sm"
           bg="dark"
           variant="dark"
-          fixed="top"
+          // fixed="top"
         >
           <Navbar.Brand as={Link} to="/">
             {pageTitle}
@@ -107,8 +107,8 @@ class Header extends Component {
           >
             <Nav className="justify-content-end">
               {menu}
-              <div className="languageChange">
-                <div className="languageName">
+              <div className="languageButtonChange">
+                <div className="languageButtonName">
                   <Span className={checked ? null : "spanActive"}>
                     {langPl}
                   </Span>

@@ -3,6 +3,7 @@ import Wrapper from "./Wrapper/Wrapper";
 import avatar2 from "../../images/mini_me.jpg";
 import AddContact from "./AddContact/AddContact";
 import data from "../../data/data";
+import ModalAddImg from "./ModalAddImg/ModalAddImg";
 
 class Contact extends Component {
   state = {
@@ -17,7 +18,8 @@ class Contact extends Component {
       email: false,
       link: false
     },
-    x: 800
+    x: 800,
+    modalOpen: false
   };
 
   handleViewAddedContact = () => {
@@ -138,7 +140,14 @@ class Contact extends Component {
     };
   };
 
+  handleOpenModal = () => {
+    this.setState({
+      modalOpen: !this.state.modalOpen
+    });
+  };
+
   render() {
+    const { modalOpen } = this.state;
     return (
       <>
         <Wrapper
@@ -152,7 +161,9 @@ class Contact extends Component {
           submitItem={this.handleAddItem}
           checked={this.props.checked}
           click={this.handleViewAddedContact}
+          modal={this.handleOpenModal}
         />
+        {modalOpen && <ModalAddImg modal={this.handleOpenModal} />}
       </>
     );
   }
