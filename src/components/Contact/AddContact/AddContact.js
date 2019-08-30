@@ -17,40 +17,7 @@ const Style = styled.div`
     color: #0b7bf4;
   }
   .formPadding {
-    position: relative;
     padding-top: 20px;
-  }
-  div.addImg {
-    position: relative;
-    top: -30px;
-    left: 260px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #0b7bf4;
-    border-radius: 50%;
-    background: none;
-    transition: all 0.5s ease;
-    cursor: pointer;
-  }
-  .addImg::before {
-    content: "+";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 10px;
-    width: 10px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #0b7bf4;
-  }
-  .addImg:hover::before {
-    color: #ffff;
-  }
-  .addImg:hover {
-    background: #0b7bf4;
   }
 `;
 
@@ -168,8 +135,8 @@ class AddContact extends Component {
               onChange={change}
               placeholder={
                 checked
-                  ? "Image from http:// or choose"
-                  : "Obrazek z http:// lub wybierz"
+                  ? "Image from http:// or blank"
+                  : "Obrazek z http:// lub puste"
               }
             />
             <div className="addImg" onClick={modal}></div>

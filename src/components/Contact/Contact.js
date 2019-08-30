@@ -3,7 +3,6 @@ import Wrapper from "./Wrapper/Wrapper";
 import avatar2 from "../../images/mini_me.jpg";
 import AddContact from "./AddContact/AddContact";
 import data from "../../data/data";
-import ModalAddImg from "./ModalAddImg/ModalAddImg";
 
 class Contact extends Component {
   state = {
@@ -147,7 +146,6 @@ class Contact extends Component {
   };
 
   render() {
-    const { modalOpen } = this.state;
     return (
       <>
         <Wrapper
@@ -163,7 +161,6 @@ class Contact extends Component {
           click={this.handleViewAddedContact}
           modal={this.handleOpenModal}
         />
-        {modalOpen && <ModalAddImg modal={this.handleOpenModal} />}
       </>
     );
   }

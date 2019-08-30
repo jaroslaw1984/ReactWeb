@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <Router>
         <Style>
-          <Container>
+          <Container fluid>
             <Row>
               <Col className="removePadding">
                 <Header change={change} checked={checked} />
