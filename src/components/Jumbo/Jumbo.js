@@ -15,6 +15,14 @@ const fadieIn = key => keyframes`
       opacity: 1;
     }
 `;
+const lineIn = () => keyframes`
+    0% {
+      right: 100%;
+    }
+    100% {
+      right: 80%;
+    }
+`;
 
 const Styles = styled.div`
   .jumbo {
@@ -33,13 +41,13 @@ const Styles = styled.div`
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
   }
   .center {
     width: 90%;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     @media (min-width: 768px) {
@@ -47,16 +55,28 @@ const Styles = styled.div`
     }
   }
   .title {
-    font-size: 2rem;
+    font-size: 1.2rem;
     animation: ${fadieIn} 2s ease;
   }
 
   .titleParagraph {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
     animation: ${fadieIn} 2s 1s both;
   }
   .button {
+    position: absolute;
+    bottom: -50%;
+    left: 0;
     animation: ${fadieIn()} 2s 2s both;
+  }
+  .redLine {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    bottom: 108%;
+    background: brown;
+    animation: ${lineIn} 2s 3s both;
   }
 `;
 
@@ -74,10 +94,11 @@ const Jumbo = ({ checked }) => {
       <Jumbotron fluid className="jumbo">
         <div className="overlay">
           <div className="center">
-            <h1 className="title">{checked ? title_en : title_pl}</h1>
-            <p className="titleParagraph">
+            <span className="redLine"></span>
+            <p className="title">{checked ? title_en : title_pl}</p>
+            <h2 className="titleParagraph">
               {checked ? titleParagraph_en : titleParagraph_pl}
-            </p>
+            </h2>
             <ScrollIntoView selector="#start">
               <Button className="button" variant="primary">
                 {checked ? button_en : button_pl}
