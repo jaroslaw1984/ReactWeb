@@ -2,7 +2,11 @@ import avatar from "../images/avatar.jpg";
 import laptop from "../images/laptop.jpg";
 import page1 from "../images/my_page1.jpg";
 import reactbootstrap from "../images/reactbootstrap.svg";
-import code from "../images/code.jpg";
+import js from "../images/js.jpg";
+import styled from "../images/styled.jpg";
+import react from "../images/react.jpg";
+import css from "../images/css.jpg";
+import html from "../images/html.jpg";
 
 const data = {
   menu: [
@@ -60,23 +64,20 @@ const data = {
       h2_en: "Web design in React",
       h2_pl: "Projektowanie stron w React",
       text1_en:
-        "Why did I choose React? Only a few years ago, when creating web applications, it was necessary to prepare numerous separate pages. It was a very simple solution, although from the user's point of view it worked completely natural, because the current page disappeared and a new one appeared. Nowadays, this trend is becoming a thing of the past, because modern applications use the SPA (single-page-application) model. A model in which it does not move between different pages at all, or even reload them.",
+        "Why did I choose React? Only a few years ago, when creating web applications, you had to prepare numerous separate pages. It was a very simple solution, although from the user's point of view it worked completely natural, because the current page disappeared and a new one appeared. Nowadays, this trend is becoming a thing of the past, because modern applications use the SPA (single-page-application) model. A model in which it does not move between different pages at all, or even reload them.",
       text1_pl:
-        "Dlaczego wybrałem React ? Jeszcze kilka lat temu, tworząc aplikacje WWW, trzeba było przygotować liczne, osobne strony. Było to bardzo proste rozwiązanie, choć z punku widzenia użytkownika działało zupełnie naturalne, bo bieżąca strona znikała i pojawiała się nowa. Teraz w dzisiejszych czas ten trend idzie w niepamięć, bo w nowoczesnych aplikacjach wykorzystuje sie model SPA (ang. single-page-application -- aplikacja jednostronowa). Model, w którym w ogóle nie przechodzi się pomiędzy różnymi stronami, ani nawet ich nie przeładowuje.",
+        "Dlaczego wybrałem React ? Jeszcze kilka lat temu, utworzenie aplikacje WWW, trzeba było przygotować liczne, osobne strony. Było to bardzo proste rozwiązanie, choć z punku widzenia użytkownika działało zupełnie naturalne, bo bieżąca strona znikała i pojawiała się nowa. Teraz w dzisiejszych czas ten trend idzie w niepamięć, bo w nowoczesnych aplikacjach wykorzystuje sie model SPA (ang. single-page-application -- aplikacja jednostronowa). Model, w którym w ogóle nie przechodzi się pomiędzy różnymi stronami, ani nawet ich nie przeładowuje.",
       img: laptop,
       codeExample: [
         { code: "<Switch>" },
         {
-          code:
-            '<Route exact path="/" render={props => <Home {...props} checked={checked} />} />'
+          code: '<Route exact path="/" component={Home} />'
         },
         {
-          code:
-            '<Route path="/contact" render={props => <Contact {...props} checked={checked} />} />'
+          code: '<Route path="/contact" component={Contact} />'
         },
         {
-          code:
-            '<Route path="/about" render={props => <About {...props} checked={checked} />} />'
+          code: '<Route path="/about" component={About} />} />'
         },
         { code: "<Route component={ErrorSite} />" },
         { code: "</Switch>" }
@@ -89,15 +90,45 @@ const data = {
     },
     {
       key: 1,
-      h2_en: "Programming Languages",
-      h2_pl: "Języki programowania",
-      text1_en: "This will be second text in language i hope it will work ",
-      text1_pl: "A to będzie drugi tekst mam nadzieję, że zadziała ",
-      img: laptop,
-      codeExample: "",
-      icons: "",
-      text2_en: "",
-      text2_pl: ""
+      h2_en: "Programming languages and tools",
+      h2_pl: "Języki programowania i narzędzia",
+      text1_en:
+        "The goal of the site was to create a portfolio using various functional tools and a powerful programming language such as JavaScript. Use the React library was obvious to me because it does something cool. The user interface is completely defined in JavaScript, so thanks to the rich functionality of this language you can do everything you can inside the template. React helps to create the most complex user interfaces.",
+      text1_pl:
+        "Celem strony było realizacja utworzenia portfolio zastosowaniem różnych funkcjonalnych narzędzi jak i mocnego języka programowania jakim jest JavaScript.  Użcie biblioteki React było dla mnie oczywiste, bo robi coś fajnego. Interfej użytkownika jest w całości zdefiniowany w JavaScript, więc dzięki bogatym funcjonalnalnością tego języka można wewnątrz szablonu robić wszystko co się da. React pomaga ona tworzyć najbardziej skomplikowane interfejsy uzytkownika.",
+      img: "",
+      codeExample: [
+        { code: "const Title = styled.h1`" },
+        { code: "font-size: 1.5em;" },
+        { code: "text-align: center;" },
+        { code: "color: palevioletred;" },
+        { code: "`;" },
+        { code: " " },
+        { code: "const Wrapper = styled.section`" },
+        { code: "padding: 4em" },
+        { code: "background: blue" },
+        { code: "`;" },
+        { code: " " },
+        { code: "render(" },
+        { code: "<Wrapper>" },
+        { code: "<Title>" },
+        { code: "Hello World!" },
+        { code: "</Title>" },
+        { code: "</Wrapper>" },
+        { code: ");" }
+      ],
+      icons: [
+        { id: 0, img: reactbootstrap, alt: "react-bootstrap" },
+        { id: 1, img: js, alt: "javascript" },
+        { id: 2, img: react, alt: "react" },
+        { id: 3, img: styled, alt: "styled component" },
+        { id: 4, img: css, alt: "CSS" },
+        { id: 5, img: html, alt: "HTML" }
+      ],
+      text2_en:
+        "For styling I use tools like css, styled-components and react-bootstrap. Styled-component is a strong tool and useful in creating applications in React because it uses tagged template literals (the latest addition to JavaScript) and the power of CSS, styled-components allows you to write real CSS code to style components. It also removes mapping between components and styles - using components as a low-level styling structure. In contrast, the react-bootstrap component model gives me more control over the form and function of each component.",
+      text2_pl:
+        "Do stylowania używam narzędzi jakim jest css, styled-components oraz react-bootstrap. Styled- component jest silinym narzędziem i przydanym w tworzeniu aplikacji w React dlatego, że wykorzystuje otagowane literały szablonów (najnowszy dodatek do JavaScript) i moc CSS, styled-components pozwala pisać rzeczywisty kod CSS do stylizowania komponentów. Usuwa również mapowanie między komponentami i stylami - użycie komponentów jako niskopoziomowej konstrukcji do stylizacji. Natomiast react-bootstrap model komponentu daje mi większą kontrolę nad formą i funkcją każdego komponentu."
     }
   ],
   projectsContent: [

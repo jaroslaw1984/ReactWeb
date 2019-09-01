@@ -66,7 +66,7 @@ const Styles = styled.div`
   }
   .button {
     position: absolute;
-    bottom: -50%;
+    bottom: -60%;
     left: 0;
     animation: ${fadieIn()} 2s 2s both;
   }

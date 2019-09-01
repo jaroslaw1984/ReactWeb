@@ -3,8 +3,16 @@ import { Image } from "react-bootstrap";
 import styled from "styled-components";
 
 const Div = styled.div`
+  display: grid;
   margin-bottom: 25px;
+  .languageIcons {
+    grid-row-start: 2;
+  }
   .codeFrame {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: left;
+    grid-row-start: 4;
     font-size: 10px;
     width: 100%;
     min-height: 5vh;
@@ -12,7 +20,6 @@ const Div = styled.div`
     background-color: rgb(40, 44, 52);
     color: rgb(255, 255, 255);
     border-radius: 10px;
-    text-align: left;
   }
   .codeFrame p {
     width: 100px;
@@ -30,7 +37,6 @@ const Div = styled.div`
     color: rgb(255, 255, 255);
     display: inline-block;
     width: 3em;
-    margin-left: 1em;
   }
   li {
     counter-increment: li;
@@ -48,9 +54,17 @@ const H2 = styled.h2`
 const P = styled.p`
   margin-top: 16px;
 `;
+
+const Span = styled.span`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  justify-items: center;
+`;
 const Img = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 90px;
+  height: 90px;
 `;
 
 const HomeContent = ({
@@ -68,24 +82,24 @@ const HomeContent = ({
   const items = [...codeExample].map((item, index) => (
     <li key={index}>{item.code}</li>
   ));
-
+  const programingIcons = [...icons].map(icon => (
+    <Img key={icon.id} src={icon.img} alt={icon.alt} title={icon.alt} />
+  ));
   return (
     <Div>
       <H2>{checked ? h2_en : h2_pl}</H2>
       {img === "" ? null : <Image src={img} fluid rounded />}
       <P>{checked ? text1_en : text1_pl}</P>
       {icons === "" ? null : (
-        <span>
-          <Img src={icons} alt="icons" />
-        </span>
+        <Span className="languageIcons">{programingIcons}</Span>
       )}
+      {text2_en === "" ? null : <P>{checked ? text2_en : text2_pl}</P>}
       {codeExample === "" ? null : (
         <div className="codeFrame">
           <p>{checked ? "Example of code:" : "Przykład kodu:"}</p>
           <ol>{items}</ol>
         </div>
       )}
-      {text2_en === "" ? null : <p>{checked ? text2_en : text2_pl}</p>}
     </Div>
   );
 };
