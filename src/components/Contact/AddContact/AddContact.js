@@ -1,17 +1,25 @@
 import React, { Component } from "react";
 import { Button, Form, Alert } from "react-bootstrap";
-import ReactCssTransitionGroup from "react-addons-css-transition-group";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-const Style = styled.div`
-  .alert-enter {
+const fadeIn = () => keyframes`
+  0% {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(-50px);
   }
-  .alert-enter.alert-enter-active {
+  100% {
     opacity: 1;
     transform: translateX(0);
-    transition: 0.3s ease-in-out;
+  }
+
+`;
+
+const Style = styled.div`
+  .alertEnter {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: 0.3s ease;
+    animation: ${fadeIn} 0.5s both;
   }
   .styleTitle {
     color: #0b7bf4;
@@ -72,17 +80,11 @@ class AddContact extends Component {
               placeholder={checked ? "Name (requierd)" : "Imię (wymagane)"}
             />
           </Form.Group>
-          <ReactCssTransitionGroup
-            transitionName="alert"
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={300}
-          >
-            {usernameValid && (
-              <Alert variant="danger">
-                {checked ? username_faild_en : username_faild_pl}
-              </Alert>
-            )}
-          </ReactCssTransitionGroup>
+          {usernameValid && (
+            <Alert variant="danger" className="alertEnter">
+              {checked ? username_faild_en : username_faild_pl}
+            </Alert>
+          )}
           <Form.Group>
             <Form.Control
               type="email"
@@ -92,17 +94,11 @@ class AddContact extends Component {
               placeholder={checked ? "Email (requierd)" : "Email (wymagane)"}
             />
           </Form.Group>
-          <ReactCssTransitionGroup
-            transitionName="alert"
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={300}
-          >
-            {emailValid && (
-              <Alert variant="danger">
-                {checked ? email_faild_en : email_faild_pl}
-              </Alert>
-            )}
-          </ReactCssTransitionGroup>
+          {emailValid && (
+            <Alert variant="danger" className="alertEnter">
+              {checked ? email_faild_en : email_faild_pl}
+            </Alert>
+          )}
           <Form.Group>
             <Form.Control
               type="text"
@@ -116,17 +112,11 @@ class AddContact extends Component {
               }
             />
           </Form.Group>
-          <ReactCssTransitionGroup
-            transitionName="alert"
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={300}
-          >
-            {linkValid && (
-              <Alert variant="danger">
-                {checked ? link_faild_en : link_faild_pl}
-              </Alert>
-            )}
-          </ReactCssTransitionGroup>
+          {linkValid && (
+            <Alert variant="danger" className="alertEnter">
+              {checked ? link_faild_en : link_faild_pl}
+            </Alert>
+          )}
           <Form.Group>
             <Form.Control
               type="text"
