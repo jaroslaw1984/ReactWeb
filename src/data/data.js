@@ -7,6 +7,10 @@ import styled from "../images/styled.jpg";
 import react from "../images/react.jpg";
 import css from "../images/css.jpg";
 import html from "../images/html.jpg";
+import phone from "../images/phone.jpg";
+import git from "../images/git.jpg";
+import sass from "../images/sass.jpg";
+import yarn from "../images/yarn.jpg";
 
 const data = {
   menu: [
@@ -69,6 +73,8 @@ const data = {
         "Dlaczego wybrałem React ? Jeszcze kilka lat temu, utworzenie aplikacje WWW, trzeba było przygotować liczne, osobne strony. Było to bardzo proste rozwiązanie, choć z punku widzenia użytkownika działało zupełnie naturalne, bo bieżąca strona znikała i pojawiała się nowa. Teraz w dzisiejszych czas ten trend idzie w niepamięć, bo w nowoczesnych aplikacjach wykorzystuje sie model SPA (ang. single-page-application -- aplikacja jednostronowa). Model, w którym w ogóle nie przechodzi się pomiędzy różnymi stronami, ani nawet ich nie przeładowuje.",
       img: laptop,
       codeExample: [
+        { code: "render() {" },
+        { code: "return (" },
         { code: "<Switch>" },
         {
           code: '<Route exact path="/" component={Home} />'
@@ -80,7 +86,9 @@ const data = {
           code: '<Route path="/about" component={About} />} />'
         },
         { code: "<Route component={ErrorSite} />" },
-        { code: "</Switch>" }
+        { code: "</Switch>" },
+        { code: " );" },
+        { code: "};" }
       ],
       icons: "",
       text2_en:
@@ -98,6 +106,7 @@ const data = {
         "Celem strony było realizacja utworzenia portfolio zastosowaniem różnych funkcjonalnych narzędzi jak i mocnego języka programowania jakim jest JavaScript.  Użcie biblioteki React było dla mnie oczywiste, bo robi coś fajnego. Interfej użytkownika jest w całości zdefiniowany w JavaScript, więc dzięki bogatym funcjonalnalnością tego języka można wewnątrz szablonu robić wszystko co się da. React pomaga ona tworzyć najbardziej skomplikowane interfejsy uzytkownika.",
       img: "",
       codeExample: [
+        { code: "// Useing styled-components: " },
         { code: "const Title = styled.h1`" },
         { code: "font-size: 1.5em;" },
         { code: "text-align: center;" },
@@ -123,12 +132,29 @@ const data = {
         { id: 2, img: react, alt: "react" },
         { id: 3, img: styled, alt: "styled component" },
         { id: 4, img: css, alt: "CSS" },
-        { id: 5, img: html, alt: "HTML" }
+        { id: 5, img: html, alt: "HTML" },
+        { id: 6, img: git, alt: "Git and Github" },
+        { id: 7, img: sass, alt: "node-sass" },
+        { id: 8, img: yarn, alt: "yarn" }
       ],
       text2_en:
         "For styling I use tools like css, styled-components and react-bootstrap. Styled-component is a strong tool and useful in creating applications in React because it uses tagged template literals (the latest addition to JavaScript) and the power of CSS, styled-components allows you to write real CSS code to style components. It also removes mapping between components and styles - using components as a low-level styling structure. In contrast, the react-bootstrap component model gives me more control over the form and function of each component.",
       text2_pl:
         "Do stylowania używam narzędzi jakim jest css, styled-components oraz react-bootstrap. Styled- component jest silinym narzędziem i przydanym w tworzeniu aplikacji w React dlatego, że wykorzystuje otagowane literały szablonów (najnowszy dodatek do JavaScript) i moc CSS, styled-components pozwala pisać rzeczywisty kod CSS do stylizowania komponentów. Usuwa również mapowanie między komponentami i stylami - użycie komponentów jako niskopoziomowej konstrukcji do stylizacji. Natomiast react-bootstrap model komponentu daje mi większą kontrolę nad formą i funkcją każdego komponentu."
+    },
+    {
+      key: 2,
+      h2_en: "Responsive websites",
+      h2_pl: "Responsywne strony internetowe",
+      text1_en:
+        "When creating websites, I stick to certain rules, such as the mobile first principle. For this I also had to use the tools which is react-bootstrap, which will allow the website to be responsive, where it will fit on most mobile phones as well as desktop devices. Another tool for handling the responsiveness of the site is CSS itself, where, with the help of flex and grid, they allow you to control the displayed graphics and components.",
+      text1_pl:
+        "Przy tworzeniu stron internetowych trzymam się pewnych zasad jak między innymi zasada mobile first. Do tego również przyszło mi wykorzystać narzędzi jakim jest react-bootstrap, które pozwoli aby strona była responsywna, gdzie będzie się układać na większości telefonów komórkowych jak i urządzenia desktopowe. Innym narzędziem do obsługi responsywności strony jest sam CSS, gdzie przy pomocy flex oraz grid, pozowli na kotrolowanie wyświetlających się grafik i komponentów.",
+      img: phone,
+      codeExample: "",
+      icons: "",
+      text2_en: "",
+      text2_pl: ""
     }
   ],
   projectsContent: [

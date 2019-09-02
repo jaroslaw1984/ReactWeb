@@ -139,12 +139,6 @@ class Contact extends Component {
     };
   };
 
-  handleOpenModal = () => {
-    this.setState({
-      modalOpen: !this.state.modalOpen
-    });
-  };
-
   render() {
     return (
       <>
@@ -159,7 +153,6 @@ class Contact extends Component {
           submitItem={this.handleAddItem}
           checked={this.props.checked}
           click={this.handleViewAddedContact}
-          modal={this.handleOpenModal}
         />
       </>
     );

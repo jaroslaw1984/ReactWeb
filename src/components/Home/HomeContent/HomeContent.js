@@ -96,7 +96,7 @@ const HomeContent = ({
       {text2_en === "" ? null : <P>{checked ? text2_en : text2_pl}</P>}
       {codeExample === "" ? null : (
         <div className="codeFrame">
-          <p>{checked ? "Example of code:" : "Przykład kodu:"}</p>
+          <p>{checked ? "Code example:" : "Przykład kodu:"}</p>
           <ol>{items}</ol>
         </div>
       )}
