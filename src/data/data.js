@@ -6,6 +6,7 @@ import js from "../images/js.jpg";
 import styled from "../images/styled.jpg";
 import react from "../images/react.jpg";
 import css from "../images/css.jpg";
+import jsx from "../images/jsx.jpg";
 import html from "../images/html.jpg";
 import phone from "../images/phone.jpg";
 import git from "../images/git.jpg";
@@ -132,7 +133,7 @@ const data = {
         { id: 2, img: react, alt: "react" },
         { id: 3, img: styled, alt: "styled component" },
         { id: 4, img: css, alt: "CSS" },
-        { id: 5, img: html, alt: "HTML" },
+        { id: 5, img: jsx, alt: "JSX" },
         { id: 6, img: git, alt: "Git and Github" },
         { id: 7, img: sass, alt: "node-sass" },
         { id: 8, img: yarn, alt: "yarn" }
@@ -161,12 +162,36 @@ const data = {
     {
       key: 0,
       img: page1,
-      cardTitle: "Omegiufix.pl",
+      cardTitle: "Omegiufix",
       descriptionCard_en:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      descriptionCard_pl: "To będzie opis karty po polsku",
-      urlGitCard: "https://github.com/jaroslaw1984/web",
-      urlLiveCard: "http://omegiumfix.pl"
+        " When deciding on how to build this site I wanted to take advantage of pure JavaScript and Css. This project was made for commercial use.",
+      descriptionCard_pl:
+        "Decydując się na budowę tej strony, chciałem skorzystać z czystego JavaScript i CSS. Ten projekt został stworzony do użytku komercyjnego.",
+      programingTools: [
+        { id: 0, img: js, alt: "javascript" },
+        { id: 1, img: css, alt: "CSS" },
+        { id: 2, img: html, alt: "HTML" },
+        { id: 3, img: sass, alt: "node-sass" }
+      ]
+      // buttonDetails:
+      // {
+      //   id: 0,
+      //   name_en: "GitHub",
+      //   name_pl: "GitHub",
+      //   url: "https://github.com/jaroslaw1984/web"
+      // },
+      // {
+      //   id: 1,
+      //   name_en: "Live",
+      //   name_pl: "Na Żywo",
+      //   url: "http://omegiumfix.pl"
+      // },
+      // {
+      //   id: 0,
+      //   name_en: "Details",
+      //   name_pl: "Szczegóły",
+      //   url: "/dom"
+      // }
     },
     {
       key: 1,
@@ -174,8 +199,26 @@ const data = {
       cardTitle: "Portfolio",
       descriptionCard_en: "Here will be description about my portfolio",
       descriptionCard_pl: "Tu będzie opis mojego portfolio",
-      urlGitCard: "https://github.com/jaroslaw1984/web",
-      urlLiveCard: "http://omegiumfix.pl"
+      programingTools: [
+        { id: 1, img: react, alt: "react" },
+        { id: 2, img: jsx, alt: "JSX" },
+        { id: 3, img: css, alt: "CSS" },
+        { id: 4, img: styled, alt: "styled component" },
+        { id: 5, img: yarn, alt: "yarn" }
+      ]
+      // buttonDetails:
+      // {
+      //   id: 0,
+      //   name_en: "GitHub",
+      //   name_pl: "GitHub",
+      //   url: "https://github.com/jaroslaw1984/web"
+      // },
+      // {
+      //   id: 1,
+      //   name_en: "Live",
+      //   name_pl: "Na Żywo",
+      //   url: "http://omegiumfix.pl"
+      // },
     }
   ],
   aboutContent: {

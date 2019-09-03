@@ -1,55 +1,92 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
 import styled from "styled-components";
 
 const Style = styled.div`
-  .buttonMargin {
-    margin: 20px;
+  -webkit-box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
+  -moz-box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
+  .wrapper {
+    display: grid;
+    grid-template-columns: 100px;
+    justify-content: center;
+  }
+  .iconTools {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  .buttonLink {
+    margin-top: 10px;
+    padding: 6px 8px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .buttonLink:hover {
+    background-color: #007bff;
+    color: #ffff;
   }
   .cardMargin {
     margin-bottom: 30px;
   }
+  .cardBody {
+    margin-top: 20px;
+    padding: 15px;
+  }
+  .cardTitle {
+    font-weight: 700;
+  }
+  span.tools {
+    font-style: italic;
+  }
 `;
-const Div = styled.div`
-  -webkit-box-shadow: 3px 4px 7px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 3px 4px 7px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 3px 4px 7px 2px rgba(0, 0, 0, 0.4);
+const Img = styled.img`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 `;
 const ProjectsContent = ({
   img,
   cardTitle,
   descriptionCard_en,
   descriptionCard_pl,
-  urlGitCard,
-  urlLiveCard,
+  programingTools,
   checked
 }) => {
-  const buttonGitName = "GitHub";
-  const buttonLiveName_en = "Live";
-  const buttonLiveName_pl = "Na żywo";
+  const buttonDetailsName_en = "Details";
+  const buttonDetailsName_pl = "Szczegóły";
+  const detailsPage = (
+    <Link
+      className="buttonLink"
+      to={`/project/${cardTitle}`.toLocaleLowerCase()}
+    >
+      {checked ? buttonDetailsName_en : buttonDetailsName_pl}
+    </Link>
+  );
+
+  const iconTools = [...programingTools].map(icon => (
+    <Img key={icon.id} src={icon.img} alt={icon.alt} title={icon.alt} />
+  ));
   return (
     <Style>
-      <Div>
-        <Card id="start" className="text-center cardMargin">
-          <Card.Img variant="top" src={img} />
-          <Card.Body>
-            <Card.Title>{cardTitle}</Card.Title>
-            <Card.Text>
-              {checked ? descriptionCard_en : descriptionCard_pl}
-            </Card.Text>
-            <Button
-              className="buttonMargin"
-              href={urlGitCard}
-              variant="outline-primary"
-            >
-              {buttonGitName}
-            </Button>
-            <Button href={urlLiveCard} variant="outline-primary">
-              {checked ? buttonLiveName_en : buttonLiveName_pl}
-            </Button>
-          </Card.Body>
-        </Card>
-      </Div>
+      <Card id="start" className=" text-center cardMargin ">
+        <Card.Img className="cardImg" variant="top" src={img} />
+        <Card.Body className="cardBody">
+          <Card.Title className="cardTitle">{cardTitle}</Card.Title>
+          <Card.Text>
+            {checked ? descriptionCard_en : descriptionCard_pl}
+          </Card.Text>
+          <span className="tools">{checked ? "Tools:" : "Narzędzia:"}</span>
+          <div className="iconTools">{iconTools}</div>
+          <div className="wrapper">{detailsPage}</div>
+        </Card.Body>
+      </Card>
     </Style>
   );
 };

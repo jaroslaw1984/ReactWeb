@@ -7,9 +7,10 @@ import Home from "../Home/Home";
 import Contact from "../Contact/Contact";
 import About from "../About/About";
 import Jumbo from "../Jumbo/Jumbo";
-import ErrorSite from "../ErrorSite/ErrorSite";
 import Footer from "../Footer/Footer";
 import Projects from "../Projects/Projects";
+import ProjectDetails from "../Projects/ProjectDetails/ProjectDetails";
+import ErrorSite from "../ErrorSite/ErrorSite";
 
 const Style = styled.div`
   .removePadding {
@@ -18,7 +19,7 @@ const Style = styled.div`
 `;
 class App extends Component {
   state = {
-    changeLanguage: true
+    changeLanguage: false
   };
 
   handelChangeLanguage = e => {
@@ -49,6 +50,12 @@ class App extends Component {
               <Route
                 path="/projects"
                 render={props => <Projects {...props} checked={checked} />}
+              />
+              <Route
+                path="/project/:id"
+                render={props => (
+                  <ProjectDetails {...props} checked={checked} />
+                )}
               />
               <Route
                 path="/contact"
