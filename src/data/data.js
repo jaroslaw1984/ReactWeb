@@ -128,15 +128,40 @@ const data = {
         { code: ");" }
       ],
       icons: [
-        { id: 0, img: reactbootstrap, alt: "react-bootstrap" },
-        { id: 1, img: js, alt: "javascript" },
-        { id: 2, img: react, alt: "react" },
-        { id: 3, img: styled, alt: "styled component" },
-        { id: 4, img: css, alt: "CSS" },
-        { id: 5, img: jsx, alt: "JSX" },
-        { id: 6, img: git, alt: "Git and Github" },
-        { id: 7, img: sass, alt: "node-sass" },
-        { id: 8, img: yarn, alt: "yarn" }
+        {
+          id: 0,
+          img: reactbootstrap,
+          name: "react-bootstrap",
+          url: "https://react-bootstrap.github.io/"
+        },
+        {
+          id: 1,
+          img: js,
+          name: "javascript",
+          url: "https://developer.mozilla.org/pl/docs/Web/JavaScript"
+        },
+        { id: 2, img: react, alt: "react", url: "https://reactjs.org/" },
+        {
+          id: 3,
+          img: styled,
+          name: "styled-component",
+          url: "https://www.styled-components.com/"
+        },
+        {
+          id: 4,
+          img: css,
+          name: "CSS",
+          url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+        },
+        {
+          id: 5,
+          img: jsx,
+          name: "JSX",
+          url: "https://reactjs.org/docs/introducing-jsx.html"
+        },
+        { id: 6, img: git, name: "Github", url: "https://github.com/" },
+        { id: 7, img: sass, name: "Sass", url: "https://sass-lang.com/" },
+        { id: 8, img: yarn, name: "yarn", url: "https://yarnpkg.com/" }
       ],
       text2_en:
         "For styling I use tools like css, styled-components and react-bootstrap. Styled-component is a strong tool and useful in creating applications in React because it uses tagged template literals (the latest addition to JavaScript) and the power of CSS, styled-components allows you to write real CSS code to style components. It also removes mapping between components and styles - using components as a low-level styling structure. In contrast, the react-bootstrap component model gives me more control over the form and function of each component.",
@@ -163,62 +188,123 @@ const data = {
       key: 0,
       img: page1,
       cardTitle: "Omegiufix",
+      id: "omegiumfix",
       descriptionCard_en:
         " When deciding on how to build this site I wanted to take advantage of pure JavaScript and Css. This project was made for commercial use.",
       descriptionCard_pl:
         "Decydując się na budowę tej strony, chciałem skorzystać z czystego JavaScript i CSS. Ten projekt został stworzony do użytku komercyjnego.",
       programingTools: [
-        { id: 0, img: js, alt: "javascript" },
-        { id: 1, img: css, alt: "CSS" },
-        { id: 2, img: html, alt: "HTML" },
-        { id: 3, img: sass, alt: "node-sass" }
+        {
+          id: 0,
+          img: js,
+          name: "javascript",
+          url: "https://developer.mozilla.org/pl/docs/Web/JavaScript"
+        },
+        {
+          id: 1,
+          img: css,
+          name: "CSS",
+          url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+        },
+        {
+          id: 2,
+          img: html,
+          name: "HTML",
+          url: "https://developer.mozilla.org/pl/docs/Glossary/HTML"
+        },
+        { id: 3, img: sass, alt: "Sass", url: "https://sass-lang.com/" }
+      ],
+      detailsContenet: [
+        {
+          id: 0,
+          title_en: "Building some think i dont know im tired OmegiumFix",
+          title_pl: "Budowa czegoś tam nie wiem jescze co",
+          description_en: "This will be a disripction of this page",
+          description_pl: "To będzie opis tej strony ale nie wiem co"
+        },
+        {
+          id: 1,
+          title_en:
+            "About technical and used tools to create a page Omegiumfix",
+          title_pl: "Strona techniczna i jakie narzędzia zostały użyte",
+          description_en: "Description what tools i use to create a website",
+          description_pl: "Opis jakich narzędzi użyłem by stworzyć stronę"
+        }
+      ],
+      buttonDetails: [
+        {
+          id: 0,
+          name_en: "GitHub",
+          name_pl: "GitHub",
+          url: "https://github.com/jaroslaw1984/web"
+        },
+        {
+          id: 1,
+          name_en: "Live",
+          name_pl: "Na Żywo",
+          url: "http://omegiumfix.pl"
+        }
       ]
-      // buttonDetails:
-      // {
-      //   id: 0,
-      //   name_en: "GitHub",
-      //   name_pl: "GitHub",
-      //   url: "https://github.com/jaroslaw1984/web"
-      // },
-      // {
-      //   id: 1,
-      //   name_en: "Live",
-      //   name_pl: "Na Żywo",
-      //   url: "http://omegiumfix.pl"
-      // },
-      // {
-      //   id: 0,
-      //   name_en: "Details",
-      //   name_pl: "Szczegóły",
-      //   url: "/dom"
-      // }
     },
     {
       key: 1,
       img: page1,
       cardTitle: "Portfolio",
+      id: "portfolio",
       descriptionCard_en: "Here will be description about my portfolio",
       descriptionCard_pl: "Tu będzie opis mojego portfolio",
       programingTools: [
-        { id: 1, img: react, alt: "react" },
-        { id: 2, img: jsx, alt: "JSX" },
-        { id: 3, img: css, alt: "CSS" },
-        { id: 4, img: styled, alt: "styled component" },
-        { id: 5, img: yarn, alt: "yarn" }
+        { id: 1, img: react, name: "react", url: "https://reactjs.org/" },
+        {
+          id: 2,
+          img: jsx,
+          name: "JSX",
+          url: "https://reactjs.org/docs/introducing-jsx.html"
+        },
+        {
+          id: 3,
+          img: css,
+          name: "CSS",
+          url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+        },
+        {
+          id: 4,
+          img: styled,
+          name: "styled-component",
+          url: "https://www.styled-components.com/"
+        },
+        { id: 5, img: yarn, name: "yarn", url: "https://yarnpkg.com/" }
+      ],
+      detailsContenet: [
+        {
+          id: 0,
+          title_en: "Building some think i dont know im tired Portfolio",
+          title_pl: "Budowa czegoś tam nie wiem jescze co",
+          description_en: "This will be a disripction of this page",
+          description_pl: "To będzie opis tej strony ale nie wiem co"
+        },
+        {
+          id: 1,
+          title_en: "About technical and used tools to create a page Portfolio",
+          title_pl: "Strona techniczna i jakie narzędzia zostały użyte",
+          description_en: "Description what tools i use to create a website",
+          description_pl: "Opis jakich narzędzi użyłem by stworzyć stronę"
+        }
+      ],
+      buttonDetails: [
+        {
+          id: 0,
+          name_en: "GitHub",
+          name_pl: "GitHub",
+          url: "https://github.com/jaroslaw1984/web"
+        },
+        {
+          id: 1,
+          name_en: "Live",
+          name_pl: "Na Żywo",
+          url: "http://omegiumfix.pl"
+        }
       ]
-      // buttonDetails:
-      // {
-      //   id: 0,
-      //   name_en: "GitHub",
-      //   name_pl: "GitHub",
-      //   url: "https://github.com/jaroslaw1984/web"
-      // },
-      // {
-      //   id: 1,
-      //   name_en: "Live",
-      //   name_pl: "Na Żywo",
-      //   url: "http://omegiumfix.pl"
-      // },
     }
   ],
   aboutContent: {

@@ -8,8 +8,7 @@ const Style = styled.div`
   -moz-box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
   box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
   .wrapper {
-    display: grid;
-    grid-template-columns: 100px;
+    display: flex;
     justify-content: center;
   }
   .iconTools {
@@ -20,7 +19,7 @@ const Style = styled.div`
   .buttonLink {
     margin-top: 10px;
     padding: 6px 8px;
-    font-size: 13px;
+    font-size: 15px;
     text-decoration: none;
     color: #007bff;
     border: 1px solid #007bff;
@@ -53,6 +52,7 @@ const Img = styled.img`
 `;
 const ProjectsContent = ({
   img,
+  id,
   cardTitle,
   descriptionCard_en,
   descriptionCard_pl,
@@ -62,16 +62,15 @@ const ProjectsContent = ({
   const buttonDetailsName_en = "Details";
   const buttonDetailsName_pl = "Szczegóły";
   const detailsPage = (
-    <Link
-      className="buttonLink"
-      to={`/project/${cardTitle}`.toLocaleLowerCase()}
-    >
+    <Link className="buttonLink" to={`/project/${id}`.toLowerCase()}>
       {checked ? buttonDetailsName_en : buttonDetailsName_pl}
     </Link>
   );
 
   const iconTools = [...programingTools].map(icon => (
-    <Img key={icon.id} src={icon.img} alt={icon.alt} title={icon.alt} />
+    <a target="_blank" rel="noopener noreferrer" key={icon.id} href={icon.url}>
+      <Img src={icon.img} alt={icon.name} title={icon.name} />
+    </a>
   ));
   return (
     <Style>

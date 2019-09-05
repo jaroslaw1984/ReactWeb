@@ -83,7 +83,7 @@ const HomeContent = ({
     <li key={index}>{item.code}</li>
   ));
   const programingIcons = [...icons].map(icon => (
-    <Img key={icon.id} src={icon.img} alt={icon.alt} title={icon.alt} />
+    <Img key={icon.id} src={icon.img} alt={icon.name} title={icon.name} />
   ));
   return (
     <Div>
