@@ -1,6 +1,10 @@
 import avatar from "../images/avatar.jpg";
 import laptop from "../images/laptop.jpg";
 import page1 from "../images/my_page1.jpg";
+import m_tablet from "../images/m_tablet.jpg";
+// import v_mobile from "../images/v_mobile.jpg";
+// import v_tablet from "../images/v_tablet.jpg";
+import v_all_devices from "../images/v_all_devices.jpg";
 import reactbootstrap from "../images/reactbootstrap.svg";
 import js from "../images/js.jpg";
 import styled from "../images/styled.jpg";
@@ -27,7 +31,7 @@ const data = {
     // "This is a page where you can find information about me, my programing experience and what is my purpose in coding. Also u can check contact page where the page will automatically respond for your post.",
     titleParagraph_pl:
       "Jestem tylko człowiekiem, który wchodzi w interakcję z kodem",
-    // "To jest strona, na której możesz znaleźć informacje o mnie, moim doświadczeniu programistycznym i jaki jest mój cel w kodowaniu. Możesz także sprawdzić stronę kontaktową, na której strona automatycznie odpowie na Twój post.",
+    // "To jest strona, na której możesz znaleźć informacje o mnie, moim doświadczeniu programistycznym i jaki jest mój cel w kodowaniu. Możesz także sprawdzić stronę kontaktową, na której strona automatycznie odpowiem na Twój post.",
     button_en: "Let's start",
     button_pl: "Zaczynajmy"
   },
@@ -220,7 +224,8 @@ const data = {
           title_en: "Building some think i dont know im tired OmegiumFix",
           title_pl: "Budowa czegoś tam nie wiem jescze co",
           description_en: "This will be a disripction of this page",
-          description_pl: "To będzie opis tej strony ale nie wiem co"
+          description_pl: "To będzie opis tej strony ale nie wiem co",
+          m_img: m_tablet
         },
         {
           id: 1,
@@ -228,7 +233,8 @@ const data = {
             "About technical and used tools to create a page Omegiumfix",
           title_pl: "Strona techniczna i jakie narzędzia zostały użyte",
           description_en: "Description what tools i use to create a website",
-          description_pl: "Opis jakich narzędzi użyłem by stworzyć stronę"
+          description_pl: "Opis jakich narzędzi użyłem by stworzyć stronę",
+          m_img: v_all_devices
         }
       ],
       buttonDetails: [
@@ -280,15 +286,21 @@ const data = {
           id: 0,
           title_en: "Building some think i dont know im tired Portfolio",
           title_pl: "Budowa czegoś tam nie wiem jescze co",
-          description_en: "This will be a disripction of this page",
-          description_pl: "To będzie opis tej strony ale nie wiem co"
+          description_en:
+            "The goal of the site was to create a portfolio using various functional tools and a powerful programming language such as JavaScript. Use the React library was obvious to me because it does something cool. The user interface is completely defined in JavaScript, so thanks to the rich functionality of this language you can do everything you can inside the template. React helps to create the most complex user interfaces.",
+          description_pl:
+            "Celem strony było realizacja utworzenia portfolio zastosowaniem różnych funkcjonalnych narzędzi jak i mocnego języka programowania jakim jest JavaScript.  Użcie biblioteki React było dla mnie oczywiste, bo robi coś fajnego. Interfej użytkownika jest w całości zdefiniowany w JavaScript, więc dzięki bogatym funcjonalnalnością tego języka można wewnątrz szablonu robić wszystko co się da. React pomaga ona tworzyć najbardziej skomplikowane interfejsy uzytkownika.",
+          m_img: m_tablet
         },
         {
           id: 1,
           title_en: "About technical and used tools to create a page Portfolio",
           title_pl: "Strona techniczna i jakie narzędzia zostały użyte",
-          description_en: "Description what tools i use to create a website",
-          description_pl: "Opis jakich narzędzi użyłem by stworzyć stronę"
+          description_en:
+            "For styling I use tools like css, styled-components and react-bootstrap. Styled-component is a strong tool and useful in creating applications in React because it uses tagged template literals (the latest addition to JavaScript) and the power of CSS, styled-components allows you to write real CSS code to style components. It also removes mapping between components and styles - using components as a low-level styling structure. In contrast, the react-bootstrap component model gives me more control over the form and function of each component.",
+          description_pl:
+            "Do stylowania używam narzędzi jakim jest css, styled-components oraz react-bootstrap. Styled- component jest silinym narzędziem i przydanym w tworzeniu aplikacji w React dlatego, że wykorzystuje otagowane literały szablonów (najnowszy dodatek do JavaScript) i moc CSS, styled-components pozwala pisać rzeczywisty kod CSS do stylizowania komponentów. Usuwa również mapowanie między komponentami i stylami - użycie komponentów jako niskopoziomowej konstrukcji do stylizacji. Natomiast react-bootstrap model komponentu daje mi większą kontrolę nad formą i funkcją każdego komponentu.",
+          m_img: m_tablet
         }
       ],
       buttonDetails: [
