@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Image, Button } from "react-bootstrap";
 import data from "../../../data/data";
@@ -54,7 +54,7 @@ const H4 = styled.h4`
 `;
 
 const Article = styled.article`
-  margin: 20px;
+  margin: 20px 20px 30px;
 `;
 
 const Img = styled.img`
@@ -63,55 +63,71 @@ const Img = styled.img`
   border-radius: 50%;
 `;
 
-const ProjectDetails = ({ match, checked }) => {
-  const detail = data.projectsContent.find(({ id }) => id === match.params.id);
-  const iconTools = detail.programingTools.map(icon => (
-    <a target="_blank" rel="noopener noreferrer" key={icon.id} href={icon.url}>
-      <Img src={icon.img} alt={icon.name} title={icon.name} />
-    </a>
-  ));
-  const contents = detail.detailsContenet.map(content => (
-    <div key={content.id} className="wrapperContent">
-      <H4>{checked ? content.title_en : content.title_pl}</H4>
-      <Article>
-        {checked ? content.description_en : content.description_pl}
-      </Article>
-      <Image
-        src={content.m_img}
-        title={match.params.id}
-        alt={match.params.id}
-        className="imgMargin"
-        fluid
-        rounded
-      />
-    </div>
-  ));
-  const buttons = detail.buttonDetails.map(button => (
-    <Button
-      className="button"
-      target="_blank"
-      rel="noopener noreferrer"
-      variant="primary"
-      key={button.id}
-      href={button.url}
-    >
-      {checked ? button.name_en : button.name_pl}
-    </Button>
-  ));
-
-  return (
-    <Style>
-      <div id="start" className="wrapper">
-        {contents}
-        <p>Tools that made project:</p>
-        <div className="iconTools">{iconTools}</div>
-        <Link className="buttonLink" to="/projects">
-          {checked ? "Go back" : "Powrót"}
-        </Link>
-        <div className="button buttonsWrapper">{buttons}</div>
+class ProjectDetails extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+  render() {
+    const { match, checked } = this.props;
+    const detail = data.projectsContent.find(
+      ({ id }) => id === match.params.id
+    );
+    const iconTools = detail.programingTools.map(icon => (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        key={icon.id}
+        href={icon.url}
+      >
+        <Img src={icon.img} alt={icon.name} title={icon.name} />
+      </a>
+    ));
+    const contents = detail.detailsContenet.map(content => (
+      <div key={content.id} className="wrapperContent">
+        <H4>{checked ? content.title_en : content.title_pl}</H4>
+        <Article>
+          {checked ? content.description_en : content.description_pl}
+        </Article>
+        <Image
+          src={content.m_img}
+          title={match.params.id}
+          alt={match.params.id}
+          className="imgMargin"
+          fluid
+          rounded
+        />
       </div>
-    </Style>
-  );
-};
+    ));
+    const buttons = detail.buttonDetails.map(button => (
+      <Button
+        className="button"
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="primary"
+        key={button.id}
+        href={button.url}
+      >
+        {checked ? button.name_en : button.name_pl}
+      </Button>
+    ));
 
+    return (
+      <Style>
+        <div id="start" className="wrapper">
+          {contents}
+          <p>
+            {checked
+              ? "Tools used to make a project:"
+              : "Narzędzia użyte do wykonania projektu:"}
+          </p>
+          <div className="iconTools">{iconTools}</div>
+          <Link className="buttonLink" to="/projects">
+            {checked ? "Go back" : "Powrót"}
+          </Link>
+          <div className="button buttonsWrapper">{buttons}</div>
+        </div>
+      </Style>
+    );
+  }
+}
 export default ProjectDetails;

@@ -61,6 +61,7 @@ const Span = styled.span`
   grid-gap: 10px;
   justify-content: center;
   justify-items: center;
+  margin-bottom: 16px;
 `;
 const Img = styled.img`
   width: 90px;

@@ -81,7 +81,9 @@ const ProjectsContent = ({
           <Card.Text>
             {checked ? descriptionCard_en : descriptionCard_pl}
           </Card.Text>
-          <span className="tools">{checked ? "Tools:" : "Narzędzia:"}</span>
+          <span className="tools">
+            {checked ? "Tools used:" : "Użyte narzędzia:"}
+          </span>
           <div className="iconTools">{iconTools}</div>
           <div className="wrapper">{detailsPage}</div>
         </Card.Body>
