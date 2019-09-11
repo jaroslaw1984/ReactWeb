@@ -10,7 +10,7 @@ const Style = styled.div`
     grid-template-columns: 1fr;
   }
   .imgMargin {
-    margin-bottom: 30px;
+    margin: 10px 0 30px;
   }
   .button {
     width: 90%;

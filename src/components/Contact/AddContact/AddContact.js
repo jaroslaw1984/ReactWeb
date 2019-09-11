@@ -27,6 +27,9 @@ const Style = styled.div`
   .formPadding {
     padding-top: 20px;
   }
+  .requierdColor {
+    border-color: rgba(229, 44, 47, 0.5);
+  }
 `;
 
 class AddContact extends Component {
@@ -34,8 +37,10 @@ class AddContact extends Component {
     username_faild_en: "Typed name is to short. Must have at least 3 signs.",
     username_faild_pl:
       "Imię  podane jest za krótkie. Powinno składać się przynajmniej z 3 znaków",
-    email_faild_en: 'Sorry, but you miss "@" at your email',
-    email_faild_pl: 'Przepraszam ale brakuje znaku "@" w emailu',
+    email_faild_miss_en: 'Sorry, but you miss "@" at your email',
+    email_faild_miss_pl: 'Przepraszam ale brakuje znaku "@" w emailu',
+    email_faild_toShort_en: "Your email is to short",
+    email_faild_toShort_pl: "Twój email jest za krótki",
     link_faild_en:
       'This is not a facebook or twitter link. Please enter correct path like "https://www.twitter.com/..." or leave this field blank',
     link_faild_pl:
@@ -54,8 +59,10 @@ class AddContact extends Component {
     const {
       username_faild_en,
       username_faild_pl,
-      email_faild_en,
-      email_faild_pl,
+      email_faild_miss_en,
+      email_faild_miss_pl,
+      email_faild_toShort_en,
+      email_faild_toShort_pl,
       link_faild_en,
       link_faild_pl
     } = this.alertMessages;
@@ -73,6 +80,7 @@ class AddContact extends Component {
           </Form.Label>
           <Form.Group>
             <Form.Control
+              className={username.length >= 3 ? null : "requierdColor"}
               type="text"
               name="username"
               value={username}
@@ -80,13 +88,19 @@ class AddContact extends Component {
               placeholder={checked ? "Name (requierd)" : "Imię (wymagane)"}
             />
           </Form.Group>
-          {usernameValid && (
-            <Alert variant="danger" className="alertEnter">
-              {checked ? username_faild_en : username_faild_pl}
-            </Alert>
-          )}
+          {usernameValid &&
+            (username.length >= 3 ? null : (
+              <Alert variant="danger" className="alertEnter">
+                {checked ? username_faild_en : username_faild_pl}
+              </Alert>
+            ))}
           <Form.Group>
             <Form.Control
+              className={
+                email.indexOf("@") !== -1 && email.length >= 6
+                  ? null
+                  : "requierdColor"
+              }
               type="email"
               name="email"
               value={email}
@@ -94,11 +108,18 @@ class AddContact extends Component {
               placeholder={checked ? "Email (requierd)" : "Email (wymagane)"}
             />
           </Form.Group>
-          {emailValid && (
-            <Alert variant="danger" className="alertEnter">
-              {checked ? email_faild_en : email_faild_pl}
-            </Alert>
-          )}
+          {(emailValid &&
+            (email.indexOf("@") !== -1 ? null : (
+              <Alert variant="danger" className="alertEnter">
+                {checked ? email_faild_miss_en : email_faild_miss_pl}
+              </Alert>
+            ))) ||
+            (emailValid &&
+              (email.length >= 6 ? null : (
+                <Alert variant="danger" className="alertEnter">
+                  {checked ? email_faild_toShort_en : email_faild_toShort_pl}
+                </Alert>
+              )))}
           <Form.Group>
             <Form.Control
               type="text"

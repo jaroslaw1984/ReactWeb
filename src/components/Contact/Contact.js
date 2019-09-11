@@ -117,7 +117,7 @@ class Contact extends Component {
     if (this.state.username.length >= 3) {
       username = true;
     }
-    if (this.state.email.indexOf("@") !== -1) {
+    if (this.state.email.indexOf("@") !== -1 && this.state.email.length >= 6) {
       email = true;
     }
     if (
