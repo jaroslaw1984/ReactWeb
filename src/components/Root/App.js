@@ -13,8 +13,9 @@ import ProjectDetails from "../Projects/ProjectDetails/ProjectDetails";
 import ErrorSite from "../ErrorSite/ErrorSite";
 
 const Style = styled.div`
-  .removePadding {
+  .resetMarginPadding {
     padding: 0;
+    margin: 0;
   }
 `;
 class App extends Component {
@@ -34,9 +35,9 @@ class App extends Component {
     return (
       <Router>
         <Style>
-          <Container fluid>
-            <Row>
-              <Col className="removePadding">
+          <Container fluid className="resetMarginPadding">
+            <Row className="resetMarginPadding">
+              <Col className="resetMarginPadding">
                 <Header change={change} checked={checked} />
                 <Jumbo checked={checked} />
               </Col>
@@ -68,9 +69,7 @@ class App extends Component {
               <Route component={ErrorSite} />
             </Switch>
           </Container>
-          <Container className="removePadding" fluid>
-            <Footer />
-          </Container>
+          <Footer />
         </Style>
       </Router>
     );

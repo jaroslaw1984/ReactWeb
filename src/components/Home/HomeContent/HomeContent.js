@@ -9,12 +9,9 @@ const Div = styled.div`
     grid-row-start: 2;
   }
   .codeFrame {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: left;
     grid-row-start: 4;
     font-size: 10px;
-    width: 100%;
+    margin: 0 15px;
     min-height: 5vh;
     line-height: 5vh;
     background-color: rgb(40, 44, 52);
@@ -45,14 +42,15 @@ const Div = styled.div`
 `;
 const H2 = styled.h2`
   padding: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-weight: 700;
   text-align: center;
 `;
 const P = styled.p`
-  margin-top: 16px;
+  padding: 0 15px;
+  margin-top: 20px;
 `;
 
 const Span = styled.span`
@@ -61,6 +59,7 @@ const Span = styled.span`
   grid-gap: 10px;
   justify-content: center;
   justify-items: center;
+  padding: 15px 15px;
   margin-bottom: 16px;
 `;
 const Img = styled.img`

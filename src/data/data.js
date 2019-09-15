@@ -305,8 +305,8 @@ const data = {
       detailsContenet: [
         {
           id: 0,
-          title_en: "Building some think i dont know im tired Portfolio",
-          title_pl: "Budowa czegoś tam nie wiem jescze co",
+          title_en: "Portfolio in React",
+          title_pl: "Portfolio w React",
           description_en:
             "The goal of the site was to create a portfolio using various functional tools and a powerful programming language such as JavaScript. Use the React library was obvious to me because it does something cool. The user interface is completely defined in JavaScript, so thanks to the rich functionality of this language you can do everything you can inside the template. React helps to create the most complex user interfaces.",
           description_pl:
@@ -315,9 +315,8 @@ const data = {
         },
         {
           id: 1,
-          title_en: "About technical and used tools to create a page Portfolio",
-          title_pl:
-            "Strona techniczna i jakie narzędzia zostały użyte do utworzenia Portfolio",
+          title_en: "How it is made",
+          title_pl: "Jak to jest zrobione",
           description_en:
             "For styling I use tools like css, styled-components and react-bootstrap. Styled-component is a strong tool and useful in creating applications in React because it uses tagged template literals (the latest addition to JavaScript) and the power of CSS, styled-components allows you to write real CSS code to style components. It also removes mapping between components and styles - using components as a low-level styling structure. In contrast, the react-bootstrap component model gives me more control over the form and function of each component.",
           description_pl:
@@ -341,10 +340,35 @@ const data = {
       ]
     }
   ],
-  aboutContent: {
-    description_en: "Hard working person to become Frontend Developer",
-    description_pl: "Ciężko pracująca osoba, aby zostać programistą Frontend"
-  }
+  aboutContent: [
+    {
+      id: 0,
+      title_en: "Who am I ?",
+      title_pl: "Kim jestem ?",
+      description_en:
+        "Hello, my name is Jarosław Sochacki. I'm from a small town called Włocławek. As a person who start interact with a code my next life challange become to achive JavaScript language and technologies associated like React and beond",
+      description_pl:
+        "Witam, nazywam się Jarosław Sochacki. Jestem z małego miasteczka Włocławek. Jako osoba, która zaczyna interakcję z kodem, moim kolejnym wyzwaniem życiowym jest osiągnięcie języka JavaScript i technologii związanych z React, która stała się „miłością mojego życia”. To dopiero początek ..."
+    },
+    {
+      id: 1,
+      title_en: "Why I'd like to become as programer frontend ?",
+      title_pl: "Dlaczego chcę zostać programistą fronend ?",
+      description_en:
+        "I'm looking an opportunity to be a better programer as now i write UI websites in freetime day by day. Being part of team i could bring new ideas and solved many problems and achieve better knowledge",
+      description_pl:
+        "Szukam okazji, aby zostać lepszym programistą, ponieważ teraz piszę strony z interfejsem użytkownika w wolnym czasie z dnia na dzień. Będąc częścią zespołu mogłem wnieść nowe pomysły i rozwiązać wiele problemów i zdobyć lepszą wiedzę"
+    },
+    {
+      id: 2,
+      title_en: "What I'm good at ?",
+      title_pl: "Moje mocne strony ?",
+      description_en:
+        "Well it is hard to say what I'm good at. As everyone have many skills that make him unique and my are is  that I never give up if I have problem. I'm sitting on till i will solve it. It doesn't matter whether it's life problems or programming, the best solution counts. I love talk to other people a specialty in english. Also I like experience with Linux as an open source, free to use operating system widely used for computer hardware. I got about 5 years experience on this system and i use is as a main operating system for fun and working. The organization of work is also my strength. I set the plan of the day so that I can work, learn and spend time with my family and done something to my self. The last skill is hard work and my also I call it as my weaknes. I like being a smart guy.",
+      description_pl:
+        "Trudno powiedzieć, w czym jestem dobry. Ponieważ każdy ma wiele umiejętności, które czynią go wyjątkowym, a moim jest to, że nigdy się nie poddaję, jeśli mam problem. Siedzę, dopóki go nie rozwiążę. Nie ma znaczenia, czy to problemy życiowe, czy programowanie, liczy się najlepsze rozwiązanie. Uwielbiam rozmawiać z innymi ludźmi po angielsku. Lubię też doświadczenie z Linuksem jako open source, darmowy system operacyjny szeroko stosowany w sprzęcie komputerowym. Mam około 5 lat doświadczenia w tym systemie i używam go jako głównego systemu operacyjnego do zabawy i pracy. Organizacja pracy to także moja siła. Ustalam plan dnia, aby móc pracować, uczyć się i spędzać czas z rodziną i zrobić coś dla siebie. Ostatnią umiejętnością jest ciężka praca, którą nazywam też moją słabością. Lubię być mądrym facetem."
+    }
+  ]
 };
 
 export default data;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const Div = styled.div`
   margin-bottom: 20px;
+  padding: 0 15px;
 `;
 const Ul = styled.ul`
   width: 100%;

@@ -7,6 +7,7 @@ const Style = styled.div`
   -webkit-box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
   -moz-box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
   box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
+  margin: 0 15px;
   .wrapper {
     display: flex;
     justify-content: center;
@@ -31,7 +32,7 @@ const Style = styled.div`
     background-color: #007bff;
     color: #ffff;
   }
-  .cardMargin {
+  .cardSpace {
     margin-bottom: 30px;
   }
   .cardBody {
@@ -74,7 +75,7 @@ const ProjectsContent = ({
   ));
   return (
     <Style>
-      <Card id="start" className=" text-center cardMargin ">
+      <Card id="start" className=" text-center cardSpace ">
         <Card.Img className="cardImg" variant="top" src={img} />
         <Card.Body className="cardBody">
           <Card.Title className="cardTitle">{cardTitle}</Card.Title>
@@ -82,7 +83,7 @@ const ProjectsContent = ({
             {checked ? descriptionCard_en : descriptionCard_pl}
           </Card.Text>
           <span className="tools">
-            {checked ? "Tools used:" : "Użyte narzędzia:"}
+            {checked ? "Technologies used:" : "Użyte technologie:"}
           </span>
           <div className="iconTools">{iconTools}</div>
           <div className="wrapper">{detailsPage}</div>

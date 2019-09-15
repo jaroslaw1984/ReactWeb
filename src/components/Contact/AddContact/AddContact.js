@@ -25,7 +25,7 @@ const Style = styled.div`
     color: #0b7bf4;
   }
   .formPadding {
-    padding-top: 20px;
+    padding: 20px 15px;
   }
   .requierdColor {
     border-color: rgba(229, 44, 47, 0.5);
@@ -71,6 +71,16 @@ class AddContact extends Component {
     const message_pl = "Wyślij mi wiadomość";
     const sendButton_en = "Send";
     const sendButton_pl = "Wyślij";
+    function showAlertMessage(typeValid, valid, en_message, pl_message) {
+      return (
+        typeValid &&
+        (valid ? null : (
+          <Alert variant="danger" className="alertEnter">
+            {checked ? en_message : pl_message}
+          </Alert>
+        ))
+      );
+    }
 
     return (
       <Style>
@@ -108,18 +118,18 @@ class AddContact extends Component {
               placeholder={checked ? "Email (requierd)" : "Email (wymagane)"}
             />
           </Form.Group>
-          {(emailValid &&
-            (email.indexOf("@") !== -1 ? null : (
-              <Alert variant="danger" className="alertEnter">
-                {checked ? email_faild_miss_en : email_faild_miss_pl}
-              </Alert>
-            ))) ||
-            (emailValid &&
-              (email.length >= 6 ? null : (
-                <Alert variant="danger" className="alertEnter">
-                  {checked ? email_faild_toShort_en : email_faild_toShort_pl}
-                </Alert>
-              )))}
+          {showAlertMessage(
+            emailValid,
+            email.indexOf("@") !== -1,
+            email_faild_miss_en,
+            email_faild_miss_pl
+          ) ||
+            showAlertMessage(
+              emailValid,
+              email.length >= 6,
+              email_faild_toShort_en,
+              email_faild_toShort_pl
+            )}
           <Form.Group>
             <Form.Control
               type="text"
@@ -133,11 +143,14 @@ class AddContact extends Component {
               }
             />
           </Form.Group>
-          {linkValid && (
-            <Alert variant="danger" className="alertEnter">
-              {checked ? link_faild_en : link_faild_pl}
-            </Alert>
-          )}
+          {linkValid &&
+            (link === "" ||
+            link.indexOf("https://www.facebook.com/") !== -1 ||
+            link.indexOf("https://twitter.com/") !== -1 ? null : (
+              <Alert variant="danger" className="alertEnter">
+                {checked ? link_faild_en : link_faild_pl}
+              </Alert>
+            ))}
           <Form.Group>
             <Form.Control
               type="text"
