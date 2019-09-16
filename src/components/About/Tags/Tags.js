@@ -10,17 +10,17 @@ class Tags extends Component {
       <section className="wrapper_tag" onClick={this.handleClick}>
         <div
           className={
-            this.props.isActive
-              ? "title_wrapper title_isActive"
-              : "title_wrapper"
+            this.props.isActive ? "title_wrapper tag_isActive" : "title_wrapper"
           }
         >
           <h3 className="tag_title">
             {this.props.checked ? this.props.title_en : this.props.title_pl}
           </h3>
-          <div className="icon_active">{this.props.isActive ? "-" : "+"}</div>
+          <div className="icon_active_tag">
+            {this.props.isActive ? "-" : "+"}
+          </div>
         </div>
-        <article className={this.props.isActive ? "open" : "close"}>
+        <article className={this.props.isActive ? "open_tag" : "close_tag"}>
           <p>
             {this.props.checked
               ? this.props.description_en

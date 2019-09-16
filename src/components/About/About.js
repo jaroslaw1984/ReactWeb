@@ -16,39 +16,41 @@ const fadieIn = () => keyframes`
 
 const Style = styled.div`
   .about_header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    overflow: hidden;
-    background-color: #3d4a5b;
-    margin-bottom: 30px;
+    height: 170px;
+    background-color: #001628;
   }
   .img_wrapper {
-    align-self: flex-start;
-    position: relative;
-    background-color: #b36117;
+    display: flex;
+    height: 80%;
+    margin-right: 15px;
+    justify-content: center;
+    border-bottom-right-radius: 20px;
+    border-bottom: 2px solid #ed9265;
   }
   .img_size {
-    /* padding: 5px; */
+    width: 120px;
+    height: 120px;
+  }
+  .tags_header_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-left: 15px;
-    width: 180px;
-    height: 180px;
-  }
-  .animation_wrapper {
-    width: 100%;
-    z-index: 3;
-  }
-  .square {
-    width: 100%;
-    background-color: #b36117;
-    display: block;
-    z-index: 0;
+    color: #72e0d1;
+    border-bottom-left-radius: 20px;
+    border-left: 2px solid #ed9265;
   }
   .wrapper_tag {
     display: grid;
     grid-template-columns: 1fr;
     transition: all 0.2s;
-    /* padding: 0 15px; */
+    margin-top: 20px;
+    cursor: pointer;
   }
   .title_wrapper {
     display: grid;
@@ -56,20 +58,20 @@ const Style = styled.div`
     margin-top: 5px;
     transition: all 0.5s;
   }
-  .title_isActive {
-    width: 100%;
-    margin: 0;
-    border-radius: 2px;
-    background-color: #4b5e99;
-    color: #ffff;
-    transition: all 1s;
-  }
   .tag_title {
     padding: 15px;
     font-size: 1.2rem;
     font-weight: 900;
   }
-  .icon_active {
+  .tag_isActive {
+    width: 100%;
+    margin: 0;
+    border-radius: 2px;
+    background-color: #35658c;
+    color: #ffff;
+    transition: all 1s;
+  }
+  .icon_active_tag {
     display: flex;
     align-self: center;
     color: #ed9265;
@@ -77,11 +79,11 @@ const Style = styled.div`
     font-size: 1.5rem;
     transition: 0.3s ease-in;
   }
-  .close {
+  .close_tag {
     display: none;
     transition: all 1s;
   }
-  .open {
+  .open_tag {
     display: block;
     animation: ${fadieIn} 1s;
   }
@@ -90,6 +92,19 @@ const Style = styled.div`
   }
   article > p {
     margin: 10px 0;
+  }
+  .line {
+    width: 50%;
+    height: 2px;
+    margin: 40px auto;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(255, 255, 255, 1) 100%
+    );
   }
 `;
 class About extends Component {
@@ -128,16 +143,19 @@ class About extends Component {
       <Style>
         <div id="start">
           <div className="about_header">
-            <div className="animation_wrapper">Anicmacja</div>
-            <div className="square">
-              <div className="img_wrapper">
-                <Image className="img_size" src={me} />
-              </div>
+            <div className="tags_header_wrapper">
+              <p>{checked ? "Competent." : "Kompetentny."}</p>{" "}
+              <p>{checked ? "Adaptive." : "Adaptacyjny."}</p>{" "}
+              <p>{checked ? "Result..." : "Rezultat..."}</p>
+            </div>
+            <div className="img_wrapper">
+              <Image roundedCircle className="img_size" src={me} />
             </div>
           </div>
           {questionsTags}
           <div className="description">
             <section>
+              <div className="line"></div>
               <h3>Doświadczenie</h3>
             </section>
           </div>

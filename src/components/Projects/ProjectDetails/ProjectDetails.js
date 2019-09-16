@@ -8,6 +8,7 @@ const Style = styled.div`
   .wrapper {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 0 15px;
   }
   .imgMargin {
     margin: 10px 0 30px;

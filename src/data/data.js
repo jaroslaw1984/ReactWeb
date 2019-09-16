@@ -353,7 +353,7 @@ const data = {
     {
       id: 1,
       title_en: "Why I'd like to become as programer frontend ?",
-      title_pl: "Dlaczego chcę zostać programistą fronend ?",
+      title_pl: "Dlaczego chcę zostać programistą frontend ?",
       description_en:
         "I'm looking an opportunity to be a better programer as now i write UI websites in freetime day by day. Being part of team i could bring new ideas and solved many problems and achieve better knowledge",
       description_pl:
