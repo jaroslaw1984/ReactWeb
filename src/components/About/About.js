@@ -4,6 +4,7 @@ import styled, { keyframes } from "styled-components";
 import me from "../../images/mini_me.jpg";
 import data from "../../data/data";
 import Tags from "./Tags/Tags";
+import color from "../../Colors/Colors";
 
 const fadieIn = () => keyframes`
     from {
@@ -11,6 +12,26 @@ const fadieIn = () => keyframes`
     }
     to {
       transform: translateY(0)
+    }
+`;
+const shadow = () => keyframes`
+    5% {
+      box-shadow: 0 0px 5px 12px rgba(0, 252, 254, 0.5), 0 0px 5px 8px rgba(114, 224, 209, 0.5);
+    }
+    15% {
+      box-shadow: 0 0px 15px 12px rgba(0, 252, 254, 0.5), 0 0px 5px 8px rgba(114, 224, 209, 0.5);
+    }
+    30% {
+      box-shadow: 0 0px 10px 6px rgba(0, 252, 254, 0.2), 0 0px 5px 8px rgba(114, 224, 209, 0.5);
+    }
+    60% {
+      box-shadow: 0 0px 15px 12px rgba(0, 252, 254,  0.5), 0 0px 5px 8px rgba(114, 224, 209, 0.3);
+    }
+    80% {
+      box-shadow: 0 0px 5px 3px rgba(114, 224, 209, 0.2), 0 0px 5px 5px rgba(255,255,255, 0.1);
+    }
+    100% {
+      box-shadow: 0 0px 2px 2px rgba(114, 224, 209, 0.2), 0 0px 5px 5px rgba(255,255,255, 0.1);
     }
 `;
 
@@ -22,7 +43,7 @@ const Style = styled.div`
     align-items: center;
     width: 100%;
     height: 170px;
-    background-color: #001628;
+    background-color: ${color.navyBlue};
   }
   .img_wrapper {
     display: flex;
@@ -30,20 +51,21 @@ const Style = styled.div`
     margin-right: 15px;
     justify-content: center;
     border-bottom-right-radius: 20px;
-    border-bottom: 2px solid #ed9265;
+    border-bottom: 2px solid ${color.orange};
   }
   .img_size {
     width: 120px;
     height: 120px;
+    animation: ${shadow} 4s infinite ease;
   }
   .tags_header_wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 15px;
-    color: #72e0d1;
+    color: ${color.blueGreenText};
     border-bottom-left-radius: 20px;
-    border-left: 2px solid #ed9265;
+    border-left: 2px solid ${color.orange};
   }
   .wrapper_tag {
     display: grid;
@@ -67,14 +89,15 @@ const Style = styled.div`
     width: 100%;
     margin: 0;
     border-radius: 2px;
-    background-color: #35658c;
-    color: #ffff;
+    background-color: ${color.blue};
+    color: ${color.white};
     transition: all 1s;
+    text-shadow: ${color.textShadowDark};
   }
   .icon_active_tag {
     display: flex;
     align-self: center;
-    color: #ed9265;
+    color: ${color.orange};
     font-weight: 900;
     font-size: 1.5rem;
     transition: 0.3s ease-in;
@@ -91,20 +114,37 @@ const Style = styled.div`
     padding: 10px 15px;
   }
   article > p {
-    margin: 10px 0;
+    padding: 10px 0 0 10px;
   }
   .line {
     width: 50%;
     height: 2px;
     margin: 40px auto;
     text-align: center;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(0, 0, 0, 1) 50%,
-      rgba(255, 255, 255, 1) 100%
-    );
+    background: ${color.white};
+    background: ${color.lineColor};
+  }
+  .title_experience_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    background-color: ${color.navyBlue};
+  }
+  .title_experience_wrapper > div {
+    width: 100%;
+    margin-right: 10px;
+    border-bottom-right-radius: 20px;
+    border-bottom: 2px solid ${color.orange};
+  }
+  .title_experience {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: ${color.blueGreenText};
+    text-shadow: ${color.textShadowWhite};
   }
 `;
 class About extends Component {
@@ -153,12 +193,16 @@ class About extends Component {
             </div>
           </div>
           {questionsTags}
-          <div className="description">
-            <section>
-              <div className="line"></div>
-              <h3>Doświadczenie</h3>
-            </section>
-          </div>
+          <section>
+            <div className="line"></div>
+            <div className="title_experience_wrapper">
+              <div>
+                <h3 className="title_experience">
+                  {checked ? "Experience" : "Doświadczenie"}
+                </h3>
+              </div>
+            </div>
+          </section>
         </div>
       </Style>
     );

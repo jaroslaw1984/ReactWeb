@@ -346,9 +346,9 @@ const data = {
       title_en: "Who am I ?",
       title_pl: "Kim jestem ?",
       description_en:
-        "Hello, my name is Jarosław Sochacki. I'm from a small town called Włocławek. As a person who start interact with a code my next life challange become to achive JavaScript language and technologies associated like React and beond",
+        'Hello, my name is Jarosław Sochacki. I am from a small town of Włocławek. At younger age I was interested in computers, which started my interest. After graduating from high school, I continued my studies at the Vocational College, where I received the title of "IT technician". I felt I could achieve even more. The next step was the graduation of the University of Information Technology in Lodz. I knew that my future was related to computer science, but I did not know which path to follow until I tasted the programming language. As a person who begins to interact with the code, my next life challenge is to master JavaScript with React.',
       description_pl:
-        "Witam, nazywam się Jarosław Sochacki. Jestem z małego miasteczka Włocławek. Jako osoba, która zaczyna interakcję z kodem, moim kolejnym wyzwaniem życiowym jest osiągnięcie języka JavaScript i technologii związanych z React, która stała się „miłością mojego życia”. To dopiero początek ..."
+        'Witam, nazywam się Jarosław Sochacki. Jestem z małego miasteczka Włocławek. Od młodości interesowałem się komputerami co zapoczątkowało moje zainteresowania. Po ukończeniu liceum, kontynułowałem naukę w Studium Zawodowe, gdzie otrzymałem tytuł Technik informatyk". Czułem, że mogę osiągnąć jeszcze więcej. Następnym krokiem było ukończenie Wyższej Szkoły  Informatyki w Łodzi. Wiedziałem, że moją przyszłość wiąże z tą dziedziną, lecz nie wiedziałem jaką drogą podążać, aż do chwili kiedy posmakowałem języka programowania. Jako osoba, która zaczyna interakcję z kodem, moim kolejnym wyzwaniem życiowym jest opanowanie języka JavaScript wraz z React.'
     },
     {
       id: 1,
