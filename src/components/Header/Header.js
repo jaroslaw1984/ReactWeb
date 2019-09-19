@@ -3,28 +3,90 @@ import { Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import data from "../../data/data";
 import styled from "styled-components";
+import color from "../../Colors/Colors";
 
 const Styles = styled.div`
   .menuText {
     font-size: 20px;
+    color: ${color.blueGreenText} !important;
+    padding-left: 10px;
+  }
+  .nav-link {
+    color: ${color.white};
+  }
+  .navbar {
+    background-color: ${color.navyBlue};
+  }
+  .navbar-light,
+  .navbar-toggler {
+    color: ${color.orange};
+    border: none;
+  }
+  .navbar-brand {
+    font-weight: 700;
+    color: ${color.white};
   }
   .active {
-    padding-left: 10px;
-    border-left: 5px solid #c82333;
+    font-weight: 700;
+    padding-left: 20px;
+    border-left: 1px solid ${color.orange};
+    border-bottom-left-radius: 20px;
+    transition: all 0.5s ease;
     @media (min-width: 576px) {
       display: block;
       height: 45px;
       border-bottom: 2px solid #c82333;
       border-left: none;
-      color: #c82333;
+      color: ${color.orange};
       transition: 0.5s;
     }
+  }
+  .hamb_wrapper {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+  }
+  .hamb_inner {
+    width: 100%;
+    height: 2px;
+    background-color: ${color.orange};
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s 0.1s ease-in-out;
+    &::after,
+    &::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: ${color.orange};
+      position: absolute;
+      left: 0;
+      transition: transform 0.3s 0.2s ease-in-out;
+    }
+  }
+  .hamb_inner::after {
+    top: -10px;
+  }
+  .hamb_inner::before {
+    top: 10px;
+  }
+  button.navbar-toggler.collapsed .hamb_inner {
+    background-color: transparent;
+  }
+  button.navbar-toggler.collapsed .hamb_inner::after {
+    transform: translateY(10px) rotate(45deg);
+  }
+  button.navbar-toggler.collapsed .hamb_inner::before {
+    transform: translateY(-10px) rotate(-45deg);
   }
   .languageButtonChange {
     position: relative;
     width: 40px;
     height: 7px;
-    background: rgb(192, 188, 188);
+    background: ${color.white};
     margin: 20px auto;
     border-radius: 100px;
   }
@@ -35,7 +97,7 @@ const Styles = styled.div`
     display: block;
     width: 20px;
     height: 20px;
-    background: brown;
+    background: ${color.pink};
     border-radius: 50%;
     transition: all 0.5s ease;
   }
@@ -48,7 +110,6 @@ const Styles = styled.div`
   }
   .languageButtonChange input[type="checkbox"]:checked + label {
     left: 25px;
-    background: #0b7bf4;
   }
   .languageButtonName {
     position: absolute;
@@ -93,14 +154,18 @@ class Header extends Component {
         <Navbar
           collapseOnSelect
           expand="sm"
-          bg="dark"
-          variant="dark"
+          // bg="dark"
+          // variant="dark"
           // fixed="top"
         >
           <Navbar.Brand as={Link} to="/">
             {pageTitle}
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav">
+            <span className="hamb_wrapper">
+              <span className="hamb_inner"></span>
+            </span>
+          </Navbar.Toggle>
           <Navbar.Collapse
             className="justify-content-end"
             id="responsive-navbar-nav"

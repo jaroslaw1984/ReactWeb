@@ -368,6 +368,42 @@ const data = {
       description_pl:
         "Trudno powiedzieć, w czym jestem dobry. Ponieważ każdy ma wiele umiejętności, które czynią go wyjątkowym, a moim jest to, że nigdy się nie poddaję, jeśli mam problem. Siedzę, dopóki go nie rozwiążę. Nie ma znaczenia, czy to problemy życiowe, czy programowanie, liczy się najlepsze rozwiązanie. Uwielbiam rozmawiać z innymi ludźmi po angielsku. Lubię też doświadczenie z Linuksem jako open source, darmowy system operacyjny szeroko stosowany w sprzęcie komputerowym. Mam około 5 lat doświadczenia w tym systemie i używam go jako głównego systemu operacyjnego do zabawy i pracy. Organizacja pracy to także moja siła. Ustalam plan dnia, aby móc pracować, uczyć się i spędzać czas z rodziną i zrobić coś dla siebie. Ostatnią umiejętnością jest ciężka praca, którą nazywam też moją słabością. Lubię być mądrym facetem."
     }
+  ],
+  icons: [
+    {
+      id: 0,
+      img: reactbootstrap,
+      name: "react-bootstrap",
+      url: "https://react-bootstrap.github.io/"
+    },
+    {
+      id: 1,
+      img: js,
+      name: "javascript",
+      url: "https://developer.mozilla.org/pl/docs/Web/JavaScript"
+    },
+    { id: 2, img: react, alt: "react", url: "https://reactjs.org/" },
+    {
+      id: 3,
+      img: styled,
+      name: "styled-component",
+      url: "https://www.styled-components.com/"
+    },
+    {
+      id: 4,
+      img: css,
+      name: "CSS",
+      url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+      id: 5,
+      img: jsx,
+      name: "JSX",
+      url: "https://reactjs.org/docs/introducing-jsx.html"
+    },
+    { id: 6, img: git, name: "Github", url: "https://github.com/" },
+    { id: 7, img: sass, name: "Sass", url: "https://sass-lang.com/" },
+    { id: 8, img: yarn, name: "yarn", url: "https://yarnpkg.com/" }
   ]
 };
 

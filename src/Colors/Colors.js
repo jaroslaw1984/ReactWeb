@@ -2,6 +2,7 @@ const Colors = {
   white: "rgb(255, 255, 255)",
   navyBlue: "#001628",
   orange: "#ed9265",
+  pink: "#E8A09E",
   // blueGreenText: "#72e0d1", //diffrent blue green color
   blueGreenText: "#00fcfe",
   blue: "#35658c",

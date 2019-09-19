@@ -147,6 +147,20 @@ const Style = styled.div`
     text-shadow: ${color.textShadowWhite};
   }
 `;
+const Img = styled.img`
+  width: 90px;
+  height: 90px;
+`;
+const Span = styled.span`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  justify-items: center;
+  padding: 15px 15px;
+  margin: 16px 0;
+`;
+
 class About extends Component {
   state = {
     activeIndex: false
@@ -164,6 +178,16 @@ class About extends Component {
   };
 
   render() {
+    const programingIcons = data.icons.map(icon => (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        key={icon.id}
+        href={icon.url}
+      >
+        <Img key={icon.id} src={icon.img} alt={icon.name} title={icon.name} />
+      </a>
+    ));
     const { checked } = this.props;
     const questionsTags = data.aboutContent.map((tag, index) => (
       <Tags
@@ -198,10 +222,11 @@ class About extends Component {
             <div className="title_experience_wrapper">
               <div>
                 <h3 className="title_experience">
-                  {checked ? "Experience" : "Doświadczenie"}
+                  {checked ? "Skills" : "Umiejętności"}
                 </h3>
               </div>
             </div>
+            <Span className="languageIcons">{programingIcons}</Span>
           </section>
         </div>
       </Style>
