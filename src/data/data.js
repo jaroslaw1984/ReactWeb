@@ -2,7 +2,7 @@ import avatar from "../images/avatar.jpg";
 import laptop from "../images/laptop.jpg";
 import page1 from "../images/my_page1.jpg";
 import m_tablet from "../images/m_tablet.jpg";
-// import v_mobile from "../images/v_mobile.jpg";
+import v_mobile from "../images/v_mobile.jpg";
 // import v_tablet from "../images/v_tablet.jpg";
 import v_all_devices from "../images/v_all_devices.jpg";
 import reactbootstrap from "../images/reactbootstrap.svg";
@@ -12,28 +12,26 @@ import react from "../images/react.jpg";
 import css from "../images/css.jpg";
 import jsx from "../images/jsx.jpg";
 import html from "../images/html.jpg";
-import phone from "../images/phone.jpg";
+// import phone from "../images/phone.jpg";
 import git from "../images/git.jpg";
 import sass from "../images/sass.jpg";
 import yarn from "../images/yarn.jpg";
+// import progr_1 from "../images/progr_1.jpg";
 
 const data = {
   menu: [
     { id: 1, name_en: "Home", name_pl: "Start", path: "/", exact: true },
     { id: 2, name_en: "Projects", name_pl: "Projekty", path: "/projects" },
-    { id: 3, name_en: "Contact", name_pl: "Kontakt", path: "/contact" },
+    { id: 3, name_en: "czat", name_pl: "Rozmowa", path: "/czat" },
     { id: 4, name_en: "About", name_pl: "O mnie", path: "/about" }
   ],
   jumboContent: {
     title_en: "Welcome to my portfolio",
-    title_pl: "Witam w moim portfolio",
-    titleParagraph_en: "I'm just only a human being who interact with a code",
-    // "This is a page where you can find information about me, my programing experience and what is my purpose in coding. Also u can check contact page where the page will automatically respond for your post.",
-    titleParagraph_pl:
-      "Jestem tylko człowiekiem, który wchodzi w interakcję z kodem",
-    // "To jest strona, na której możesz znaleźć informacje o mnie, moim doświadczeniu programistycznym i jaki jest mój cel w kodowaniu. Możesz także sprawdzić stronę kontaktową, na której strona automatycznie odpowiem na Twój post.",
-    button_en: "Let's start",
-    button_pl: "Zaczynajmy"
+    title_pl: "Witam na moim portfolio",
+    titleParagraph_en: "Web development &",
+    titleParagraph_pl: "Tworzenie stron &",
+    titleSecondParagraph_en: "Internet applications",
+    titleSecondParagraph_pl: "Aplikacje internetowe"
   },
   dataContactItems: [
     {
@@ -70,8 +68,8 @@ const data = {
   homeContent: [
     {
       key: 0,
-      h2_en: `Being like a modern Frankenstein "it's alive"`,
-      h2_pl: "Będąc jak współczesny Frankenstein „to żyje”",
+      h2_en: "Being like a modern Frankenstein „it's alive”",
+      h2_pl: "Projektowanie ",
       text1_en:
         "My goal is to gain knowledge about programming, thanks to which I can create my visions, ideas and I love challenges. Programming has become a part of my life since I can remember. The first program I wrote was a flying balloon on the screen created in Commodore 64, of course, the book helped me, but I felt like Frankenstein who brings something to life. My other works were born at the University of Information Technology, but my greatest pride was to create a bookstore in PHP with a full administrative panel for the defense of engineering work. It was a task full of adventures and frustration. I felt that the PHP programming language isn't for me. After a few years of drifting aimlessly, I found my holy grail which has become javascript. I started learning programming from scratch, the most obscure topics were explained to me by courses that were previously not so popular. Now I am more patient, I work harder to get better results and knowledge, which thanks my family for their patience that they give me a chance to achieve my goal.",
       text1_pl:
@@ -91,27 +89,6 @@ const data = {
       text1_pl:
         "Czysty kod jest ważny jak wygląd strony, który przedstawia styl twórcy, dlatego nowe technologie pomagają osiągnąc wizualny cel. Niżej przedstawiam skrawek kodu w jaki sposób wykorzystuje stylizacji komponentów w React:",
       img: "",
-      codeExample: [
-        { code: "import styled from 'styled-components';" },
-        { code: "const Title = styled.h1`" },
-        { code: "font-size: 1.5em;" },
-        { code: "text-align: center;" },
-        { code: "color: palevioletred;" },
-        { code: "`;" },
-        { code: " " },
-        { code: "const Wrapper = styled.section`" },
-        { code: "padding: 4em" },
-        { code: "background: blue" },
-        { code: "`;" },
-        { code: " " },
-        { code: "render(" },
-        { code: "<Wrapper>" },
-        { code: "<Title>" },
-        { code: "Hello World!" },
-        { code: "</Title>" },
-        { code: "</Wrapper>" },
-        { code: ");" }
-      ],
       icons: [
         {
           id: 0,
@@ -162,25 +139,6 @@ const data = {
       text1_pl:
         "Dlaczego wybrałem bibliotekę React ? Jeszcze kilka lat temu, utworzenie aplikacje WWW, trzeba było przygotować liczne, osobne strony. Było to bardzo proste rozwiązanie, choć z punku widzenia użytkownika działało zupełnie naturalne, bo bieżąca strona znikała i pojawiała się nowa. Teraz w dzisiejszych czas ten trend idzie w niepamięć, bo w nowoczesnych aplikacjach wykorzystuje sie model SPA (ang. single-page-application -- aplikacja jednostronowa). Model, w którym w ogóle nie przechodzi się pomiędzy różnymi stronami, ani nawet ich nie przeładowuje. Poniższy kod przedstawia jak można przechodzić między stronami za pomocą React Router:",
       img: laptop,
-      codeExample: [
-        { code: "import { Router, Route, Switch } from 'react-router-dom';" },
-        { code: "render() {" },
-        { code: "return (" },
-        { code: "<Switch>" },
-        {
-          code: '<Route exact path="/" component={Home} />'
-        },
-        {
-          code: '<Route path="/contact" component={Contact} />'
-        },
-        {
-          code: '<Route path="/about" component={About} />} />'
-        },
-        { code: "<Route component={ErrorSite} />" },
-        { code: "</Switch>" },
-        { code: " );" },
-        { code: "};" }
-      ],
       icons: "",
       text2_en:
         "Controlling the user interface and managing the state of applications in React is indeed simple and you only need to do one thing: the final state of the interface, and the rest with the correct display of the user interface will take the React library.",
@@ -196,7 +154,7 @@ const data = {
         "When creating websites, I stick to certain rules, such as the mobile first principle. For this I also had to use the tools which is react-bootstrap, which will allow the website to be responsive, where it will fit on most mobile phones as well as desktop devices. Another tool for handling the responsiveness of the site is CSS itself, where, with the help of flex and grid, they allow you to control the displayed graphics and components.",
       text1_pl:
         "Przy tworzeniu stron internetowych trzymam się pewnych zasad jak między innymi zasada mobile first. Do tego również przyszło mi wykorzystać narzędzi jakim jest react-bootstrap, które pozwoli aby strona była responsywna, gdzie będzie się układać na większości telefonów komórkowych jak i urządzenia desktopowe. Innym narzędziem do obsługi responsywności strony jest sam CSS, gdzie przy pomocy flex oraz grid, pozowli na kotrolowanie wyświetlających się grafik i komponentów.",
-      img: phone,
+      img: v_mobile,
       codeExample: "",
       icons: "",
       text2_en: "",

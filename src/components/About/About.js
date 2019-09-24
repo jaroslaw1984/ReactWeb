@@ -48,9 +48,7 @@ const Style = styled.div`
   .img_wrapper {
     display: flex;
     height: 80%;
-    margin-right: 15px;
     justify-content: center;
-    border-bottom-right-radius: 20px;
     border-bottom: 2px solid ${color.orange};
   }
   .img_size {
@@ -92,7 +90,6 @@ const Style = styled.div`
     background-color: ${color.blue};
     color: ${color.white};
     transition: all 1s;
-    text-shadow: ${color.textShadowDark};
   }
   .icon_active_tag {
     display: flex;
@@ -134,17 +131,14 @@ const Style = styled.div`
   }
   .title_experience_wrapper > div {
     width: 100%;
-    margin-right: 10px;
-    border-bottom-right-radius: 20px;
+    /* margin-right: 10px; */
     border-bottom: 2px solid ${color.orange};
   }
   .title_experience {
     text-align: center;
     font-size: 1.3rem;
-    font-weight: 900;
     text-transform: uppercase;
     color: ${color.blueGreenText};
-    text-shadow: ${color.textShadowWhite};
   }
 `;
 const Img = styled.img`

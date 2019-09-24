@@ -59,7 +59,7 @@ class App extends Component {
                 )}
               />
               <Route
-                path="/contact"
+                path="/czat"
                 render={props => <Contact {...props} checked={checked} />}
               />
               <Route

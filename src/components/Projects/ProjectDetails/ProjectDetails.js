@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Image, Button } from "react-bootstrap";
+import ScrollIntoView from "react-scroll-into-view";
 import data from "../../../data/data";
 import styled from "styled-components";
 
@@ -26,9 +27,11 @@ const Style = styled.div`
     justify-content: center;
     justify-items: center;
   }
+  .goBackWrapper {
+    margin-top: 30px;
+  }
   .buttonLink {
     width: 50%;
-    margin-top: 30px;
     padding: 6px 8px;
     font-size: 15px;
     text-decoration: none;
@@ -65,9 +68,6 @@ const Img = styled.img`
 `;
 
 class ProjectDetails extends Component {
-  componentDidMount() {
-    window.scrollTo(0, 0);
-  }
   render() {
     const { match, checked } = this.props;
     const detail = data.projectsContent.find(
@@ -122,9 +122,13 @@ class ProjectDetails extends Component {
               : "Narzędzia użyte do wykonania projektu:"}
           </p>
           <div className="iconTools">{iconTools}</div>
-          <Link className="buttonLink" to="/projects">
-            {checked ? "Go back" : "Powrót"}
-          </Link>
+          <div className="goBackWrapper">
+            <ScrollIntoView selector="#scrollTop">
+              <Link className="buttonLink" to="/projects">
+                {checked ? "Go back" : "Powrót"}
+              </Link>
+            </ScrollIntoView>
+          </div>
           <div className="button buttonsWrapper">{buttons}</div>
         </div>
       </Style>

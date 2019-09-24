@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import styled from "styled-components";
+import ScrollIntoView from "react-scroll-into-view";
 
 const Style = styled.div`
   -webkit-box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
@@ -63,9 +64,11 @@ const ProjectsContent = ({
   const buttonDetailsName_en = "Details";
   const buttonDetailsName_pl = "Szczegóły";
   const detailsPage = (
-    <Link className="buttonLink" to={`/project/${id}`.toLowerCase()}>
-      {checked ? buttonDetailsName_en : buttonDetailsName_pl}
-    </Link>
+    <ScrollIntoView selector="#scrollTop">
+      <Link className="buttonLink" to={`/project/${id}`.toLowerCase()}>
+        {checked ? buttonDetailsName_en : buttonDetailsName_pl}
+      </Link>
+    </ScrollIntoView>
   );
 
   const iconTools = [...programingTools].map(icon => (

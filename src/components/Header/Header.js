@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import ScrollIntoView from "react-scroll-into-view";
 import data from "../../data/data";
 import styled from "styled-components";
 import color from "../../Colors/Colors";
@@ -30,7 +31,6 @@ const Styles = styled.div`
     font-weight: 700;
     padding-left: 20px;
     border-left: 1px solid ${color.orange};
-    border-bottom-left-radius: 20px;
     transition: all 0.5s ease;
     @media (min-width: 576px) {
       display: block;
@@ -126,6 +126,9 @@ const Styles = styled.div`
     font-weight: bold;
     transition: all 0.3s ease-in;
   }
+  #scrollHide {
+    transition: all 0.3s ease;
+  }
 `;
 const Span = styled.span`
   color: gray;
@@ -133,31 +136,38 @@ const Span = styled.span`
 `;
 class Header extends Component {
   render() {
+    // script that hide navbar when scroll down
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("scrollHide").style.top = "0";
+      } else {
+        document.getElementById("scrollHide").style.top = "-60px";
+      }
+      prevScrollpos = currentScrollPos;
+    };
     const { checked, change } = this.props;
     const pageTitle = "Omegiumfix";
     const langPl = "pl";
     const langEn = "en";
     const menu = data.menu.map(item => (
-      <Nav.Link
-        key={item.id}
-        exact={item.exact ? item.exact : false}
-        as={NavLink}
-        to={item.path}
-        eventKey={item.id}
-        className="menuText"
-      >
-        {checked ? item.name_en : item.name_pl}
-      </Nav.Link>
+      <ScrollIntoView key={item.id} selector="#scrollTop">
+        <Nav.Link
+          exact={item.exact ? item.exact : false}
+          as={NavLink}
+          to={item.path}
+          eventKey={item.id}
+          className="menuText"
+        >
+          {checked ? item.name_en : item.name_pl}
+        </Nav.Link>
+      </ScrollIntoView>
     ));
     return (
+      // Navigation bar mobile and desktop view
       <Styles>
-        <Navbar
-          collapseOnSelect
-          expand="sm"
-          // bg="dark"
-          // variant="dark"
-          // fixed="top"
-        >
+        <Navbar collapseOnSelect expand="sm" fixed="top" id="scrollHide">
           <Navbar.Brand as={Link} to="/">
             {pageTitle}
           </Navbar.Brand>

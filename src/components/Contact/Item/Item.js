@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
+import color from "../../../Colors/Colors";
 
 const defaultImg = "http://unsplash.it/150/150";
 
@@ -47,6 +48,9 @@ const Li = styled.li`
   .buttonActive {
     width: 180px;
     margin-bottom: 25px;
+    background-color: ${color.white};
+    border: 1px solid ${color.blue};
+    color: ${color.blue};
   }
   .buttonDisable {
     display: none;
@@ -57,7 +61,7 @@ const H2 = styled.h2`
   width: 100%;
   margin-top: 10px;
   text-align: center;
-  color: #0b7bf4;
+  color: ${color.blue};
   font-size: 1.3rem;
   font-weight: 700;
 `;
@@ -65,7 +69,7 @@ const H2 = styled.h2`
 const H6 = styled.h6`
   width: 100%;
   text-align: center;
-  color: #0b7bf4;
+  color: ${color.blue};
   font-size: 0.8rem;
 `;
 const P = styled.p`
@@ -108,7 +112,6 @@ const Item = ({
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        variant="outline-primary"
       >
         {buttonLink()}
       </Button>

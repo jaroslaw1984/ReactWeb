@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, Alert } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
+import color from "../../../Colors/Colors";
 
 const fadeIn = () => keyframes`
   0% {
@@ -22,13 +23,18 @@ const Style = styled.div`
     animation: ${fadeIn} 0.5s both;
   }
   .styleTitle {
-    color: #0b7bf4;
+    font-weight: 700;
+    color: ${color.blue};
   }
   .formPadding {
     padding: 20px 15px;
   }
   .requierdColor {
-    border-color: rgba(229, 44, 47, 0.5);
+    border-color: ${color.alertForm};
+  }
+  .buttonStyle {
+    background-color: ${color.blue};
+    border: none;
   }
 `;
 
@@ -176,7 +182,12 @@ class AddContact extends Component {
               placeholder={checked ? "Message" : "Wiadomość"}
             />
           </Form.Group>
-          <Button type="submit" variant="primary" onClick={click}>
+          <Button
+            type="submit"
+            variant="primary"
+            onClick={click}
+            className="buttonStyle"
+          >
             {checked ? sendButton_en : sendButton_pl}
           </Button>
         </Form>
