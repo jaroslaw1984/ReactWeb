@@ -24,17 +24,13 @@ const Style = styled.div`
   }
   .styleTitle {
     font-weight: 700;
-    color: ${color.blue};
+    color: ${color.light_blue};
   }
   .formPadding {
     padding: 20px 15px;
   }
   .requierdColor {
     border-color: ${color.alertForm};
-  }
-  .buttonStyle {
-    background-color: ${color.blue};
-    border: none;
   }
 `;
 

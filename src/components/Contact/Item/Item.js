@@ -48,9 +48,6 @@ const Li = styled.li`
   .buttonActive {
     width: 180px;
     margin-bottom: 25px;
-    background-color: ${color.white};
-    border: 1px solid ${color.blue};
-    color: ${color.blue};
   }
   .buttonDisable {
     display: none;
@@ -61,7 +58,7 @@ const H2 = styled.h2`
   width: 100%;
   margin-top: 10px;
   text-align: center;
-  color: ${color.blue};
+  color: ${color.light_blue};
   font-size: 1.3rem;
   font-weight: 700;
 `;
@@ -111,6 +108,7 @@ const Item = ({
         className={link.length === 0 ? "buttonDisable" : "buttonActive"}
         href={link}
         target="_blank"
+        variant="outline-primary"
         rel="noopener noreferrer"
       >
         {buttonLink()}

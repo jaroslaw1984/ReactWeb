@@ -4,6 +4,7 @@ import { Image, Button } from "react-bootstrap";
 import ScrollIntoView from "react-scroll-into-view";
 import data from "../../../data/data";
 import styled from "styled-components";
+import color from "../../../Colors/Colors";
 
 const Style = styled.div`
   .wrapper {
@@ -36,15 +37,15 @@ const Style = styled.div`
     font-size: 15px;
     text-decoration: none;
     text-align: center;
-    color: #007bff;
-    border: 1px solid #007bff;
+    color: ${color.light_blue};
+    border: 1px solid ${color.light_blue};
     border-radius: 0.25rem;
     transition: all 0.3s ease;
     cursor: pointer;
   }
   .buttonLink:hover {
-    background-color: #007bff;
-    color: #ffff;
+    background-color: ${color.light_blue};
+    color: ${color.white};
   }
   .iconTools {
     display: flex;

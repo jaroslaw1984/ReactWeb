@@ -17,12 +17,18 @@ import git from "../images/git.jpg";
 import sass from "../images/sass.jpg";
 import yarn from "../images/yarn.jpg";
 // import progr_1 from "../images/progr_1.jpg";
+import { faMobileAlt, faAt, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faTwitter,
+  faGithub
+} from "@fortawesome/free-brands-svg-icons";
 
 const data = {
   menu: [
     { id: 1, name_en: "Home", name_pl: "Start", path: "/", exact: true },
     { id: 2, name_en: "Projects", name_pl: "Projekty", path: "/projects" },
-    { id: 3, name_en: "czat", name_pl: "Rozmowa", path: "/czat" },
+    { id: 3, name_en: "Czat", name_pl: "Rozmowa", path: "/czat" },
     { id: 4, name_en: "About", name_pl: "O mnie", path: "/about" }
   ],
   jumboContent: {
@@ -362,7 +368,32 @@ const data = {
     { id: 6, img: git, name: "Github", url: "https://github.com/" },
     { id: 7, img: sass, name: "Sass", url: "https://sass-lang.com/" },
     { id: 8, img: yarn, name: "yarn", url: "https://yarnpkg.com/" }
-  ]
+  ],
+  footerContent: {
+    name: { tag: "Jarosław Sochacki", icon: faUser },
+    phone: { tag: "784-955-996", icon: faMobileAlt },
+    email: { tag: "inz.jaroslawsochacki@gmail.com", icon: faAt },
+    socialIcons: [
+      {
+        id: 0,
+        name: "twitter",
+        link: "https://twitter.com/JarekSochacki",
+        icon: faTwitter
+      },
+      {
+        id: 1,
+        name: "facebook",
+        link: "https://www.facebook.com/profile.php?id=100001667016208",
+        icon: faFacebook
+      },
+      {
+        id: 2,
+        name: "GitHub",
+        link: "https://github.com/jaroslaw1984/",
+        icon: faGithub
+      }
+    ]
+  }
 };
 
 export default data;

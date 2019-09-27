@@ -102,7 +102,7 @@ const H2 = styled.h2`
 `;
 const H3 = styled(H2)``;
 
-const Jumbo = ({ checked, match }) => {
+const Jumbo = ({ checked }) => {
   const {
     title_en,
     title_pl,

@@ -121,24 +121,9 @@ const Style = styled.div`
     background: ${color.white};
     background: ${color.lineColor};
   }
-  .title_experience_wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 15vh;
-    background-color: ${color.navyBlue};
-  }
-  .title_experience_wrapper > div {
-    width: 100%;
-    /* margin-right: 10px; */
-    border-bottom: 2px solid ${color.orange};
-  }
   .title_experience {
-    text-align: center;
-    font-size: 1.3rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    color: ${color.blueGreenText};
   }
 `;
 const Img = styled.img`
@@ -153,6 +138,11 @@ const Span = styled.span`
   justify-items: center;
   padding: 15px 15px;
   margin: 16px 0;
+`;
+const H2 = styled.h2`
+  padding: 0 15px;
+  font-weight: 700;
+  text-align: left;
 `;
 
 class About extends Component {
@@ -215,9 +205,9 @@ class About extends Component {
             <div className="line"></div>
             <div className="title_experience_wrapper">
               <div>
-                <h3 className="title_experience">
+                <H2 className="title_experience">
                   {checked ? "Skills" : "Umiejętności"}
-                </h3>
+                </H2>
               </div>
             </div>
             <Span className="languageIcons">{programingIcons}</Span>

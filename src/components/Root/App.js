@@ -69,7 +69,7 @@ class App extends Component {
               <Route component={ErrorSite} />
             </Switch>
           </Container>
-          <Footer />
+          <Footer checked={checked} />
         </Style>
       </Router>
     );

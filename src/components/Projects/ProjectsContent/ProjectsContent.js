@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import styled from "styled-components";
 import ScrollIntoView from "react-scroll-into-view";
+import color from "../../../Colors/Colors";
 
 const Style = styled.div`
   -webkit-box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
@@ -23,14 +24,14 @@ const Style = styled.div`
     padding: 6px 8px;
     font-size: 15px;
     text-decoration: none;
-    color: #007bff;
-    border: 1px solid #007bff;
+    color: ${color.light_blue};
+    border: 1px solid ${color.light_blue};
     border-radius: 0.25rem;
     transition: all 0.3s ease;
     cursor: pointer;
   }
   .buttonLink:hover {
-    background-color: #007bff;
+    background-color: ${color.light_blue};
     color: #ffff;
   }
   .cardSpace {
