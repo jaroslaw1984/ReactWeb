@@ -2,6 +2,7 @@ const colors = {
   white: "rgb(255, 255, 255)",
   navyBlue: "#001628",
   orange: "#ed9265",
+  orangeOpacity: "rgba(237, 146, 101, 0.5)",
   pink: "#E8A09E",
   red: "brown",
   // blueGreenText: "#72e0d1", //diffrent blue green color

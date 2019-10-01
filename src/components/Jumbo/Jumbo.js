@@ -74,6 +74,10 @@ const Styles = styled.div`
     }
   }
   .title {
+    font-size: 1rem;
+    @media (min-width: 414px) {
+      font-size: 1.3rem;
+    }
     animation: ${fadieIn} 2s ease;
   }
   .titleParagraph {
@@ -91,14 +95,20 @@ const Styles = styled.div`
     background: ${color.red};
     animation: ${RedLineIn} 2s 3s both;
   }
-  .subTitleSize {
+  /* .subTitleSize {
     font-size: 2rem;
-  }
+    @media (min-width: 414px) {
+      font-size: 2.2rem;
+    }
+  } */
 `;
 const H2 = styled.h2`
   font-size: 1.5rem;
   line-height: 40px;
   font-weight: 700;
+  @media (min-width: 414px) {
+    font-size: 2rem;
+  }
 `;
 const H3 = styled(H2)``;
 

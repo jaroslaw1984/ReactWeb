@@ -11,6 +11,7 @@ import Footer from "../Footer/Footer";
 import Projects from "../Projects/Projects";
 import ProjectDetails from "../Projects/ProjectDetails/ProjectDetails";
 import ErrorSite from "../ErrorSite/ErrorSite";
+import ScrollTopBtn from "../ScrollTopBtn/ScrollTopBtn";
 
 const Style = styled.div`
   .resetMarginPadding {
@@ -28,6 +29,27 @@ class App extends Component {
       changeLanguage: e.target.checked
     });
   };
+
+  componentDidMount() {
+    // script that hide navbar and button to scroll up when scrolling down
+    let prevScrollPos = window.pageYOffset;
+    window.onscroll = function() {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollPos > currentScrollPos) {
+        document.getElementById("scrollHide").style.top = "0";
+      } else {
+        document.getElementById("scrollHide").style.top = "-60px";
+      }
+      if (prevScrollPos > 100) {
+        document.querySelector(".btn_wrapper").style.opacity = "1";
+        document.querySelector(".btn_wrapper").style.display = "inline";
+      } else {
+        document.querySelector(".btn_wrapper").style.opacity = "0";
+        document.querySelector(".btn_wrapper").style.display = "none";
+      }
+      prevScrollPos = currentScrollPos;
+    };
+  }
 
   render() {
     const change = this.handelChangeLanguage;
@@ -69,6 +91,7 @@ class App extends Component {
               <Route component={ErrorSite} />
             </Switch>
           </Container>
+          <ScrollTopBtn />
           <Footer checked={checked} />
         </Style>
       </Router>

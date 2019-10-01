@@ -1,9 +1,8 @@
 import avatar from "../images/avatar.jpg";
-import laptop from "../images/laptop.jpg";
 import page1 from "../images/my_page1.jpg";
 import m_tablet from "../images/m_tablet.jpg";
 import v_mobile from "../images/v_mobile.jpg";
-// import v_tablet from "../images/v_tablet.jpg";
+import m_project from "../images/m_project.jpg";
 import v_all_devices from "../images/v_all_devices.jpg";
 import reactbootstrap from "../images/reactbootstrap.svg";
 import js from "../images/js.jpg";
@@ -16,8 +15,10 @@ import html from "../images/html.jpg";
 import git from "../images/git.jpg";
 import sass from "../images/sass.jpg";
 import yarn from "../images/yarn.jpg";
+import linux from "../images/linux.jpg";
+import gimp from "../images/gimp.jpg";
 // import progr_1 from "../images/progr_1.jpg";
-import { faMobileAlt, faAt, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faAt, faUser } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faTwitter,
@@ -74,12 +75,12 @@ const data = {
   homeContent: [
     {
       key: 0,
-      h2_en: "Being like a modern Frankenstein „it's alive”",
-      h2_pl: "Projektowanie ",
+      h2_en: "Designing",
+      h2_pl: "Projektowanie",
       text1_en:
-        "My goal is to gain knowledge about programming, thanks to which I can create my visions, ideas and I love challenges. Programming has become a part of my life since I can remember. The first program I wrote was a flying balloon on the screen created in Commodore 64, of course, the book helped me, but I felt like Frankenstein who brings something to life. My other works were born at the University of Information Technology, but my greatest pride was to create a bookstore in PHP with a full administrative panel for the defense of engineering work. It was a task full of adventures and frustration. I felt that the PHP programming language isn't for me. After a few years of drifting aimlessly, I found my holy grail which has become javascript. I started learning programming from scratch, the most obscure topics were explained to me by courses that were previously not so popular. Now I am more patient, I work harder to get better results and knowledge, which thanks my family for their patience that they give me a chance to achieve my goal.",
+        "I am learning programming and website design since 2018. I do projects only for myself, thanks to which I can create my visions, ideas and above all I love challenges. I am currently looking for a job as a Junior Frontend Developer.",
       text1_pl:
-        "Moim celem jest zdobycie wiedzy programowania, dzięki której mogę tworzyć swoje wizje, pomysły i uwielbiam wyzwania. Programowanie stało się częścią mojego życia, odkąd pamiętam. Pierwszy program, który napisałem, to latający balon na ekranie stworzonym w Commodore 64, oczywiście pomogła mi w tym książka, ale czułem się jak Frankenstein który przywołuje coś do życia. Moje inne dzieła narodziły się na Wyższej Szkole Informatyki, ale moją największą dumą było stworzenie księgarni w języku PHP z pełnym panelem administracyjnym dla obrony pracy inżynierskiej. To było zadanie pełne przygód i frustracji. Czułem, że ten język programowania PHP nie jest dla mnie. Po paru latach dryfowania bez celu znalazłem swój święty gral jakim stał się  javascript. Zacząłem uczyć się programowania od zera, najbardziej niejasne zagadnienia wyjaśniły mi kursy, które wcześniej nie były tak popularne. Teraz jestem bardziej cierpliwy, pracuję ciężej, aby uzyskać lepsze efekty i wiedzę, co dziękuje mojej rodzinie za cierpliwość, że dają mi szansę na osiągnięcie celu.",
+        "Uczę się programowania i projektowania stron internetowych od 2018. Projekty wykonuje wyłącznie dla siebie, dzięki temu mogę tworzyć swoje wizje, pomysły i przede wszystkim uwielbiam wyzwania. Aktualnie poszukuje pracy jako Junior Frontend Developer. ",
       img: "",
       codeExample: "",
       icons: "",
@@ -93,8 +94,8 @@ const data = {
       text1_en:
         "Pure code is important as the page’s appearance represents the creator's style, which is why new technologies help achieve a visual goal. Below is a scrap of code on how it uses component styling in React:",
       text1_pl:
-        "Czysty kod jest ważny jak wygląd strony, który przedstawia styl twórcy, dlatego nowe technologie pomagają osiągnąc wizualny cel. Niżej przedstawiam skrawek kodu w jaki sposób wykorzystuje stylizacji komponentów w React:",
-      img: "",
+        "Czysty kod jest ważny jak wygląd strony, który przedstawia styl twórcy, dlatego nowe technologie pomagają osiągnąc wizualny cel.",
+      img: m_project,
       icons: [
         {
           id: 0,
@@ -108,7 +109,7 @@ const data = {
           name: "javascript",
           url: "https://developer.mozilla.org/pl/docs/Web/JavaScript"
         },
-        { id: 2, img: react, alt: "react", url: "https://reactjs.org/" },
+        // { id: 2, img: react, alt: "react", url: "https://reactjs.org/" }
         {
           id: 3,
           img: styled,
@@ -120,40 +121,24 @@ const data = {
           img: css,
           name: "CSS",
           url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
-        },
-        {
-          id: 5,
-          img: jsx,
-          name: "JSX",
-          url: "https://reactjs.org/docs/introducing-jsx.html"
-        },
-        { id: 6, img: git, name: "Github", url: "https://github.com/" },
-        { id: 7, img: sass, name: "Sass", url: "https://sass-lang.com/" },
-        { id: 8, img: yarn, name: "yarn", url: "https://yarnpkg.com/" }
+        }
+        // {
+        //   id: 5,
+        //   img: jsx,
+        //   name: "JSX",
+        //   url: "https://reactjs.org/docs/introducing-jsx.html"
+        // },
+        // { id: 6, img: git, name: "Github", url: "https://github.com/" },
+        // { id: 7, img: sass, name: "Sass", url: "https://sass-lang.com/" }
+        // { id: 8, img: yarn, name: "yarn", url: "https://yarnpkg.com/" }
       ],
       text2_en:
-        "The user interface is a key element of any web application, therefore it uses the available styling tools, i.e. CSS3, Sass, style-componets and react-bootstrap if the website uses React technologies. However to work in a team and backups is using github. I do not present all the tools I use, because every other project requires different solutions to facilitate work.",
+        "The user interface is a key element of any web application, therefore it uses the available styling tools, i.e. CSS3, Sass, style-componets and react-bootstrap if the website uses React technologies. I do not present all the tools I use, because every other project requires different solutions to facilitate work.",
       text2_pl:
-        "Interfejs użytkownika to kluczowy element każdej aplikacji internetowej, dlatego wykorzytuje dostępne narzędzia do stylizacji czyli CSS3, Sass, style-componets oraz react-bootstrap jeśli strona wykorzystuje technologie React. Natomiast do pracy w zespole i kopii zapasowych używam github'a. Nie przedstawiam wszystkich narzędzi jakich używam, gdyż każdy inny projekt wymaga różnych rozwiązń ułatwiające pracę."
+        "Interfejs użytkownika to kluczowy element każdej aplikacji internetowej, dlatego wykorzytuje dostępne narzędzia do stylizacji czyli CSS3, Sass, style-componets oraz react-bootstrap jeśli strona wykorzystuje technologie React. Nie przedstawiam wszystkich narzędzi jakich używam, gdyż każdy inny projekt wymaga różnych rozwiązń ułatwiające pracę."
     },
     {
       key: 2,
-      h2_en: "Web design in React",
-      h2_pl: "Projektowanie stron w React",
-      text1_en:
-        "Why did I choose React library ? Only a few years ago, when creating web applications, you had to prepare numerous separate pages. It was a very simple solution, although from the user's point of view it worked completely natural, because the current page disappeared and a new one appeared. Nowadays, this trend is becoming a thing of the past, because modern applications use the SPA (single-page-application) model. A model in which it does not move between different pages at all, or even reload them. The following code shows how to navigate between pages using the React Router:",
-      text1_pl:
-        "Dlaczego wybrałem bibliotekę React ? Jeszcze kilka lat temu, utworzenie aplikacje WWW, trzeba było przygotować liczne, osobne strony. Było to bardzo proste rozwiązanie, choć z punku widzenia użytkownika działało zupełnie naturalne, bo bieżąca strona znikała i pojawiała się nowa. Teraz w dzisiejszych czas ten trend idzie w niepamięć, bo w nowoczesnych aplikacjach wykorzystuje sie model SPA (ang. single-page-application -- aplikacja jednostronowa). Model, w którym w ogóle nie przechodzi się pomiędzy różnymi stronami, ani nawet ich nie przeładowuje. Poniższy kod przedstawia jak można przechodzić między stronami za pomocą React Router:",
-      img: laptop,
-      icons: "",
-      text2_en:
-        "Controlling the user interface and managing the state of applications in React is indeed simple and you only need to do one thing: the final state of the interface, and the rest with the correct display of the user interface will take the React library.",
-      text2_pl:
-        "Kontrolowanie interfejsu użytkownika i zarządzanie stanem aplikacji w React jest w rzeczy samej proste  i wystarczy zajmować się tylko jedną rzeczą: końcowym stanem interfejsu, a całą resztą z poprawnym wyświetlaniem interfejsu użytkownika zajmie się biblioteka React."
-    },
-
-    {
-      key: 3,
       h2_en: "Responsive websites",
       h2_pl: "Responsywne strony internetowe",
       text1_en:
@@ -307,17 +292,17 @@ const data = {
   aboutContent: [
     {
       id: 0,
-      title_en: "Who am I ?",
-      title_pl: "Kim jestem ?",
+      title_en: "Who am I?",
+      title_pl: "Kim jestem?",
       description_en:
-        'Hello, my name is Jarosław Sochacki. I am from a small town of Włocławek. At younger age I was interested in computers, which started my interest. After graduating from high school, I continued my studies at the Vocational College, where I received the title of "IT technician". I felt I could achieve even more. The next step was the graduation of the University of Information Technology in Lodz. I knew that my future was related to computer science, but I did not know which path to follow until I tasted the programming language. As a person who begins to interact with the code, my next life challenge is to master JavaScript with React.',
+        "Hello, my name is Jarosław Sochacki and I come from Włocławek. I have two children, a daughter named Nadia and a son, Alan. In addition to family and programming, I love rollerblading and relaxing with a good Sc-fi movie.",
       description_pl:
-        'Witam, nazywam się Jarosław Sochacki. Jestem z małego miasteczka Włocławek. Od młodości interesowałem się komputerami co zapoczątkowało moje zainteresowania. Po ukończeniu liceum, kontynułowałem naukę w Studium Zawodowe, gdzie otrzymałem tytuł Technik informatyk". Czułem, że mogę osiągnąć jeszcze więcej. Następnym krokiem było ukończenie Wyższej Szkoły  Informatyki w Łodzi. Wiedziałem, że moją przyszłość wiąże z tą dziedziną, lecz nie wiedziałem jaką drogą podążać, aż do chwili kiedy posmakowałem języka programowania. Jako osoba, która zaczyna interakcję z kodem, moim kolejnym wyzwaniem życiowym jest opanowanie języka JavaScript wraz z React.'
+        "Witam, nazywam się Jarosław Sochacki i pochodzę z Włocławka. Mam dwójkę dzieci, córkę o imieniu Nadia oraz syna Alan. Poza rodziną i programowaniem uwielbiam jeździć na rolkach i relaksować się przy dobrym filmie Sc-fi."
     },
     {
       id: 1,
-      title_en: "Why I'd like to become as programer frontend ?",
-      title_pl: "Dlaczego chcę zostać programistą frontend ?",
+      title_en: "Why I'd like to become as programer frontend?",
+      title_pl: "Dlaczego chcę zostać programistą frontend?",
       description_en:
         "I'm looking an opportunity to be a better programer as now i write UI websites in freetime day by day. Being part of team i could bring new ideas and solved many problems and achieve better knowledge",
       description_pl:
@@ -325,12 +310,21 @@ const data = {
     },
     {
       id: 2,
-      title_en: "What I'm good at ?",
-      title_pl: "Moje mocne strony ?",
+      title_en: "What I'm good at?",
+      title_pl: "Moje mocne strony?",
       description_en:
         "Well it is hard to say what I'm good at. As everyone have many skills that make him unique and my are is  that I never give up if I have problem. I'm sitting on till i will solve it. It doesn't matter whether it's life problems or programming, the best solution counts. I love talk to other people a specialty in english. Also I like experience with Linux as an open source, free to use operating system widely used for computer hardware. I got about 5 years experience on this system and i use is as a main operating system for fun and working. The organization of work is also my strength. I set the plan of the day so that I can work, learn and spend time with my family and done something to my self. The last skill is hard work and my also I call it as my weaknes. I like being a smart guy.",
       description_pl:
         "Trudno powiedzieć, w czym jestem dobry. Ponieważ każdy ma wiele umiejętności, które czynią go wyjątkowym, a moim jest to, że nigdy się nie poddaję, jeśli mam problem. Siedzę, dopóki go nie rozwiążę. Nie ma znaczenia, czy to problemy życiowe, czy programowanie, liczy się najlepsze rozwiązanie. Uwielbiam rozmawiać z innymi ludźmi po angielsku. Lubię też doświadczenie z Linuksem jako open source, darmowy system operacyjny szeroko stosowany w sprzęcie komputerowym. Mam około 5 lat doświadczenia w tym systemie i używam go jako głównego systemu operacyjnego do zabawy i pracy. Organizacja pracy to także moja siła. Ustalam plan dnia, aby móc pracować, uczyć się i spędzać czas z rodziną i zrobić coś dla siebie. Ostatnią umiejętnością jest ciężka praca, którą nazywam też moją słabością. Lubię być mądrym facetem."
+    },
+    {
+      id: 3,
+      title_en: "What studies did you graduate from?",
+      title_pl: "Jakie studia skończyłem?",
+      description_en:
+        "After graduating from high school, I continued my studies at the Vocational College, where I received the title of „IT technician” . The next step was my studies, which lasted 3.5 years at the University of Computer Science in Lodz and finished with the title of engineer in the specialty of „Network computer”",
+      description_pl:
+        "Po ukończeniu liceum, kontynułowałem naukę w Studium Zawodowe, gdzie otrzymałem tytuł „Technik informatyk”. Następnym krokiem były studia, które trwały 3.5 roku na Wyższej Szkole Informatyki w Łodzi i skończyłem je z tytułem inżyniera na specjalności „Sieci komputerowe”"
     }
   ],
   icons: [
@@ -367,11 +361,17 @@ const data = {
     },
     { id: 6, img: git, name: "Github", url: "https://github.com/" },
     { id: 7, img: sass, name: "Sass", url: "https://sass-lang.com/" },
-    { id: 8, img: yarn, name: "yarn", url: "https://yarnpkg.com/" }
+    { id: 8, img: yarn, name: "yarn", url: "https://yarnpkg.com/" },
+    {
+      id: 9,
+      img: linux,
+      name: "Linux",
+      url: "https://pl.wikipedia.org/wiki/Linux"
+    },
+    { id: 10, img: gimp, name: "Gimp", url: "https://www.gimp.org/" }
   ],
   footerContent: {
     name: { tag: "Jarosław Sochacki", icon: faUser },
-    phone: { tag: "784-955-996", icon: faMobileAlt },
     email: { tag: "inz.jaroslawsochacki@gmail.com", icon: faAt },
     socialIcons: [
       {

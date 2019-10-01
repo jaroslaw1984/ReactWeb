@@ -22,17 +22,16 @@ const Styles = styled.div`
     align-items: center;
     margin: 10px 0;
   }
-  .name,
-  .phone {
+  .name {
     width: 60%;
     margin: 10px 0;
+    text-align: center;
     & > span:last-child {
       margin-left: 10px;
       color: ${color.blueGreenText};
     }
   }
-  .name:hover,
-  .phone:hover {
+  .name:hover {
     color: ${color.orange};
   }
   .email {
@@ -98,7 +97,7 @@ const H2 = styled.h2`
 
 const Footer = ({ checked }) => {
   const date = new Date().getFullYear();
-  const { name, phone, email, socialIcons } = data.footerContent;
+  const { name, email, socialIcons } = data.footerContent;
   const socialIconsItems = socialIcons.map(item => (
     <span key={item.id}>
       <a
@@ -129,7 +128,6 @@ const Footer = ({ checked }) => {
             <H2>{checked ? "Contact" : "Kontakt"}</H2>
             <div className="contact_section">
               {contactInfo("name", name.icon, name.tag)}
-              {contactInfo("phone", phone.icon, phone.tag)}
               {contactInfo("email", email.icon, email.tag)}
             </div>
             <div className="socialMediaIcons">{socialIconsItems}</div>

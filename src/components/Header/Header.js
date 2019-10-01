@@ -5,10 +5,11 @@ import ScrollIntoView from "react-scroll-into-view";
 import data from "../../data/data";
 import styled from "styled-components";
 import color from "../../Colors/Colors";
+import size from "../../Fonts/Fonts";
 
 const Styles = styled.div`
   .menuText {
-    font-size: 20px;
+    font-size: ${size.menuText};
     color: ${color.blueGreenText} !important;
     padding-left: 10px;
   }
@@ -123,7 +124,7 @@ const Styles = styled.div`
   }
   .spanActive {
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
     transition: all 0.3s ease-in;
   }
   #scrollHide {
@@ -132,21 +133,10 @@ const Styles = styled.div`
 `;
 const Span = styled.span`
   color: gray;
-  font-size: 1.3rem;
+  font-size: ${size.languageChange};
 `;
 class Header extends Component {
   render() {
-    // script that hide navbar when scroll down
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      let currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("scrollHide").style.top = "0";
-      } else {
-        document.getElementById("scrollHide").style.top = "-60px";
-      }
-      prevScrollpos = currentScrollPos;
-    };
     const { checked, change } = this.props;
     const pageTitle = "Omegiumfix";
     const langPl = "pl";
