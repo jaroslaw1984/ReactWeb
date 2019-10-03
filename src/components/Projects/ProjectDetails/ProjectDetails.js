@@ -5,12 +5,12 @@ import ScrollIntoView from "react-scroll-into-view";
 import data from "../../../data/data";
 import styled from "styled-components";
 import color from "../../../Colors/Colors";
+import size from "../../../Fonts/Fonts";
 
 const Style = styled.div`
   .wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0 15px;
   }
   .imgMargin {
     margin: 10px 0 30px;
@@ -30,11 +30,15 @@ const Style = styled.div`
   }
   .goBackWrapper {
     margin-top: 30px;
+    padding: 0 15px;
+    font-size: ${size.BtnLinkXs};
+    @media screen and (min-width: 414px) {
+      font-size: ${size.BtnLinkSm};
+    }
   }
   .buttonLink {
     width: 50%;
     padding: 6px 8px;
-    font-size: 15px;
     text-decoration: none;
     text-align: center;
     color: ${color.light_blue};
@@ -42,6 +46,10 @@ const Style = styled.div`
     border-radius: 0.25rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    font-size: ${size.BtnLinkXs};
+    @media screen and (min-width: 414px) {
+      font-size: ${size.BtnLinkSm};
+    }
   }
   .buttonLink:hover {
     background-color: ${color.light_blue};
@@ -53,13 +61,23 @@ const Style = styled.div`
     margin: 10px 0;
   }
 `;
-const H4 = styled.h4`
+const H2 = styled.h2`
+  font-size: ${size.H2Xs};
   font-weight: 700;
   text-transform: uppercase;
+  padding: 0 15px;
+  @media screen and (min-width: 414px) {
+    font-size: ${size.H2Sm};
+  }
 `;
 
-const Article = styled.article`
-  margin: 20px 20px 30px;
+const P = styled.p`
+  margin: 30px 20px;
+  padding: 0 15px;
+  font-size: ${size.PXs};
+  @media screen and (min-width: 414px) {
+    font-size: ${size.PSm};
+  }
 `;
 
 const Img = styled.img`
@@ -86,10 +104,8 @@ class ProjectDetails extends Component {
     ));
     const contents = detail.detailsContenet.map(content => (
       <div key={content.id} className="wrapperContent">
-        <H4>{checked ? content.title_en : content.title_pl}</H4>
-        <Article>
-          {checked ? content.description_en : content.description_pl}
-        </Article>
+        <H2>{checked ? content.title_en : content.title_pl}</H2>
+        <P>{checked ? content.description_en : content.description_pl}</P>
         <Image
           src={content.m_img}
           title={match.params.id}
@@ -117,11 +133,11 @@ class ProjectDetails extends Component {
       <Style>
         <div id="start" className="wrapper">
           {contents}
-          <p>
+          <P>
             {checked
               ? "Tools used to make a project:"
               : "Narzędzia użyte do wykonania projektu:"}
-          </p>
+          </P>
           <div className="iconTools">{iconTools}</div>
           <div className="goBackWrapper">
             <ScrollIntoView selector="#scrollTop">

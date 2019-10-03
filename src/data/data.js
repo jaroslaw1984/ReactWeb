@@ -189,9 +189,9 @@ const data = {
           title_en: "A website like no other",
           title_pl: "Strona jak żadna inna ",
           description_en:
-            "In this stage of as a beginner, I wanted to build a website that would challenge me and help bring my skills to the next level. I believe this project taught me a many aspects to resolve a problems and patient. This will be not my last project in pure javascript. This project also show my other hobbies that i interesting and i hope in the future I could use it for commercial us",
+            "At this stage, as a beginner, I wanted to create a website that would challenge me and help me take my skills to the next level. This project taught me many aspects of problem solving in pure javascript.",
           description_pl:
-            "Na tym etapie, jako początkujący, chciałem stworzyć stronę internetową, która rzuciłaby mi wyzwanie i pomogłaby przenieść moje umiejętności na wyższy poziom. Wierzę, że ten projekt nauczył mnie wielu aspektów rozwiązywania problemów i cierpliwości. To nie będzie mój ostatni projekt w czystym javascript. Ten projekt pokazuje również moje inne hobby, które mnie interesują i mam nadzieję, że w przyszłości będę mógł go wykorzystać do celów komercyjnych.",
+            "Na tym etapie, jako początkujący, chciałem stworzyć stronę internetową, która rzuciłaby mi wyzwanie i pomogłaby przenieść moje umiejętności na wyższy poziom. Ten projekt nauczył mnie wielu aspektów rozwiązywania problemów w czystym javascript.",
           m_img: m_tablet
         },
         {
@@ -199,9 +199,9 @@ const data = {
           title_en: "Technical page of omegiumfix",
           title_pl: "Strona techniczna omegiumfix",
           description_en:
-            "I wanted to take things back to the basics to get a better understand of building a website from the ground up without popular javascript libraries. With this project I also realized one doesn't necessarily need a JavaScript library to produce a professional grade website. I chose to build this Omegium Fix Website with pure html, SASS, lots of JavaScript to create some nice animations to enhance the user experience and give the site a aesthetics.",
+            "I wanted to take things back to the basics to get a better understand of building a website from the ground up without popular javascript libraries. With this project I also realized one doesn't necessarily need a JavaScript library to produce a professional grade website. I chose to build this OmegiumFix Website with Html5, SASS and JavaScript to create some nice animations to enhance the user experience and give the site a aesthetics.",
           description_pl:
-            "Chciałem wrócić do podstaw, aby lepiej zrozumieć budowę witryny od podstaw bez popularnych bibliotek javascript. Dzięki temu projektowi zdałem sobie również sprawę z tego, że do stworzenia profesjonalnej strony internetowej niekoniecznie jest potrzebna biblioteka JavaScript. Zdecydowałem się zbudować tę witrynę Omegium Fix z czystym HTML, SASS i z dużą ilością JavaScript, aby stworzyć fajne animacje, które poprawią wrażenia użytkownika i nadadzą stronie estetyki.",
+            "Chciałem wrócić do podstaw, aby lepiej zrozumieć budowę witryny od podstaw bez popularnych bibliotek javascript. Dzięki temu projektowi zdałem sobie również sprawę z tego, że do stworzenia profesjonalnej strony internetowej niekoniecznie jest potrzebna biblioteka JavaScript. Zdecydowałem się zbudować tę witrynę OmegiumFix z HTML5, SASS oraz JavaScript, aby stworzyć fajne animacje, które poprawią wrażenia użytkownika i nadadzą stronie estetyki.",
           m_img: v_all_devices
         }
       ],
@@ -392,7 +392,13 @@ const data = {
         link: "https://github.com/jaroslaw1984/",
         icon: faGithub
       }
-    ]
+    ],
+    experience: {
+      description_pl:
+        "Tutaj można pobrać moje udokumentowane doświadczenie zawodowe w forme Curriculum Vitae (CV).",
+      description_en:
+        "Here you can download my documented professional experience in the form of Curriculum Vitae (CV)."
+    }
   }
 };
 

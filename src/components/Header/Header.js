@@ -9,9 +9,12 @@ import size from "../../Fonts/Fonts";
 
 const Styles = styled.div`
   .menuText {
-    font-size: ${size.menuText};
+    font-size: ${size.menuTextXs};
     color: ${color.blueGreenText} !important;
     padding-left: 10px;
+    @media screen and (min-width: 414px) {
+      font-size: ${size.menuTextSm};
+    }
   }
   .nav-link {
     color: ${color.white};
@@ -33,7 +36,7 @@ const Styles = styled.div`
     padding-left: 20px;
     border-left: 1px solid ${color.orange};
     transition: all 0.5s ease;
-    @media (min-width: 576px) {
+    @media screen and (min-width: 576px) {
       display: block;
       height: 45px;
       border-bottom: 2px solid #c82333;
@@ -133,7 +136,10 @@ const Styles = styled.div`
 `;
 const Span = styled.span`
   color: gray;
-  font-size: ${size.languageChange};
+  font-size: ${size.menuTextXs};
+  @media screen and (min-width: 414px) {
+    font-size: ${size.menuTextSm};
+  }
 `;
 class Header extends Component {
   render() {
@@ -158,7 +164,7 @@ class Header extends Component {
       // Navigation bar mobile and desktop view
       <Styles>
         <Navbar collapseOnSelect expand="sm" fixed="top" id="scrollHide">
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand as={Link} to="/" exact="true">
             {pageTitle}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav">
@@ -172,6 +178,7 @@ class Header extends Component {
           >
             <Nav className="justify-content-end">
               {menu}
+              {/* Button that allow to change language page */}
               <div className="languageButtonChange">
                 <div className="languageButtonName">
                   <Span className={checked ? null : "spanActive"}>

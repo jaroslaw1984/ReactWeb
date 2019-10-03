@@ -4,6 +4,7 @@ import { Card } from "react-bootstrap";
 import styled from "styled-components";
 import ScrollIntoView from "react-scroll-into-view";
 import color from "../../../Colors/Colors";
+import size from "../../../Fonts/Fonts";
 
 const Style = styled.div`
   -webkit-box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
@@ -22,17 +23,20 @@ const Style = styled.div`
   .buttonLink {
     margin-top: 10px;
     padding: 6px 8px;
-    font-size: 15px;
     text-decoration: none;
     color: ${color.light_blue};
     border: 1px solid ${color.light_blue};
     border-radius: 0.25rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    font-size: ${size.BtnLinkXs};
+    @media screen and (min-width: 414px) {
+      font-size: ${size.BtnLinkSm};
+    }
   }
   .buttonLink:hover {
     background-color: ${color.light_blue};
-    color: #ffff;
+    color: ${color.white};
   }
   .cardSpace {
     margin-bottom: 30px;
@@ -43,15 +47,33 @@ const Style = styled.div`
   }
   .cardTitle {
     font-weight: 700;
+    font-size: ${size.PCCardTitleXs};
+    text-transform: uppercase;
+    @media screen and (min-width: 414px) {
+      font-size: ${size.PCCardTitleSm};
+    }
   }
-  span.tools {
-    font-style: italic;
+  .cardText {
+    font-size: ${size.PCCardTextXs};
+    @media screen and (min-width: 414px) {
+      font-size: ${size.PCCardTextSm};
+      & + span.tools {
+        font-size: ${size.PCCardTextSm};
+      }
+    }
+    & + span.tools {
+      font-style: italic;
+    }
   }
 `;
 const Img = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  @media screen and (min-width: 414px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 const ProjectsContent = ({
   img,
@@ -83,7 +105,7 @@ const ProjectsContent = ({
         <Card.Img className="cardImg" variant="top" src={img} />
         <Card.Body className="cardBody">
           <Card.Title className="cardTitle">{cardTitle}</Card.Title>
-          <Card.Text>
+          <Card.Text className="cardText">
             {checked ? descriptionCard_en : descriptionCard_pl}
           </Card.Text>
           <span className="tools">

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button, Form, Alert } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
 import color from "../../../Colors/Colors";
+import size from "../../../Fonts/Fonts";
 
 const fadeIn = () => keyframes`
   0% {
@@ -21,16 +22,36 @@ const Style = styled.div`
     transform: translateY(-50px);
     transition: 0.3s ease;
     animation: ${fadeIn} 0.5s both;
+    font-size: ${size.IPXs};
+    @media screen and (min-width: 414px) {
+      font-size: ${size.IPSm};
+    }
   }
   .styleTitle {
     font-weight: 700;
     color: ${color.light_blue};
+    font-size: ${size.IH2Xs};
+    @media screen and (min-width: 414px) {
+      font-size: ${size.IH2Sm};
+    }
+  }
+  .textStyle {
+    font-size: ${size.IPXs};
+    @media screen and (min-width: 414px) {
+      font-size: ${size.IPSm};
+    }
   }
   .formPadding {
     padding: 20px 15px;
   }
   .requierdColor {
     border-color: ${color.alertForm};
+  }
+  .btnSubmit {
+    font-size: ${size.BtnLinkXs};
+    @media screen and (min-width: 414px) {
+      font-size: ${size.BtnLinkSm};
+    }
   }
 `;
 
@@ -39,8 +60,8 @@ class AddContact extends Component {
     username_faild_en: "Typed name is to short. Must have at least 3 signs.",
     username_faild_pl:
       "Imię  podane jest za krótkie. Powinno składać się przynajmniej z 3 znaków",
-    email_faild_miss_en: 'Sorry, but you miss "@" at your email',
-    email_faild_miss_pl: 'Przepraszam ale brakuje znaku "@" w emailu',
+    email_faild_miss_en: 'You miss "@" at your email',
+    email_faild_miss_pl: 'Brakuje znaku "@" w emailu',
     email_faild_toShort_en: "Your email is to short",
     email_faild_toShort_pl: "Twój email jest za krótki",
     link_faild_en:
@@ -92,7 +113,9 @@ class AddContact extends Component {
           </Form.Label>
           <Form.Group>
             <Form.Control
-              className={username.length >= 3 ? null : "requierdColor"}
+              className={
+                username.length >= 3 ? null : "requierdColor textStyle"
+              }
               type="text"
               name="username"
               value={username}
@@ -111,7 +134,7 @@ class AddContact extends Component {
               className={
                 email.indexOf("@") !== -1 && email.length >= 6
                   ? null
-                  : "requierdColor"
+                  : "requierdColor textStyle"
               }
               type="email"
               name="email"
@@ -134,6 +157,7 @@ class AddContact extends Component {
             )}
           <Form.Group>
             <Form.Control
+              className="textStyle"
               type="text"
               name="link"
               value={link}
@@ -155,6 +179,7 @@ class AddContact extends Component {
             ))}
           <Form.Group>
             <Form.Control
+              className="textStyle"
               type="text"
               name="image"
               value={image}
@@ -169,6 +194,7 @@ class AddContact extends Component {
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Control
+              className="textStyle"
               type="text"
               name="textarea"
               value={textarea}
@@ -180,9 +206,9 @@ class AddContact extends Component {
           </Form.Group>
           <Button
             type="submit"
+            className="btnSubmit"
             variant="primary"
             onClick={click}
-            className="buttonStyle"
           >
             {checked ? sendButton_en : sendButton_pl}
           </Button>

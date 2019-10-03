@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
 import color from "../../../Colors/Colors";
+import size from "../../../Fonts/Fonts";
 
 const defaultImg = "http://unsplash.it/150/150";
 
@@ -25,7 +26,7 @@ const Li = styled.li`
   padding: 0;
   margin: 0;
   animation: ${fadeIn} 0.5s ease;
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     padding: 40px 30px;
     flex-wrap: nowrap;
   }
@@ -36,6 +37,10 @@ const Li = styled.li`
     align-self: center;
     background: lightgray no-repeat;
     background-size: cover;
+    @media screen and (min-width: 414px) {
+      width: 200px;
+      height: 200px;
+    }
   }
   .imgNone {
     width: 180px;
@@ -48,6 +53,10 @@ const Li = styled.li`
   .buttonActive {
     width: 180px;
     margin-bottom: 25px;
+    font-size: ${size.BtnLinkXs};
+    @media screen and (min-width: 414px) {
+      font-size: ${size.BtnLinkSm};
+    }
   }
   .buttonDisable {
     display: none;
@@ -59,21 +68,30 @@ const H2 = styled.h2`
   margin-top: 10px;
   text-align: center;
   color: ${color.light_blue};
-  font-size: 1.3rem;
   font-weight: 700;
+  font-size: ${size.IH2Xs};
+  @media screen and (min-width: 414px) {
+    font-size: ${size.IH2Sm};
+  }
 `;
 
 const H6 = styled.h6`
   width: 100%;
   text-align: center;
   color: ${color.blue};
-  font-size: 0.8rem;
+  font-size: ${size.IH6Xs};
+  @media screen and (min-width: 414px) {
+    font-size: ${size.IH6Sm};
+  }
 `;
 const P = styled.p`
   width: 100%;
   margin-top: 10px;
-  font-size: 1rem;
   font-weight: 400;
+  font-size: ${size.IPXs};
+  @media screen and (min-width: 414px) {
+    font-size: ${size.PSm};
+  }
 `;
 
 const Item = ({

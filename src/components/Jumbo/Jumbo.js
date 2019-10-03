@@ -6,6 +6,7 @@ import color from "../../Colors/Colors";
 import waves from "../../images/waves.jpg";
 import data from "../../data/data";
 import progr from "../../images/progr.jpg";
+import size from "../../Fonts/Fonts";
 
 const fadieIn = () => keyframes`
     0% {
@@ -49,7 +50,7 @@ const Styles = styled.div`
     background-repeat: no-repeat;
     animation: ${imgMove} 10s 1s alternate both linear infinite;
     z-index: 0;
-    @media (min-width: 768px) {
+    @media screen and (min-width: 768px) {
       background: url(${waves});
     }
   }
@@ -69,14 +70,14 @@ const Styles = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
-    @media (min-width: 768px) {
+    @media screen and (min-width: 768px) {
       width: auto;
     }
   }
   .title {
-    font-size: 1rem;
-    @media (min-width: 414px) {
-      font-size: 1.3rem;
+    font-size: ${size.titleXs};
+    @media screen and (min-width: 414px) {
+      font-size: ${size.titleSm};
     }
     animation: ${fadieIn} 2s ease;
   }
@@ -95,19 +96,13 @@ const Styles = styled.div`
     background: ${color.red};
     animation: ${RedLineIn} 2s 3s both;
   }
-  /* .subTitleSize {
-    font-size: 2rem;
-    @media (min-width: 414px) {
-      font-size: 2.2rem;
-    }
-  } */
 `;
 const H2 = styled.h2`
-  font-size: 1.5rem;
+  font-size: ${size.JH2Xs};
   line-height: 40px;
   font-weight: 700;
-  @media (min-width: 414px) {
-    font-size: 2rem;
+  @media screen and (min-width: 414px) {
+    font-size: ${size.JH2Sm};
   }
 `;
 const H3 = styled(H2)``;
@@ -198,7 +193,7 @@ const Jumbo = ({ checked }) => {
               path="/about"
               render={() => (
                 <>
-                  {titleH2("All about me", "Wszystko o mnie", "subTitleSize")}
+                  {titleH2("All About me", "Wszystko o mnie", "subTitleSize")}
                 </>
               )}
             />

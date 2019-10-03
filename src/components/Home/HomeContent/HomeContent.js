@@ -1,8 +1,10 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 import styled from "styled-components";
+import size from "../../../Fonts/Fonts";
 
 const Div = styled.div`
+  max-width: 100%;
   display: grid;
   .languageIcons {
     grid-row-start: 4;
@@ -15,10 +17,19 @@ const H2 = styled.h2`
   padding: 0 15px;
   font-weight: 700;
   text-align: left;
+  text-transform: uppercase;
+  font-size: ${size.H2Xs};
+  @media screen and (min-width: 414px) {
+    font-size: ${size.H2Sm};
+  }
 `;
 const P = styled.p`
   padding: 0 15px;
   margin: 30px 20px;
+  font-size: ${size.PXs};
+  @media screen and (min-width: 414px) {
+    font-size: ${size.PSm};
+  }
 `;
 
 const Span = styled.span`

@@ -1,19 +1,14 @@
 import React, { Component } from "react";
 import { Image } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf, faDownload } from "@fortawesome/free-solid-svg-icons";
 import styled, { keyframes } from "styled-components";
 import me from "../../images/mini_me.jpg";
 import data from "../../data/data";
 import Tags from "./Tags/Tags";
 import color from "../../Colors/Colors";
+import size from "../../Fonts/Fonts";
 
-const fadieIn = () => keyframes`
-    from {
-      transform: translateY(-30px)
-    }
-    to {
-      transform: translateY(0)
-    }
-`;
 const shadow = () => keyframes`
     5% {
       box-shadow: 0 0px 5px 12px rgba(0, 252, 254, 0.5), 0 0px 5px 8px rgba(114, 224, 209, 0.5);
@@ -55,6 +50,10 @@ const Style = styled.div`
     width: 120px;
     height: 120px;
     animation: ${shadow} 4s infinite ease;
+    @media screen and (min-width: 414px) {
+      width: 125px;
+      height: 125px;
+    }
   }
   .tags_header_wrapper {
     display: flex;
@@ -65,54 +64,7 @@ const Style = styled.div`
     border-bottom-left-radius: 20px;
     border-left: 2px solid ${color.orange};
   }
-  .wrapper_tag {
-    display: grid;
-    grid-template-columns: 1fr;
-    transition: all 0.2s;
-    margin-top: 20px;
-    cursor: pointer;
-  }
-  .title_wrapper {
-    display: grid;
-    grid-template-columns: 1fr 30px;
-    margin-top: 5px;
-    transition: all 0.5s;
-  }
-  .tag_title {
-    padding: 15px;
-    font-size: 1.2rem;
-    font-weight: 900;
-  }
-  .tag_isActive {
-    width: 100%;
-    margin: 0;
-    border-radius: 2px;
-    background-color: ${color.blue};
-    color: ${color.white};
-    transition: all 1s;
-  }
-  .icon_active_tag {
-    display: flex;
-    align-self: center;
-    color: ${color.orange};
-    font-weight: 900;
-    font-size: 1.5rem;
-    transition: 0.3s ease-in;
-  }
-  .close_tag {
-    display: none;
-    transition: all 1s;
-  }
-  .open_tag {
-    display: block;
-    animation: ${fadieIn} 1s;
-  }
-  article {
-    padding: 10px 15px;
-  }
-  article > p {
-    padding: 10px 0 0 10px;
-  }
+
   .line {
     width: 50%;
     height: 2px;
@@ -121,9 +73,49 @@ const Style = styled.div`
     background: ${color.white};
     background: ${color.lineColor};
   }
-  .title_experience {
-    font-size: 2rem;
+  .title_experience,
+  .title_skills {
     text-transform: uppercase;
+    font-size: ${size.H2Xs};
+    @media screen and (min-width: 414px) {
+      font-size: ${size.H2Sm};
+    }
+  }
+  .docWrapper {
+    display: grid;
+    grid-template-columns: 30px 1fr 50px;
+    height: 10vh;
+    margin: 30px 20px;
+    padding: 0 15px;
+    & span {
+      display: flex;
+      align-items: center;
+      font-size: ${size.IconSizeXs};
+      color: ${color.blue};
+      @media screen and (min-width: 414px) {
+        font-size: ${size.IconSizeSm};
+      }
+    }
+    & p {
+      display: flex;
+      margin: 0;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: ${size.PXs};
+      @media screen and (min-width: 414px) {
+        font-size: ${size.PSm};
+      }
+    }
+    & a:visited,
+    a:active,
+    a:focus {
+      color: ${color.blue};
+      text-decoration: none;
+    }
+    & span ~ span:hover a {
+      color: ${color.orange};
+      transition: all 0.5s;
+    }
   }
 `;
 const Img = styled.img`
@@ -137,12 +129,25 @@ const Span = styled.span`
   justify-content: center;
   justify-items: center;
   padding: 15px 15px;
-  margin: 16px 0;
+  margin: 20px 0;
 `;
 const H2 = styled.h2`
   padding: 0 15px;
+  margin-bottom: 8px;
   font-weight: 700;
   text-align: left;
+  font-size: ${size.H2Xs};
+  @media screen and (min-width: 414px) {
+    font-size: ${size.H2Sm};
+  }
+`;
+const P = styled.p`
+  padding: 0 15px;
+  margin: 30px 20px;
+  font-size: ${size.APXs};
+  @media screen and (min-width: 414px) {
+    font-size: ${size.PSm};
+  }
 `;
 
 class About extends Component {
@@ -173,6 +178,7 @@ class About extends Component {
       </a>
     ));
     const { checked } = this.props;
+    const { description_en, description_pl } = data.footerContent.experience;
     const questionsTags = data.aboutContent.map((tag, index) => (
       <Tags
         key={tag.id}
@@ -192,9 +198,9 @@ class About extends Component {
         <div id="start">
           <div className="about_header">
             <div className="tags_header_wrapper">
-              <p>{checked ? "Competent." : "Kompetentny."}</p>{" "}
-              <p>{checked ? "Adaptive." : "Adaptacyjny."}</p>{" "}
-              <p>{checked ? "Result..." : "Rezultat..."}</p>
+              <p>{checked ? "Sophisticated." : "Wyrafionowany."}</p>
+              <p>{checked ? "Competent." : "Kompetentny."}</p>
+              <p>{checked ? "Adaptive." : "Adaptacyjny."}</p>
             </div>
             <div className="img_wrapper">
               <Image roundedCircle className="img_size" src={me} />
@@ -203,14 +209,45 @@ class About extends Component {
           {questionsTags}
           <section>
             <div className="line"></div>
-            <div className="title_experience_wrapper">
-              <div>
-                <H2 className="title_experience">
-                  {checked ? "Skills" : "Umiejętności"}
-                </H2>
-              </div>
+            <H2 className="title_skills">
+              {checked ? "Skills" : "Umiejętności"}
+            </H2>
+            <Span>{programingIcons}</Span>
+            <H2 className="title_experience">
+              {checked ? "Experience" : "Doświadczenie"}
+            </H2>
+            <P>{checked ? description_en : description_pl}</P>
+            <div className="docWrapper">
+              <span>
+                <FontAwesomeIcon icon={faFilePdf} />
+              </span>
+              <p>-{checked ? "in polish" : "po polsku"}</p>
+
+              <span>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/1lv-1t1tbGtBCUY6YteQmqtPUDzMuZ-Zw/view?usp=sharing"
+                >
+                  <FontAwesomeIcon icon={faDownload} />
+                </a>
+              </span>
             </div>
-            <Span className="languageIcons">{programingIcons}</Span>
+            <div className="docWrapper">
+              <span>
+                <FontAwesomeIcon icon={faFilePdf} />
+              </span>
+              <p>-{checked ? "in english" : "po angielsku"}</p>
+              <span>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/1SKUdUbWC17nBfCevW10pZzKGLzecVl9T/view?usp=sharing"
+                >
+                  <FontAwesomeIcon icon={faDownload} />
+                </a>
+              </span>
+            </div>
           </section>
         </div>
       </Style>

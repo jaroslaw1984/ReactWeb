@@ -26,6 +26,7 @@ const Styles = styled.div`
     width: 60%;
     margin: 10px 0;
     text-align: center;
+    transition: all 0.5s;
     & > span:last-child {
       margin-left: 10px;
       color: ${color.blueGreenText};
@@ -52,6 +53,7 @@ const Styles = styled.div`
     }
   }
   .email:hover span:first-child {
+    transition: all 0.5s;
     color: ${color.orange};
   }
   .socialMediaIcons {
@@ -64,6 +66,7 @@ const Styles = styled.div`
       font-size: 2rem;
     }
     & span:hover > a {
+      transition: all 0.5s;
       color: ${color.orange};
     }
     & a:visited,
