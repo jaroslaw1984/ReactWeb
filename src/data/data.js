@@ -306,7 +306,7 @@ const data = {
       description_en:
         "I'm looking an opportunity to be a better programer as now i write UI websites in freetime day by day. Being part of team i could bring new ideas and solved many problems and achieve better knowledge",
       description_pl:
-        "Szukam okazji, aby zostać lepszym programistą, ponieważ teraz piszę strony z interfejsem użytkownika w wolnym czasie z dnia na dzień. Będąc częścią zespołu mogłem wnieść nowe pomysły i rozwiązać wiele problemów i zdobyć lepszą wiedzę"
+        "Szukam możliwości, aby zostać lepszym programistą, ponieważ teraz piszę strony z interfejsem użytkownika w wolnym czasie z dnia na dzień. Będąc częścią zespołu mogłem wnieść nowe pomysły i rozwiązać wiele problemów i zdobyć lepszą wiedzę"
     },
     {
       id: 2,
