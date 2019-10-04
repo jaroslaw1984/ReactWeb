@@ -26,6 +26,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const data = {
+  nameOfPage: "OmegiumFix",
   menu: [
     { id: 1, name_en: "Home", name_pl: "Start", path: "/", exact: true },
     { id: 2, name_en: "Projects", name_pl: "Projekty", path: "/projects" },
@@ -322,7 +323,7 @@ const data = {
       title_en: "What studies did you graduate from?",
       title_pl: "Jakie studia skończyłem?",
       description_en:
-        "After graduating from high school, I continued my studies at the Vocational College, where I received the title of „IT technician” . The next step was my studies, which lasted 3.5 years at the University of Computer Science in Lodz and finished with the title of engineer in the specialty of „Network computer”",
+        "After graduating from high school, I continued my studies at the Vocational College, where I received the title of „IT technician” . The next step was my studies, which lasted 3,5 years at the University of Computer Science in Lodz and finished with the title of engineer in the specialty of „Network computer”",
       description_pl:
         "Po ukończeniu liceum, kontynułowałem naukę w Studium Zawodowe, gdzie otrzymałem tytuł „Technik informatyk”. Następnym krokiem były studia, które trwały 3.5 roku na Wyższej Szkole Informatyki w Łodzi i skończyłem je z tytułem inżyniera na specjalności „Sieci komputerowe”"
     }

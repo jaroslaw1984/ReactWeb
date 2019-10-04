@@ -12,7 +12,7 @@ const Styles = styled.div`
     font-size: ${size.menuTextXs};
     color: ${color.blueGreenText} !important;
     padding-left: 10px;
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.menuTextSm};
     }
   }
@@ -36,7 +36,8 @@ const Styles = styled.div`
     padding-left: 20px;
     border-left: 1px solid ${color.orange};
     transition: all 0.5s ease;
-    @media screen and (min-width: 576px) {
+    /* navbar line */
+    @media screen and (min-width: 650px) and (min-width: 733px) and (orientation: landscape) {
       display: block;
       height: 45px;
       border-bottom: 2px solid #c82333;
@@ -137,14 +138,13 @@ const Styles = styled.div`
 const Span = styled.span`
   color: gray;
   font-size: ${size.menuTextXs};
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.menuTextSm};
   }
 `;
 class Header extends Component {
   render() {
     const { checked, change } = this.props;
-    const pageTitle = "Omegiumfix";
     const langPl = "pl";
     const langEn = "en";
     const menu = data.menu.map(item => (
@@ -163,9 +163,9 @@ class Header extends Component {
     return (
       // Navigation bar mobile and desktop view
       <Styles>
-        <Navbar collapseOnSelect expand="sm" fixed="top" id="scrollHide">
+        <Navbar collapseOnSelect expand="md" fixed="top" id="scrollHide">
           <Navbar.Brand as={Link} to="/" exact="true">
-            {pageTitle}
+            {data.nameOfPage}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav">
             <span className="hamb_wrapper">

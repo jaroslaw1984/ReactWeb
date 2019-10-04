@@ -23,7 +23,7 @@ const Style = styled.div`
     transition: 0.3s ease;
     animation: ${fadeIn} 0.5s both;
     font-size: ${size.IPXs};
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.IPSm};
     }
   }
@@ -31,25 +31,39 @@ const Style = styled.div`
     font-weight: 700;
     color: ${color.light_blue};
     font-size: ${size.IH2Xs};
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.IH2Sm};
     }
   }
   .textStyle {
     font-size: ${size.IPXs};
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.IPSm};
     }
   }
-  .formPadding {
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     padding: 20px 15px;
+    width: 100%;
+  }
+  .input {
+    width: 100%;
+    @media screen and (min-width: 600px) and (orientation: portrait) {
+      width: 70%;
+    }
+    @media screen and (max-width: 736px) and (orientation: landscape) {
+      width: 70%;
+    }
   }
   .requierdColor {
     border-color: ${color.alertForm};
   }
   .btnSubmit {
     font-size: ${size.BtnLinkXs};
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.BtnLinkSm};
     }
   }
@@ -107,11 +121,11 @@ class AddContact extends Component {
 
     return (
       <Style>
-        <Form className="formPadding" onSubmit={submitItem} noValidate>
+        <Form className="formWrapper" onSubmit={submitItem} noValidate>
           <Form.Label className="styleTitle">
             {checked ? message_en : message_pl}
           </Form.Label>
-          <Form.Group>
+          <Form.Group className="input">
             <Form.Control
               className={
                 username.length >= 3 ? null : "requierdColor textStyle"
@@ -129,7 +143,7 @@ class AddContact extends Component {
                 {checked ? username_faild_en : username_faild_pl}
               </Alert>
             ))}
-          <Form.Group>
+          <Form.Group className="input">
             <Form.Control
               className={
                 email.indexOf("@") !== -1 && email.length >= 6
@@ -155,7 +169,7 @@ class AddContact extends Component {
               email_faild_toShort_en,
               email_faild_toShort_pl
             )}
-          <Form.Group>
+          <Form.Group className="input">
             <Form.Control
               className="textStyle"
               type="text"
@@ -177,7 +191,7 @@ class AddContact extends Component {
                 {checked ? link_faild_en : link_faild_pl}
               </Alert>
             ))}
-          <Form.Group>
+          <Form.Group className="input">
             <Form.Control
               className="textStyle"
               type="text"
@@ -192,7 +206,10 @@ class AddContact extends Component {
             />
             <div className="addImg" onClick={modal}></div>
           </Form.Group>
-          <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Group
+            controlId="exampleForm.ControlTextarea1"
+            className="input"
+          >
             <Form.Control
               className="textStyle"
               type="text"

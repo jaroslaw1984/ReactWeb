@@ -1,6 +1,16 @@
 //this is a configuration file for font size to mobile and desktop
 
 const fontsSize = {
+  // ***********
+  // Portrait **
+  // ***********
+
+  // ***************************************************************************
+  // project is created for mobile first and it is start with 375px as default
+  resolutionSm: "414px",
+
+  // ***************************************************************************
+
   // *****************************************
   // all text titles (<H2>)
   // *****************************************
@@ -35,6 +45,8 @@ const fontsSize = {
   // mobile size < 414
   menuTextSm: "1.5rem",
 
+  // -----------------------------------------
+
   //component Jumbo.js
 
   // mobile size < 375
@@ -45,6 +57,8 @@ const fontsSize = {
   titleSm: "1.3rem",
   JH2Sm: "2rem",
 
+  // -----------------------------------------
+
   // component ProjectsContent.js
 
   // mobile size < 375
@@ -54,6 +68,8 @@ const fontsSize = {
   // mobile size < 414
   PCCardTitleSm: "1.5rem",
   PCCardTextSm: "1.2rem",
+
+  // -----------------------------------------
 
   // component Contact.js > Item.js
 
@@ -66,6 +82,8 @@ const fontsSize = {
   IH2Sm: "1.5rem", //common with title form
   IH6Sm: "1rem",
   IPSm: "1.2rem", // common with alert text
+
+  // -----------------------------------------
 
   // component Contact.js > AddContact.js (<Form>)
   // Inherits properties from Item.js
@@ -80,7 +98,25 @@ const fontsSize = {
   // mobile size < 414
   APSm: "1rem",
   TH3Sm: "1.4rem",
-  IconSizeSm: "1.8rem"
+  IconSizeSm: "1.8rem",
+
+  // -----------------------------------------
+
+  // component Footer.js
+
+  // mobile size < 375
+  fMailAdressXs: "1rem",
+  fSocialIconSizeXs: "2.4rem",
+
+  // mobile size < 414
+  fMailAdressSm: "1.3rem",
+  fSocialIconSizeSm: "3rem"
+
+  // -----------------------------------------
+
+  // ************
+  // landscape **
+  // ************
 };
 
 export default fontsSize;

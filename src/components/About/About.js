@@ -50,7 +50,7 @@ const Style = styled.div`
     width: 120px;
     height: 120px;
     animation: ${shadow} 4s infinite ease;
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       width: 125px;
       height: 125px;
     }
@@ -59,6 +59,7 @@ const Style = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     margin-left: 15px;
     color: ${color.blueGreenText};
     border-bottom-left-radius: 20px;
@@ -77,7 +78,7 @@ const Style = styled.div`
   .title_skills {
     text-transform: uppercase;
     font-size: ${size.H2Xs};
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.H2Sm};
     }
   }
@@ -87,12 +88,15 @@ const Style = styled.div`
     height: 10vh;
     margin: 30px 20px;
     padding: 0 15px;
+    @media screen and (min-width: 600px) {
+      grid-template-columns: 30px 200px 50px;
+    }
     & span {
       display: flex;
       align-items: center;
       font-size: ${size.IconSizeXs};
       color: ${color.blue};
-      @media screen and (min-width: 414px) {
+      @media screen and (min-width: ${size.resolutionSm}) {
         font-size: ${size.IconSizeSm};
       }
     }
@@ -102,7 +106,7 @@ const Style = styled.div`
       justify-content: flex-start;
       align-items: center;
       font-size: ${size.PXs};
-      @media screen and (min-width: 414px) {
+      @media screen and (min-width: ${size.resolutionSm}) {
         font-size: ${size.PSm};
       }
     }
@@ -137,7 +141,7 @@ const H2 = styled.h2`
   font-weight: 700;
   text-align: left;
   font-size: ${size.H2Xs};
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.H2Sm};
   }
 `;
@@ -145,7 +149,7 @@ const P = styled.p`
   padding: 0 15px;
   margin: 30px 20px;
   font-size: ${size.APXs};
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.PSm};
   }
 `;

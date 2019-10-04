@@ -39,6 +39,9 @@ const Span = styled.span`
   justify-content: center;
   justify-items: center;
   padding: 0 15px 0;
+  @media screen and (min-width: 533px) and (orientation: landscape) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
 const Img = styled.img`
   width: 90px;

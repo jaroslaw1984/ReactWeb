@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import color from "../../Colors/Colors";
 import data from "../../data/data";
+import size from "../../Fonts/Fonts";
 
 const Styles = styled.div`
   .footer {
@@ -21,12 +22,17 @@ const Styles = styled.div`
     justify-content: center;
     align-items: center;
     margin: 10px 0;
+    width: 100%;
   }
   .name {
     width: 60%;
     margin: 10px 0;
     text-align: center;
     transition: all 0.5s;
+    font-size: ${size.PXs};
+    @media screen and (min-width: ${size.resolutionSm}) {
+      font-size: ${size.PSm};
+    }
     & > span:last-child {
       margin-left: 10px;
       color: ${color.blueGreenText};
@@ -35,21 +41,37 @@ const Styles = styled.div`
   .name:hover {
     color: ${color.orange};
   }
-  .email {
-    display: grid;
-    grid-template-columns: 50px 1fr;
+  .emailWrapper {
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 60px;
     margin: 20px 0;
     background-color: ${color.blue};
+  }
+  .email {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @media screen and (min-width: ${size.resolutionSm}) {
+      width: 50%;
+    }
     & > span {
-      margin: 5px auto;
+      /* margin: 5px auto; */
+      text-align: center;
+      /* size of email icon*/
       font-size: 2rem;
     }
     & span:last-child {
+      /* size of email adress */
       font-size: 0.9rem;
+      font-size: ${size.fMailAdressXs};
+      @media screen and (min-width: ${size.resolutionSm}) {
+        font-size: ${size.fMailAdressSm};
+      }
     }
   }
   .email:hover span:first-child {
@@ -63,7 +85,11 @@ const Styles = styled.div`
     margin-bottom: 20px;
     height: 20px;
     & > span {
-      font-size: 2rem;
+      /* size of social media icons */
+      font-size: ${size.fSocialIconSizeXs};
+      @media screen and (min-width: ${size.resolutionSm}) {
+        font-size: ${size.fSocialIconSizeSm};
+      }
     }
     & span:hover > a {
       transition: all 0.5s;
@@ -77,14 +103,19 @@ const Styles = styled.div`
     }
   }
   .data_section {
-    margin: 10px 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
   .data {
-    line-height: 15vh;
     text-align: center;
-    margin-bottom: 0;
     color: ${color.blueGreenText};
     font-weight: 900;
+    font-size: ${size.PXs};
+    @media screen and (min-width: ${size.resolutionSm}) {
+      font-size: ${size.PSm};
+    }
   }
   .link {
     text-decoration: none;
@@ -95,7 +126,10 @@ const Styles = styled.div`
 
 const H2 = styled.h2`
   margin: 20px 20px;
-  font-size: 1.5rem;
+  font-size: ${size.H2Xs};
+  @media screen and (min-width: ${size.resolutionSm}) {
+    font-size: ${size.H2Sm};
+  }
 `;
 
 const Footer = ({ checked }) => {
@@ -131,7 +165,9 @@ const Footer = ({ checked }) => {
             <H2>{checked ? "Contact" : "Kontakt"}</H2>
             <div className="contact_section">
               {contactInfo("name", name.icon, name.tag)}
-              {contactInfo("email", email.icon, email.tag)}
+              <div className="emailWrapper">
+                {contactInfo("email", email.icon, email.tag)}
+              </div>
             </div>
             <div className="socialMediaIcons">{socialIconsItems}</div>
             <div className="data_section">
@@ -143,7 +179,7 @@ const Footer = ({ checked }) => {
                   rel="noopener noreferrer"
                   href="http://www.omegiumfix.pl"
                 >
-                  OmegiumFix
+                  {data.nameOfPage}
                 </a>
               </p>
             </div>

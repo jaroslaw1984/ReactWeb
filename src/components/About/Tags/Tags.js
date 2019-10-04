@@ -63,13 +63,13 @@ const H3 = styled.h3`
   font-size: 1.2rem;
   font-weight: 900;
   font-size: ${size.TH3Xs};
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.TH3Sm};
   }
 `;
 const P = styled.p`
   font-size: ${size.PXs};
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.PSm};
   }
 `;

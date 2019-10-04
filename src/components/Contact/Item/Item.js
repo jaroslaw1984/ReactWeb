@@ -37,7 +37,7 @@ const Li = styled.li`
     align-self: center;
     background: lightgray no-repeat;
     background-size: cover;
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       width: 200px;
       height: 200px;
     }
@@ -54,7 +54,7 @@ const Li = styled.li`
     width: 180px;
     margin-bottom: 25px;
     font-size: ${size.BtnLinkXs};
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.BtnLinkSm};
     }
   }
@@ -70,7 +70,7 @@ const H2 = styled.h2`
   color: ${color.light_blue};
   font-weight: 700;
   font-size: ${size.IH2Xs};
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.IH2Sm};
   }
 `;
@@ -80,7 +80,7 @@ const H6 = styled.h6`
   text-align: center;
   color: ${color.blue};
   font-size: ${size.IH6Xs};
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.IH6Sm};
   }
 `;
@@ -89,7 +89,7 @@ const P = styled.p`
   margin-top: 10px;
   font-weight: 400;
   font-size: ${size.IPXs};
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.PSm};
   }
 `;

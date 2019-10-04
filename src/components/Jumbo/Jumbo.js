@@ -53,6 +53,9 @@ const Styles = styled.div`
     @media screen and (min-width: 768px) {
       background: url(${waves});
     }
+    @media screen and (min-width: 480px) and (orientation: landscape) {
+      animation: none;
+    }
   }
   .overlay {
     position: absolute;
@@ -76,7 +79,7 @@ const Styles = styled.div`
   }
   .title {
     font-size: ${size.titleXs};
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.titleSm};
     }
     animation: ${fadieIn} 2s ease;
@@ -101,7 +104,7 @@ const H2 = styled.h2`
   font-size: ${size.JH2Xs};
   line-height: 40px;
   font-weight: 700;
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.JH2Sm};
   }
 `;

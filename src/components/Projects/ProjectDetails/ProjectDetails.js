@@ -32,7 +32,7 @@ const Style = styled.div`
     margin-top: 30px;
     padding: 0 15px;
     font-size: ${size.BtnLinkXs};
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.BtnLinkSm};
     }
   }
@@ -47,7 +47,7 @@ const Style = styled.div`
     transition: all 0.3s ease;
     cursor: pointer;
     font-size: ${size.BtnLinkXs};
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.BtnLinkSm};
     }
   }
@@ -66,7 +66,7 @@ const H2 = styled.h2`
   font-weight: 700;
   text-transform: uppercase;
   padding: 0 15px;
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.H2Sm};
   }
 `;
@@ -75,7 +75,7 @@ const P = styled.p`
   margin: 30px 20px;
   padding: 0 15px;
   font-size: ${size.PXs};
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.PSm};
   }
 `;

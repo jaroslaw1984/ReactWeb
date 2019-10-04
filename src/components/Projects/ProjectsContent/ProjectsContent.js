@@ -30,7 +30,7 @@ const Style = styled.div`
     transition: all 0.3s ease;
     cursor: pointer;
     font-size: ${size.BtnLinkXs};
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.BtnLinkSm};
     }
   }
@@ -49,13 +49,13 @@ const Style = styled.div`
     font-weight: 700;
     font-size: ${size.PCCardTitleXs};
     text-transform: uppercase;
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.PCCardTitleSm};
     }
   }
   .cardText {
     font-size: ${size.PCCardTextXs};
-    @media screen and (min-width: 414px) {
+    @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.PCCardTextSm};
       & + span.tools {
         font-size: ${size.PCCardTextSm};
@@ -70,7 +70,7 @@ const Img = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     width: 50px;
     height: 50px;
   }
