@@ -32,27 +32,53 @@ const shadow = () => keyframes`
 
 const Style = styled.div`
   .about_header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: ${color.navyBlue};
+    @media screen and (min-width: 480px) and (orientation: landscape) {
+      justify-content: center;
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .header_wrapper {
     display: grid;
+    width: 100%;
+    height: 170px;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 170px;
-    background-color: ${color.navyBlue};
+    @media screen and (min-width: 480px) and (max-width: 639px) and (orientation: landscape) {
+      width: 70%;
+    }
+    @media screen and (min-width: 640px) and (orientation: landscape) {
+      width: 55%;
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      width: 70%;
+      height: 220px;
+    }
   }
-  .img_wrapper {
+  .header_img_wrapper {
     display: flex;
-    height: 80%;
+    height: 100%;
     justify-content: center;
-    border-bottom: 2px solid ${color.orange};
+    align-items: center;
   }
-  .img_size {
-    width: 120px;
-    height: 120px;
+  .header_img_size {
+    width: 130px;
+    height: 130px;
     animation: ${shadow} 4s infinite ease;
     @media screen and (min-width: ${size.resolutionSm}) {
-      width: 125px;
-      height: 125px;
+      width: 135px;
+      height: 135px;
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      width: 180px;
+      height: 180px;
     }
   }
   .tags_header_wrapper {
@@ -64,6 +90,16 @@ const Style = styled.div`
     color: ${color.blueGreenText};
     border-bottom-left-radius: 20px;
     border-left: 2px solid ${color.orange};
+    & > p {
+      font-size: ${size.APXs};
+      @media screen and (min-width: ${size.resolutionSm}) {
+        font-size: ${size.APSm};
+      }
+      @media screen and (min-width: ${size.resolutionMd}) {
+        font-size: ${size.APMd};
+        margin-left: 20px;
+      }
+    }
   }
 
   .line {
@@ -81,6 +117,9 @@ const Style = styled.div`
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.H2Sm};
     }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.H2Md};
+    }
   }
   .docWrapper {
     display: grid;
@@ -91,13 +130,20 @@ const Style = styled.div`
     @media screen and (min-width: 600px) {
       grid-template-columns: 30px 200px 50px;
     }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      justify-content: center;
+      grid-template-columns: 30px 50% 50px;
+    }
     & span {
       display: flex;
       align-items: center;
-      font-size: ${size.IconSizeXs};
+      font-size: ${size.IconSizeFileXs};
       color: ${color.blue};
       @media screen and (min-width: ${size.resolutionSm}) {
-        font-size: ${size.IconSizeSm};
+        font-size: ${size.IconSizeFileSm};
+      }
+      @media screen and (min-width: ${size.resolutionMd}) {
+        font-size: ${size.IconSizeFileMd};
       }
     }
     & p {
@@ -108,6 +154,10 @@ const Style = styled.div`
       font-size: ${size.PXs};
       @media screen and (min-width: ${size.resolutionSm}) {
         font-size: ${size.PSm};
+      }
+      @media screen and (min-width: ${size.resolutionMd}) {
+        font-size: ${size.PMd};
+        margin-left: 20px;
       }
     }
     & a:visited,
@@ -125,7 +175,16 @@ const Style = styled.div`
 const Img = styled.img`
   width: 90px;
   height: 90px;
+  @media screen and (min-width: ${size.resolutionSm}) {
+    width: 110px;
+    height: 110px;
+  }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    width: 130px;
+    height: 130px;
+  }
 `;
+// configuration icons skills
 const Span = styled.span`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -134,6 +193,12 @@ const Span = styled.span`
   justify-items: center;
   padding: 15px 15px;
   margin: 20px 0;
+  @media screen and (min-width: 480px) and (orientation: landscape) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 `;
 const H2 = styled.h2`
   padding: 0 15px;
@@ -148,9 +213,12 @@ const H2 = styled.h2`
 const P = styled.p`
   padding: 0 15px;
   margin: 30px 20px;
-  font-size: ${size.APXs};
+  font-size: ${size.PXs};
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.PSm};
+  }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.PMd};
   }
 `;
 
@@ -201,13 +269,15 @@ class About extends Component {
       <Style>
         <div id="start">
           <div className="about_header">
-            <div className="tags_header_wrapper">
-              <p>{checked ? "Sophisticated." : "Wyrafionowany."}</p>
-              <p>{checked ? "Competent." : "Kompetentny."}</p>
-              <p>{checked ? "Adaptive." : "Adaptacyjny."}</p>
-            </div>
-            <div className="img_wrapper">
-              <Image roundedCircle className="img_size" src={me} />
+            <div className="header_wrapper">
+              <div className="tags_header_wrapper">
+                <p>{checked ? "Sophisticated." : "Wyrafionowany."}</p>
+                <p>{checked ? "Competent." : "Kompetentny."}</p>
+                <p>{checked ? "Adaptive." : "Adaptacyjny."}</p>
+              </div>
+              <div className="header_img_wrapper">
+                <Image roundedCircle className="header_img_size" src={me} />
+              </div>
             </div>
           </div>
           {questionsTags}

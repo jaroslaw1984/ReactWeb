@@ -3,9 +3,9 @@ import { Jumbotron } from "react-bootstrap";
 import { Route } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import color from "../../Colors/Colors";
-import waves from "../../images/waves.jpg";
 import data from "../../data/data";
-import progr from "../../images/progr.jpg";
+import progr_m from "../../images/progr_m.jpg";
+import progr_md from "../../images/progr_md.jpg";
 import size from "../../Fonts/Fonts";
 
 const fadieIn = () => keyframes`
@@ -44,16 +44,19 @@ const Styles = styled.div`
     position: relative;
     min-height: 100vh;
     color: ${color.white};
-    background: url(${progr});
+    background: url(${progr_m});
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     animation: ${imgMove} 10s 1s alternate both linear infinite;
     z-index: 0;
-    @media screen and (min-width: 768px) {
-      background: url(${waves});
+    @media screen and (min-width: ${size.resolutionMd}) {
+      background: url(${progr_md});
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
     }
-    @media screen and (min-width: 480px) and (orientation: landscape) {
+    @media screen and (min-width: ${size.resolutionXsLands}) and (orientation: landscape) {
       animation: none;
     }
   }
@@ -73,14 +76,17 @@ const Styles = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
-    @media screen and (min-width: 768px) {
-      width: auto;
-    }
   }
   .title {
-    font-size: ${size.titleXs};
+    font-size: ${size.JTitleXs};
     @media screen and (min-width: ${size.resolutionSm}) {
-      font-size: ${size.titleSm};
+      font-size: ${size.JTitleSm};
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.JTitletMd};
+    }
+    @media screen and (min-width: ${size.resolutionXsLands}) and (orientation: landscape) {
+      font-size: ${size.JTitleXsLands};
     }
     animation: ${fadieIn} 2s ease;
   }
@@ -106,6 +112,13 @@ const H2 = styled.h2`
   font-weight: 700;
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.JH2Sm};
+  }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.JH2Md};
+    line-height: 60px;
+  }
+  @media screen and (min-width: ${size.resolutionXsLands}) and (orientation: landscape) {
+    font-size: ${size.JH2XsLands};
   }
 `;
 const H3 = styled(H2)``;

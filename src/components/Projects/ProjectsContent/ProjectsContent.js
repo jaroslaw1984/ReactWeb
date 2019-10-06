@@ -11,6 +11,10 @@ const Style = styled.div`
   -moz-box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
   box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
   margin: 0 15px;
+  @media screen and (min-width: ${size.resolutionMd}) {
+    margin: 0 auto;
+    width: 70%;
+  }
   .wrapper {
     display: flex;
     justify-content: center;
@@ -18,10 +22,13 @@ const Style = styled.div`
   .iconTools {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 40px 0;
+    @media screen and (min-width: ${size.resolutionMd}) {
+      justify-content: space-around;
+    }
   }
   .buttonLink {
-    margin-top: 10px;
+    margin: 10px;
     padding: 6px 8px;
     text-decoration: none;
     color: ${color.light_blue};
@@ -32,6 +39,9 @@ const Style = styled.div`
     font-size: ${size.BtnLinkXs};
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.BtnLinkSm};
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.BtnLinkMd};
     }
   }
   .buttonLink:hover {
@@ -52,8 +62,13 @@ const Style = styled.div`
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.PCCardTitleSm};
     }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.PCCardTitleMd};
+    }
   }
   .cardText {
+    margin: 20px 0;
+    line-height: ${size.lineHeight}
     font-size: ${size.PCCardTextXs};
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.PCCardTextSm};
@@ -61,7 +76,14 @@ const Style = styled.div`
         font-size: ${size.PCCardTextSm};
       }
     }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.PCCardTextMd};
+      & + span.tools {
+        font-size: ${size.PCCardTextMd};
+      }
+    }
     & + span.tools {
+      margin: 10px;
       font-style: italic;
     }
   }
@@ -73,6 +95,10 @@ const Img = styled.img`
   @media screen and (min-width: ${size.resolutionSm}) {
     width: 50px;
     height: 50px;
+  }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    width: 60px;
+    height: 60px;
   }
 `;
 const ProjectsContent = ({

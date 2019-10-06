@@ -18,6 +18,7 @@ const fadeIn = () => keyframes`
 
 const Style = styled.div`
   .alertEnter {
+    width: 100%;
     opacity: 0;
     transform: translateY(-50px);
     transition: 0.3s ease;
@@ -25,6 +26,15 @@ const Style = styled.div`
     font-size: ${size.IPXs};
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.IPSm};
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.IPMd};
+    }
+    @media screen and (min-width: 600px) and (orientation: portrait) {
+      width: 70%;
+    }
+    @media screen and (max-width: 736px) and (orientation: landscape) {
+      width: 70%;
     }
   }
   .styleTitle {
@@ -34,11 +44,8 @@ const Style = styled.div`
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.IH2Sm};
     }
-  }
-  .textStyle {
-    font-size: ${size.IPXs};
     @media screen and (min-width: ${size.resolutionSm}) {
-      font-size: ${size.IPSm};
+      font-size: ${size.IH2Md};
     }
   }
   .formWrapper {
@@ -58,6 +65,17 @@ const Style = styled.div`
       width: 70%;
     }
   }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: ${size.IPXs};
+    @media screen and (min-width: ${size.resolutionSm}) {
+      font-size: ${size.IPSm};
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.IPMd};
+    }
+  }
   .requierdColor {
     border-color: ${color.alertForm};
   }
@@ -65,6 +83,9 @@ const Style = styled.div`
     font-size: ${size.BtnLinkXs};
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.BtnLinkSm};
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.BtnLinkMd};
     }
   }
 `;
@@ -148,7 +169,7 @@ class AddContact extends Component {
               className={
                 email.indexOf("@") !== -1 && email.length >= 6
                   ? null
-                  : "requierdColor textStyle"
+                  : "requierdColor"
               }
               type="email"
               name="email"
@@ -171,7 +192,6 @@ class AddContact extends Component {
             )}
           <Form.Group className="input">
             <Form.Control
-              className="textStyle"
               type="text"
               name="link"
               value={link}
@@ -193,7 +213,6 @@ class AddContact extends Component {
             ))}
           <Form.Group className="input">
             <Form.Control
-              className="textStyle"
               type="text"
               name="image"
               value={image}
@@ -211,7 +230,6 @@ class AddContact extends Component {
             className="input"
           >
             <Form.Control
-              className="textStyle"
               type="text"
               name="textarea"
               value={textarea}

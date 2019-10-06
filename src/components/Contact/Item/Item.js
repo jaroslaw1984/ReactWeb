@@ -26,7 +26,7 @@ const Li = styled.li`
   padding: 0;
   margin: 0;
   animation: ${fadeIn} 0.5s ease;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${size.resolutionMd}) {
     padding: 40px 30px;
     flex-wrap: nowrap;
   }
@@ -41,6 +41,10 @@ const Li = styled.li`
       width: 200px;
       height: 200px;
     }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      width: 280px;
+      height: 280px;
+    }
   }
   .imgNone {
     width: 180px;
@@ -49,6 +53,14 @@ const Li = styled.li`
     align-self: center;
     background: url(${defaultImg}) no-repeat;
     background-size: cover;
+    @media screen and (min-width: ${size.resolutionSm}) {
+      width: 200px;
+      height: 200px;
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      width: 280px;
+      height: 280px;
+    }
   }
   .buttonActive {
     width: 180px;
@@ -56,6 +68,9 @@ const Li = styled.li`
     font-size: ${size.BtnLinkXs};
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.BtnLinkSm};
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.BtnLinkMd};
     }
   }
   .buttonDisable {
@@ -73,24 +88,34 @@ const H2 = styled.h2`
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.IH2Sm};
   }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.IH2Md};
+  }
 `;
 
 const H6 = styled.h6`
   width: 100%;
   text-align: center;
+  font-weight: 600;
   color: ${color.blue};
   font-size: ${size.IH6Xs};
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.IH6Sm};
   }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.IH6Md};
+  }
 `;
 const P = styled.p`
   width: 100%;
+  line-height: ${size.lineHeight}
   margin-top: 10px;
-  font-weight: 400;
   font-size: ${size.IPXs};
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.PSm};
+  }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.PMd};
   }
 `;
 

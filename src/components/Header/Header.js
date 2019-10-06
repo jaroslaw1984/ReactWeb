@@ -11,15 +11,24 @@ const Styles = styled.div`
   .menuText {
     font-size: ${size.menuTextXs};
     color: ${color.blueGreenText} !important;
-    padding-left: 10px;
+    width: 90%;
+    margin: 0 10px;
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.menuTextSm};
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.menuTextMd};
+      height: 5vh;
     }
   }
   .nav-link {
     color: ${color.white};
   }
+  div.navbar-nav {
+    width: 80% !important;
+  }
   .navbar {
+    width: 100%;
     background-color: ${color.navyBlue};
   }
   .navbar-light,
@@ -29,6 +38,7 @@ const Styles = styled.div`
   }
   .navbar-brand {
     font-weight: 700;
+    line-height: 5vh;
     color: ${color.white};
   }
   .active {
@@ -37,13 +47,12 @@ const Styles = styled.div`
     border-left: 1px solid ${color.orange};
     transition: all 0.5s ease;
     /* navbar line */
-    @media screen and (min-width: 650px) and (min-width: 733px) and (orientation: landscape) {
-      display: block;
-      height: 45px;
-      border-bottom: 2px solid #c82333;
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-weight: normal;
+      height: 5vh;
+      border-bottom: 2px solid ${color.red};
       border-left: none;
-      color: ${color.orange};
-      transition: 0.5s;
+      transition: all 0.5s ease;
     }
   }
   .hamb_wrapper {
@@ -94,6 +103,9 @@ const Styles = styled.div`
     background: ${color.white};
     margin: 20px auto;
     border-radius: 100px;
+    @media screen and (min-width: ${size.resolutionMd}) {
+      left: -5px;
+    }
   }
   .languageButtonChange label {
     position: absolute;
@@ -108,9 +120,9 @@ const Styles = styled.div`
   }
   .languageButtonChange input[type="checkbox"] {
     position: absolute;
-    left: 0;
+    left: -25px;
     top: -2px;
-    width: 50px;
+    width: 100px;
     opacity: 0;
   }
   .languageButtonChange input[type="checkbox"]:checked + label {
@@ -127,7 +139,7 @@ const Styles = styled.div`
     width: 110px;
   }
   .spanActive {
-    color: #fff;
+    color: ${color.white};
     font-weight: 700;
     transition: all 0.3s ease-in;
   }
@@ -136,10 +148,13 @@ const Styles = styled.div`
   }
 `;
 const Span = styled.span`
-  color: gray;
+  color: ${color.whiteOpacity};
   font-size: ${size.menuTextXs};
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.menuTextSm};
+  }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.menuTextMd};
   }
 `;
 class Header extends Component {
@@ -167,7 +182,7 @@ class Header extends Component {
           <Navbar.Brand as={Link} to="/" exact="true">
             {data.nameOfPage}
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav">
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" id="">
             <span className="hamb_wrapper">
               <span className="hamb_inner"></span>
             </span>
@@ -176,27 +191,21 @@ class Header extends Component {
             className="justify-content-end"
             id="responsive-navbar-nav"
           >
-            <Nav className="justify-content-end">
-              {menu}
-              {/* Button that allow to change language page */}
-              <div className="languageButtonChange">
-                <div className="languageButtonName">
-                  <Span className={checked ? null : "spanActive"}>
-                    {langPl}
-                  </Span>
-                  <Span className={checked ? "spanActive" : null}>
-                    {langEn}
-                  </Span>
-                </div>
-                <input
-                  type="checkbox"
-                  id="checkbox"
-                  checked={checked}
-                  onChange={change}
-                />
-                <label htmlFor="checkbox" id="checkbox" />
+            <Nav>{menu}</Nav>
+            {/* Button that allow to change language page */}
+            <div className="languageButtonChange">
+              <div className="languageButtonName">
+                <Span className={checked ? null : "spanActive"}>{langPl}</Span>
+                <Span className={checked ? "spanActive" : null}>{langEn}</Span>
               </div>
-            </Nav>
+              <input
+                type="checkbox"
+                id="checkbox"
+                checked={checked}
+                onChange={change}
+              />
+              <label htmlFor="checkbox" id="checkbox" />
+            </div>
           </Navbar.Collapse>
         </Navbar>
       </Styles>

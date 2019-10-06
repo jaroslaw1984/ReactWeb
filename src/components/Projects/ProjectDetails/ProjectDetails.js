@@ -13,15 +13,22 @@ const Style = styled.div`
     grid-template-columns: 1fr;
   }
   .imgMargin {
+    width: 100%;
     margin: 10px 0 30px;
   }
   .button {
-    width: 90%;
+    flex-basis: 50%;
     margin: 10px 10px 30px;
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 1;
+    @media screen and (min-width: ${size.resolutionMd}) {
+      flex-basis: 30%;
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.BtnLinkMd};
+    }
   }
   .buttonsWrapper {
     display: flex;
@@ -34,6 +41,9 @@ const Style = styled.div`
     font-size: ${size.BtnLinkXs};
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.BtnLinkSm};
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.BtnLinkMd};
     }
   }
   .buttonLink {
@@ -49,6 +59,9 @@ const Style = styled.div`
     font-size: ${size.BtnLinkXs};
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.BtnLinkSm};
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.BtnLinkMd};
     }
   }
   .buttonLink:hover {
@@ -69,6 +82,9 @@ const H2 = styled.h2`
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.H2Sm};
   }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.H2Md};
+  }
 `;
 
 const P = styled.p`
@@ -78,12 +94,19 @@ const P = styled.p`
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.PSm};
   }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.PMd};
+  }
 `;
 
 const Img = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  @media screen and (min-width: ${size.resolutionMd}) {
+    width: 70px;
+    height: 70px;
+  }
 `;
 
 class ProjectDetails extends Component {

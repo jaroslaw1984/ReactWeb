@@ -1,7 +1,7 @@
 # This is a project based on React and React-bootstrap
 
-<br /> In progress\_:
-<br /> This project started with mobile first. Check first the resolution for **iPhone 4 320:480**. Higher resolution views will be soon added
+<br /> In progress\_\_:
+<br /> This project started with mobile first. Mobile and medium devices are now availabe from **320 > 411 > 768**. Higher resolution views will be soon added
 
 # Credits
 

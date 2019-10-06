@@ -10,7 +10,14 @@ const Div = styled.div`
     grid-row-start: 4;
   }
   .imgMargin {
-    margin: 20px auto 0;
+    width: 100%;
+    margin: 10px auto 30px;
+  }
+  img:nth-last-child(2) {
+    width: 50%;
+    @media screen and (min-width: ${size.resolutionMd}) {
+      width: 30%;
+    }
   }
 `;
 const H2 = styled.h2`
@@ -19,16 +26,23 @@ const H2 = styled.h2`
   text-align: left;
   text-transform: uppercase;
   font-size: ${size.H2Xs};
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.H2Sm};
+  }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.H2Md};
   }
 `;
 const P = styled.p`
   padding: 0 15px;
   margin: 30px 20px;
   font-size: ${size.PXs};
-  @media screen and (min-width: 414px) {
+  line-height: ${size.lineHeight};
+  @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.PSm};
+  }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.PMd};
   }
 `;
 
@@ -39,6 +53,9 @@ const Span = styled.span`
   justify-content: center;
   justify-items: center;
   padding: 0 15px 0;
+  @media screen and (min-width: ${size.resolutionMd}) {
+    grid-template-columns: repeat(4, 1fr);
+  }
   @media screen and (min-width: 533px) and (orientation: landscape) {
     grid-template-columns: repeat(4, 1fr);
   }

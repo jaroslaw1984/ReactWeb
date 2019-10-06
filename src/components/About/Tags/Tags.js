@@ -25,6 +25,9 @@ const Style = styled.div`
     grid-template-columns: 1fr 30px;
     margin-top: 5px;
     transition: all 0.5s;
+    @media screen and (min-width: ${size.resolutionMd}) {
+      grid-template-columns: 1fr 50px;
+    }
   }
   .tag_isActive {
     width: 100%;
@@ -41,6 +44,9 @@ const Style = styled.div`
     font-weight: 900;
     font-size: 1.5rem;
     transition: 0.3s ease-in;
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.IconActiveTag};
+    }
   }
   .close_tag {
     display: none;
@@ -66,11 +72,18 @@ const H3 = styled.h3`
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.TH3Sm};
   }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.TH3Md};
+  }
 `;
 const P = styled.p`
   font-size: ${size.PXs};
+  line-height: ${size.lineHeight};
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.PSm};
+  }
+  @media screen and (min-width: ${size.resolutionMd}) {
+    font-size: ${size.PMd};
   }
 `;
 
