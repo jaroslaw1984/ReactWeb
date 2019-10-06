@@ -12,9 +12,21 @@ const Style = styled.div`
     display: grid;
     grid-template-columns: 1fr;
   }
+
+  .image_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .imgMargin {
     width: 100%;
     margin: 10px 0 30px;
+    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+      width: 90%;
+    }
+    @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
+      width: 90%;
+    }
   }
   .button {
     flex-basis: 50%;
@@ -100,6 +112,9 @@ const P = styled.p`
   @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
     line-height: ${size.lineHeightLandscape};
   }
+  @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
+    line-height: ${size.lineHeightLandscapeL};
+  }
 `;
 
 const Img = styled.img`
@@ -132,14 +147,16 @@ class ProjectDetails extends Component {
       <div key={content.id} className="wrapperContent">
         <H2>{checked ? content.title_en : content.title_pl}</H2>
         <P>{checked ? content.description_en : content.description_pl}</P>
-        <Image
-          src={content.m_img}
-          title={match.params.id}
-          alt={match.params.id}
-          className="imgMargin"
-          fluid
-          rounded
-        />
+        <div className="image_wrapper">
+          <Image
+            src={content.m_img}
+            title={match.params.id}
+            alt={match.params.id}
+            className="imgMargin"
+            fluid
+            rounded
+          />
+        </div>
       </div>
     ));
     const buttons = detail.buttonDetails.map(button => (

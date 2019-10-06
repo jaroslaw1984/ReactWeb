@@ -120,6 +120,9 @@ const P = styled.p`
   @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
     line-height: ${size.lineHeightLandscape};
   }
+  @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
+    line-height: ${size.lineHeightLandscapeL};
+  }
 `;
 
 const Item = ({

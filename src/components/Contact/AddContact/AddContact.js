@@ -67,6 +67,9 @@ const Style = styled.div`
     @media screen and (max-width: 736px) and (orientation: landscape) {
       width: 70%;
     }
+    @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
+      width: 70%;
+    }
   }
   input[type="text"],
   input[type="email"],

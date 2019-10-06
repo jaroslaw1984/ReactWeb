@@ -59,6 +59,9 @@ const Styles = styled.div`
     @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       animation: none;
     }
+    @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
+      animation: none;
+    }
   }
   .overlay {
     position: absolute;

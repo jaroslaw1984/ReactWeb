@@ -27,7 +27,7 @@ const Style = styled.div`
       justify-content: space-around;
     }
     @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-      justify-content: space-evenly;
+      line-height: ${size.lineHeightLandscape};
     }
   }
   .buttonLink {

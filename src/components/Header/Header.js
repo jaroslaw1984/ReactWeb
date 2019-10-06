@@ -24,6 +24,10 @@ const Styles = styled.div`
       height: 4vh;
       line-height: 3vh;
     }
+    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+      height: 10vh;
+      line-height: 6vh;
+    }
   }
   .nav-link {
     color: ${color.white};
@@ -60,6 +64,9 @@ const Styles = styled.div`
     }
     @media screen and (min-width: 800px) {
       height: 4vh;
+    }
+    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+      height: 10vh;
     }
   }
   .hamb_wrapper {

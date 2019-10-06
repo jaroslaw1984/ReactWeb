@@ -36,15 +36,16 @@ const fontsSize = {
   // all paragraph text (<P>)
   // *****************************************
   // mobile size > 375px
-  PXs: "1.1rem",
+  PXs: "0.9rem",
   // mobile size > 414px
-  PSm: "1.3rem",
+  PSm: "1.2rem",
   // middle size > 768px
   PMd: "1.5rem",
 
   // *****************************************
   // all paragraph line-height (<P>)
   // *****************************************
+  lineHeightXs: "3vh",
   lineHeight: "5vh",
   lineHeightLandscape: "9vh",
 
@@ -71,13 +72,13 @@ const fontsSize = {
   //component Header.js navBar
 
   // mobile size > 375px
-  menuTextXs: "1.2rem",
+  menuTextXs: "1rem",
 
   // mobile size > 414px
-  menuTextSm: "1.5rem",
+  menuTextSm: "1.2rem",
 
   // middle size > 768px
-  menuTextMd: "1.35rem",
+  menuTextMd: "1.3rem",
 
   // -----------------------------------------
 

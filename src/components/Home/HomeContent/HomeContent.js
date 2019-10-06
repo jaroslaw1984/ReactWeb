@@ -15,14 +15,20 @@ const Div = styled.div`
     @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       width: 90%;
     }
-  }
-  img:nth-last-child(2) {
-    width: 50%;
-    @media screen and (min-width: ${size.resolutionMd}) {
-      width: 30%;
+    @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
+      width: 90%;
     }
-    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-      width: 25%;
+    &:nth-last-child(2) {
+      width: 30%;
+      @media screen and (min-width: ${size.resolutionMd}) {
+        width: 20%;
+      }
+      @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+        width: 20%;
+      }
+      @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
+        width: 25%;
+      }
     }
   }
 `;
@@ -50,7 +56,13 @@ const P = styled.p`
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.PMd};
   }
+  @media screen and (min-width: ${size.resolutionL}) {
+    line-height: ${size.lineHeightXs};
+  }
   @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+    line-height: ${size.lineHeightLandscape};
+  }
+  @media only screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
     line-height: ${size.lineHeightLandscape};
   }
 `;
