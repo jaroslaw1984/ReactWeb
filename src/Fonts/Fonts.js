@@ -12,13 +12,15 @@ const fontsSize = {
   resolutionSm: "414px",
   // middle size > 768px
   resolutionMd: "768px",
+  // large size > 800px
+  resolutionL: "800px",
 
   // ***************************************************************************
 
   // ************
   // Landscape **
   // ************
-  resolutionXsLands: "480px",
+  resolutionSmLands: "812px",
 
   // *****************************************
   // all text titles (>H2>)
@@ -44,6 +46,7 @@ const fontsSize = {
   // all paragraph line-height (<P>)
   // *****************************************
   lineHeight: "5vh",
+  lineHeightLandscape: "9vh",
 
   // *****************************************
   // all buttons size that lead to subpages

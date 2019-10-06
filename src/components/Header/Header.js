@@ -20,6 +20,10 @@ const Styles = styled.div`
       font-size: ${size.menuTextMd};
       height: 5vh;
     }
+    @media screen and (min-width: ${size.resolutionL}) {
+      height: 4vh;
+      line-height: 3vh;
+    }
   }
   .nav-link {
     color: ${color.white};
@@ -53,6 +57,9 @@ const Styles = styled.div`
       border-bottom: 2px solid ${color.red};
       border-left: none;
       transition: all 0.5s ease;
+    }
+    @media screen and (min-width: 800px) {
+      height: 4vh;
     }
   }
   .hamb_wrapper {

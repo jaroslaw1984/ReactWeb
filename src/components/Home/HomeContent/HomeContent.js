@@ -12,11 +12,17 @@ const Div = styled.div`
   .imgMargin {
     width: 100%;
     margin: 10px auto 30px;
+    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+      width: 90%;
+    }
   }
   img:nth-last-child(2) {
     width: 50%;
     @media screen and (min-width: ${size.resolutionMd}) {
       width: 30%;
+    }
+    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+      width: 25%;
     }
   }
 `;
@@ -43,6 +49,9 @@ const P = styled.p`
   }
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.PMd};
+  }
+  @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+    line-height: ${size.lineHeightLandscape};
   }
 `;
 

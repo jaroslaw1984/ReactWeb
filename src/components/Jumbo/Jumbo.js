@@ -56,7 +56,7 @@ const Styles = styled.div`
       background-attachment: fixed;
       background-repeat: no-repeat;
     }
-    @media screen and (min-width: ${size.resolutionXsLands}) and (orientation: landscape) {
+    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       animation: none;
     }
   }

@@ -108,7 +108,7 @@ const H6 = styled.h6`
 `;
 const P = styled.p`
   width: 100%;
-  line-height: ${size.lineHeight}
+  line-height: ${size.lineHeight};
   margin-top: 10px;
   font-size: ${size.IPXs};
   @media screen and (min-width: ${size.resolutionSm}) {
@@ -116,6 +116,9 @@ const P = styled.p`
   }
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.PMd};
+  }
+  @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+    line-height: ${size.lineHeightLandscape};
   }
 `;
 

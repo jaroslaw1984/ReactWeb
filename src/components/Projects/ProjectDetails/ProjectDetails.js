@@ -97,6 +97,9 @@ const P = styled.p`
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.PMd};
   }
+  @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+    line-height: ${size.lineHeightLandscape};
+  }
 `;
 
 const Img = styled.img`

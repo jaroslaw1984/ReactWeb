@@ -33,7 +33,7 @@ const Style = styled.div`
     @media screen and (min-width: 600px) and (orientation: portrait) {
       width: 70%;
     }
-    @media screen and (max-width: 736px) and (orientation: landscape) {
+    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       width: 70%;
     }
   }
@@ -46,6 +46,9 @@ const Style = styled.div`
     }
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.IH2Md};
+    }
+    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+      font-size: ${size.IH2Sm};
     }
   }
   .formWrapper {

@@ -26,6 +26,9 @@ const Style = styled.div`
     @media screen and (min-width: ${size.resolutionMd}) {
       justify-content: space-around;
     }
+    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+      justify-content: space-evenly;
+    }
   }
   .buttonLink {
     margin: 10px;
@@ -68,13 +71,16 @@ const Style = styled.div`
   }
   .cardText {
     margin: 20px 0;
-    line-height: ${size.lineHeight}
+    line-height: ${size.lineHeight};
     font-size: ${size.PCCardTextXs};
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.PCCardTextSm};
       & + span.tools {
         font-size: ${size.PCCardTextSm};
       }
+    }
+    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
+      line-height: ${size.lineHeightLandscape};
     }
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.PCCardTextMd};
