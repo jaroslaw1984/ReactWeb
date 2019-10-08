@@ -51,6 +51,7 @@ const Style = styled.div`
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
     @media screen and (min-width: 480px) and (max-width: 639px) and (orientation: landscape) {
       width: 70%;
     }
@@ -60,6 +61,12 @@ const Style = styled.div`
     @media screen and (min-width: ${size.resolutionMd}) {
       width: 70%;
       height: 220px;
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      width: 50%;
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      width: 30%;
     }
   }
   .header_img_wrapper {
@@ -183,6 +190,10 @@ const Img = styled.img`
     width: 130px;
     height: 130px;
   }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    width: 90px;
+    height: 90px;
+  }
 `;
 // configuration icons skills
 const Span = styled.span`
@@ -199,6 +210,9 @@ const Span = styled.span`
   @media screen and (min-width: ${size.resolutionMd}) {
     grid-template-columns: repeat(5, 1fr);
   }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 `;
 const H2 = styled.h2`
   padding: 0 15px;
@@ -208,6 +222,12 @@ const H2 = styled.h2`
   font-size: ${size.H2Xs};
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.H2Sm};
+  }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.H2Desk};
+  }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    font-size: ${size.H2DeskL};
   }
 `;
 const P = styled.p`
@@ -219,6 +239,12 @@ const P = styled.p`
   }
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.PMd};
+  }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.PDesk};
+  }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    font-size: ${size.PDeskL};
   }
 `;
 

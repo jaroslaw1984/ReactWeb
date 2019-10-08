@@ -12,32 +12,44 @@ const Styles = styled.div`
     font-size: ${size.menuTextXs};
     color: ${color.blueGreenText} !important;
     width: 90%;
-    margin: 0 10px;
+    margin: 10px;
+    padding: 0;
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.menuTextSm};
     }
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.menuTextMd};
-      height: 5vh;
     }
-    @media screen and (min-width: ${size.resolutionL}) {
-      height: 4vh;
-      line-height: 3vh;
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.menuTextDesk};
     }
-    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-      height: 10vh;
-      line-height: 6vh;
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      font-size: ${size.menuTextDeskL};
     }
   }
   .nav-link {
     color: ${color.white};
   }
-  div.navbar-nav {
-    width: 80% !important;
-  }
   .navbar {
     width: 100%;
     background-color: ${color.navyBlue};
+  }
+  a.navbar-brand {
+    font-size: ${size.menuPageNameXs};
+    @media screen and (min-width: ${size.resolutionSm}) {
+      font-size: ${size.menuPageNameSm};
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      font-size: ${size.menuPageNameMd};
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.menuPageNameDesk};
+    }
+    &:hover,
+    :active,
+    :focus {
+      color: ${color.white};
+    }
   }
   .navbar-light,
   .navbar-toggler {
@@ -54,19 +66,13 @@ const Styles = styled.div`
     padding-left: 20px;
     border-left: 1px solid ${color.orange};
     transition: all 0.5s ease;
-    /* navbar line */
+    /* navbar after 770px*/
     @media screen and (min-width: ${size.resolutionMd}) {
       font-weight: normal;
-      height: 5vh;
-      border-bottom: 2px solid ${color.red};
+      padding-left: 0;
+      color: ${color.orange} !important;
       border-left: none;
       transition: all 0.5s ease;
-    }
-    @media screen and (min-width: 800px) {
-      height: 4vh;
-    }
-    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-      height: 10vh;
     }
   }
   .hamb_wrapper {
@@ -117,8 +123,33 @@ const Styles = styled.div`
     background: ${color.white};
     margin: 20px auto;
     border-radius: 100px;
+    transition: all 1s ease;
     @media screen and (min-width: ${size.resolutionMd}) {
-      left: -5px;
+      left: 20px;
+    }
+    @media screen and (min-width: 880px) {
+      left: 80px;
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      left: 100px;
+    }
+    @media screen and (min-width: 1100px) {
+      left: 180px;
+    }
+    @media screen and (min-width: 1200px) {
+      left: 220px;
+    }
+    @media screen and (min-width: 1300px) {
+      left: 280px;
+    }
+    @media screen and (min-width: 1500px) {
+      left: 380px;
+    }
+    @media screen and (min-width: 1600px) {
+      left: 410px;
+    }
+    @media screen and (min-width: 1920px) {
+      left: 510px;
     }
   }
   .languageButtonChange label {
@@ -205,7 +236,7 @@ class Header extends Component {
             className="justify-content-end"
             id="responsive-navbar-nav"
           >
-            <Nav>{menu}</Nav>
+            {menu}
             {/* Button that allow to change language page */}
             <div className="languageButtonChange">
               <div className="languageButtonName">

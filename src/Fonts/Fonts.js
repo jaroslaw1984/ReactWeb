@@ -14,6 +14,10 @@ const fontsSize = {
   resolutionMd: "768px",
   // large size > 800px
   resolutionL: "800px",
+  // desktop size > 992px
+  resolutionDesk: "992px",
+  // desktop large size > 1200px
+  resolutionDeskL: "1200px",
 
   // ***************************************************************************
 
@@ -30,7 +34,11 @@ const fontsSize = {
   // mobile size > 414px
   H2Sm: "2rem",
   // middle size > 768px
-  H2Md: "2.5rem",
+  H2Md: "2.2rem",
+  // desktop size > 992px
+  H2Desk: "1.8rem",
+  // desktop large size > 1200px
+  H2DeskL: "2.2rem",
 
   // *****************************************
   // all paragraph text (<P>)
@@ -40,14 +48,11 @@ const fontsSize = {
   // mobile size > 414px
   PSm: "1.2rem",
   // middle size > 768px
-  PMd: "1.5rem",
-
-  // *****************************************
-  // all paragraph line-height (<P>)
-  // *****************************************
-  lineHeightXs: "3vh",
-  lineHeight: "5vh",
-  lineHeightLandscape: "9vh",
+  PMd: "1.3rem",
+  // desktop size > 992px
+  PDesk: "1.1rem",
+  // desktop large size > 1200px
+  PDeskL: "1.3rem",
 
   // *****************************************
   // all buttons size that lead to subpages
@@ -58,6 +63,8 @@ const fontsSize = {
   BtnLinkSm: "1.1rem",
   // middle size > 768px
   BtnLinkMd: "1.4rem",
+  // desktop size > 992px
+  BtnLinkDesk: "1rem",
 
   // *****************************************
   // scroll button size that lead to top
@@ -66,6 +73,8 @@ const fontsSize = {
   BtnScrollTopXs: "2rem",
   // middle size > 768px
   BtnScrollTopMd: "2.3rem",
+  // desktop size > 992px
+  BtnScrollTopDesk: "2rem",
 
   // -----------------------------------------
 
@@ -73,12 +82,17 @@ const fontsSize = {
 
   // mobile size > 375px
   menuTextXs: "1rem",
-
+  menuPageNameXs: "1.2rem",
   // mobile size > 414px
-  menuTextSm: "1.2rem",
+  menuTextSm: "1.4rem",
+  menuPageNameSm: "1.5rem",
 
   // middle size > 768px
   menuTextMd: "1.3rem",
+  menuPageNameMd: "1.4rem",
+  // desktop size > 992px
+  menuTextDesk: "1.5rem",
+  menuPageNameDesk: "2rem",
 
   // -----------------------------------------
 
@@ -95,6 +109,12 @@ const fontsSize = {
   // middle size > 768px
   JTitletMd: "2.1rem",
   JH2Md: "3rem",
+  // desktop size > 992px
+  JTitletDesk: "2.5rem",
+  JH2Desk: "3.2rem",
+  // desktop large size > 1200px
+  JTitletDeskL: "4rem",
+  JH2DeskL: "5rem",
 
   // -----------------------------------------
 
@@ -111,7 +131,10 @@ const fontsSize = {
   // middle size > 768px
   PCCardTitleMd: "1.7rem",
   PCCardTextMd: "1.4rem",
-  PCCardBtnMd: "1.4rem",
+
+  // desktop size > 922px
+  PCCardTitleDesk: "1.4rem",
+  PCCardTextDesk: "1.1rem",
 
   // -----------------------------------------
 
@@ -132,6 +155,15 @@ const fontsSize = {
   IH6Md: "1.2rem",
   IPMd: "1.4rem", // common with alert text
 
+  // Desktop size > 922px
+  IH2Desk: "1.5rem", //common with title form
+  IH6Desk: "0.9rem",
+  IPDesk: "1rem", // common with alert text
+
+  // Desktop large size > 922px
+  IH2DeskL: "1.5rem", //common with title form
+  IH6DeskL: "1rem",
+  IPDeskL: "1.3rem", // common with alert text
   // -----------------------------------------
 
   // component Contact.js > AddContact.js (>Form>)
@@ -141,25 +173,31 @@ const fontsSize = {
 
   // mobile size > 375px
   APXs: "1rem",
-  TH3Xs: "1.2rem",
+  IconSizeFileXs: "1.6rem",
 
   // mobile size > 414px
   APSm: "1.3rem",
-  TH3Sm: "1.4rem",
+  IconSizeFileSm: "2rem",
 
   // middle size > 768px
   APMd: "1.7rem",
-  TH3Md: "1.6rem",
   IconSizeFileMd: "2.5rem",
+  // desktop size > 922
+  APDesk: "1.7rem",
+  IconSizeFileDesk: "2.5rem",
 
   // component About.js > Tags.js
 
   // mobile size > 375px
-  IconSizeFileXs: "1.6rem",
+  TH3Xs: "1.2rem",
   // mobile size > 414px
-  IconSizeFileSm: "2rem",
+  TH3Sm: "1.4rem",
   // middle size > 768px
   IconActiveTag: "3rem",
+  TH3Md: "1.6rem",
+  // desktop size > 922
+  IconActiveTagDesk: "2rem",
+  TH3Desk: "1.3rem",
 
   // -----------------------------------------
 
@@ -179,6 +217,16 @@ const fontsSize = {
   fMailAdressMd: "1.5rem",
   fMailIconSizeMd: "2.5rem",
   fSocialIconSizeMd: "3.5rem",
+
+  // desktop size > 992px
+  fMailAdressDesk: "1.3rem",
+  fMailIconSizeDesk: "2.2rem",
+  fSocialIconSizeDesk: "3rem",
+
+  // desktop large size > 992px
+  fMailAdressDeskL: "1.5rem",
+  fMailIconSizeDeskL: "2.8rem",
+  fSocialIconSizeDeskL: "3.5rem",
 
   // -----------------------------------------
 

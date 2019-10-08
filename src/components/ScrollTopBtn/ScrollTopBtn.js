@@ -27,6 +27,11 @@ const Style = styled.div`
       height: 45px;
       font-size: ${size.BtnScrollTopMd};
     }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      width: 35px;
+      height: 35px;
+      font-size: ${size.BtnScrollTopDesk};
+    }
   }
   .btn_scroll {
     position: relative;

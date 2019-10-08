@@ -1,9 +1,10 @@
 import avatar from "../images/avatar.jpg";
 import page1 from "../images/my_page1.jpg";
 import m_tablet from "../images/m_tablet.jpg";
-import v_mobile from "../images/v_mobile.jpg";
 import m_project from "../images/m_project.jpg";
 import v_all_devices from "../images/v_all_devices.jpg";
+import all_devices_2 from "../images/all_devices_2.jpg";
+import portfolio from "../images/portfolio.jpg";
 import reactbootstrap from "../images/reactbootstrap.svg";
 import js from "../images/js.jpg";
 import styled from "../images/styled.jpg";
@@ -146,7 +147,7 @@ const data = {
         "When creating websites, I stick to certain rules, such as the mobile first principle. For this I also had to use the tools which is react-bootstrap, which will allow the website to be responsive, where it will fit on most mobile phones as well as desktop devices. Another tool for handling the responsiveness of the site is CSS itself, where, with the help of flex and grid, they allow you to control the displayed graphics and components.",
       text1_pl:
         "Przy tworzeniu stron internetowych trzymam się pewnych zasad jak między innymi zasada mobile first. Do tego również przyszło mi wykorzystać narzędzi jakim jest react-bootstrap, które pozwoli aby strona była responsywna, gdzie będzie się układać na większości telefonów komórkowych jak i urządzenia desktopowe. Innym narzędziem do obsługi responsywności strony jest sam CSS, gdzie przy pomocy flex oraz grid, pozowli na kotrolowanie wyświetlających się grafik i komponentów.",
-      img: v_mobile,
+      img: all_devices_2,
       codeExample: "",
       icons: "",
       text2_en: "",
@@ -223,7 +224,7 @@ const data = {
     },
     {
       key: 1,
-      img: page1,
+      img: portfolio,
       cardTitle: "Portfolio",
       id: "portfolio",
       descriptionCard_en:
@@ -271,7 +272,7 @@ const data = {
             "For styling I use tools like css, styled-components and react-bootstrap. Styled-component is a strong tool and useful in creating applications in React because it uses tagged template literals (the latest addition to JavaScript) and the power of CSS, styled-components allows you to write real CSS code to style components. It also removes mapping between components and styles - using components as a low-level styling structure. In contrast, the react-bootstrap component model gives me more control over the form and function of each component.",
           description_pl:
             "Do stylowania używam narzędzi jakim jest css, styled-components oraz react-bootstrap. Styled- component jest silinym narzędziem i przydanym w tworzeniu aplikacji w React dlatego, że wykorzystuje otagowane literały szablonów (najnowszy dodatek do JavaScript) i moc CSS, styled-components pozwala pisać rzeczywisty kod CSS do stylizowania komponentów. Usuwa również mapowanie między komponentami i stylami - użycie komponentów jako niskopoziomowej konstrukcji do stylizacji. Natomiast react-bootstrap model komponentu daje mi większą kontrolę nad formą i funkcją każdego komponentu.",
-          m_img: m_tablet
+          m_img: all_devices_2
         }
       ],
       buttonDetails: [

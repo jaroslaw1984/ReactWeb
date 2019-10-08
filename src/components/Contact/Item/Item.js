@@ -72,6 +72,9 @@ const Li = styled.li`
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.BtnLinkMd};
     }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.BtnLinkDesk};
+    }
   }
   .buttonDisable {
     display: none;
@@ -91,6 +94,12 @@ const H2 = styled.h2`
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.IH2Md};
   }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.H2Desk};
+  }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    font-size: ${size.H2DeskL};
+  }
 `;
 
 const H6 = styled.h6`
@@ -105,6 +114,12 @@ const H6 = styled.h6`
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.IH6Md};
   }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.IH6Desk};
+  }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    font-size: ${size.IH6DeskL};
+  }
 `;
 const P = styled.p`
   width: 100%;
@@ -117,11 +132,11 @@ const P = styled.p`
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.PMd};
   }
-  @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-    line-height: ${size.lineHeightLandscape};
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.PDesk};
   }
-  @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
-    line-height: ${size.lineHeightLandscapeL};
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    font-size: ${size.PDeskL};
   }
 `;
 

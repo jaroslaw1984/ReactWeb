@@ -11,23 +11,32 @@ const Div = styled.div`
   }
   .imgMargin {
     width: 100%;
-    margin: 10px auto 30px;
+    margin: 30px auto 30px;
+    @media screen and (min-width: ${size.resolutionMd}) {
+      width: 90%;
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      width: 70%;
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      width: 50%;
+    }
     @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       width: 90%;
     }
-    @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
-      width: 90%;
-    }
     &:nth-last-child(2) {
-      width: 30%;
+      width: 98%;
       @media screen and (min-width: ${size.resolutionMd}) {
-        width: 20%;
+        width: 90%;
+      }
+      @media screen and (min-width: ${size.resolutionDesk}) {
+        width: 70%;
+      }
+      @media screen and (min-width: ${size.resolutionDeskL}) {
+        width: 50%;
       }
       @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-        width: 20%;
-      }
-      @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
-        width: 25%;
+        width: 90%;
       }
     }
   }
@@ -44,26 +53,28 @@ const H2 = styled.h2`
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.H2Md};
   }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.H2Desk};
+  }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    font-size: ${size.H2DeskL};
+  }
 `;
 const P = styled.p`
   padding: 0 15px;
   margin: 30px 20px;
   font-size: ${size.PXs};
-  line-height: ${size.lineHeight};
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.PSm};
   }
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.PMd};
   }
-  @media screen and (min-width: ${size.resolutionL}) {
-    line-height: ${size.lineHeightXs};
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.PDesk};
   }
-  @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-    line-height: ${size.lineHeightLandscape};
-  }
-  @media only screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
-    line-height: ${size.lineHeightLandscape};
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    font-size: ${size.PDeskL};
   }
 `;
 

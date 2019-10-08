@@ -59,9 +59,6 @@ const Styles = styled.div`
     @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       animation: none;
     }
-    @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
-      animation: none;
-    }
   }
   .overlay {
     position: absolute;
@@ -119,6 +116,14 @@ const H2 = styled.h2`
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.JH2Md};
     line-height: 60px;
+  }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.JH2Desk};
+    line-height: 60px;
+  }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    font-size: ${size.JH2DeskL};
+    line-height: 100px;
   }
   @media screen and (min-width: ${size.resolutionXsLands}) and (orientation: landscape) {
     font-size: ${size.JH2XsLands};

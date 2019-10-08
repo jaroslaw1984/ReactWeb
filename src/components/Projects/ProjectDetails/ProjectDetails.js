@@ -21,10 +21,19 @@ const Style = styled.div`
   .imgMargin {
     width: 100%;
     margin: 10px 0 30px;
+    @media screen and (min-width: ${size.resolutionMd}) {
+      width: 90%;
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      width: 70%;
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      width: 50%;
+    }
     @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       width: 90%;
     }
-    @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
+    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       width: 90%;
     }
   }
@@ -37,8 +46,6 @@ const Style = styled.div`
     grid-column-end: 1;
     @media screen and (min-width: ${size.resolutionMd}) {
       flex-basis: 30%;
-    }
-    @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.BtnLinkMd};
     }
   }
@@ -56,6 +63,9 @@ const Style = styled.div`
     }
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.BtnLinkMd};
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.BtnLinkDesk};
     }
   }
   .buttonLink {
@@ -84,6 +94,14 @@ const Style = styled.div`
     display: flex;
     justify-content: space-around;
     margin: 10px 0;
+    @media screen and (min-width: ${size.resolutionSm}) {
+      justify-content: flex-start;
+    }
+  }
+  .icons_img {
+    @media screen and (min-width: ${size.resolutionSm}) {
+      margin-left: 50px;
+    }
   }
 `;
 const H2 = styled.h2`
@@ -97,6 +115,12 @@ const H2 = styled.h2`
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.H2Md};
   }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.H2Desk};
+  }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    font-size: ${size.H2DeskL};
+  }
 `;
 
 const P = styled.p`
@@ -109,11 +133,11 @@ const P = styled.p`
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.PMd};
   }
-  @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-    line-height: ${size.lineHeightLandscape};
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.PDesk};
   }
-  @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
-    line-height: ${size.lineHeightLandscapeL};
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    font-size: ${size.PDeskL};
   }
 `;
 
@@ -139,6 +163,7 @@ class ProjectDetails extends Component {
         rel="noopener noreferrer"
         key={icon.id}
         href={icon.url}
+        className="icons_img"
       >
         <Img src={icon.img} alt={icon.name} title={icon.name} />
       </a>

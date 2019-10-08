@@ -28,6 +28,14 @@ const Style = styled.div`
     @media screen and (min-width: ${size.resolutionMd}) {
       grid-template-columns: 1fr 50px;
     }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      grid-template-columns: 0.8fr 50px;
+      justify-content: center;
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      grid-template-columns: 0.8fr 50px;
+      justify-content: center;
+    }
   }
   .tag_isActive {
     width: 100%;
@@ -47,6 +55,9 @@ const Style = styled.div`
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.IconActiveTag};
     }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.IconActiveTagDesk};
+    }
   }
   .close_tag {
     display: none;
@@ -61,6 +72,14 @@ const Style = styled.div`
   }
   article > p {
     padding: 10px 0 0 10px;
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      margin: 0 auto;
+      padding: 10px 120px;
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      margin: 0 auto;
+      padding: 10px 250px;
+    }
   }
 `;
 
@@ -75,6 +94,9 @@ const H3 = styled.h3`
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.TH3Md};
   }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.TH3Desk};
+  }
 `;
 const P = styled.p`
   font-size: ${size.PXs};
@@ -85,11 +107,8 @@ const P = styled.p`
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.PMd};
   }
-  @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-    line-height: ${size.lineHeightLandscape};
-  }
-  @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
-    line-height: ${size.lineHeightLandscapeL};
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.PDesk};
   }
 `;
 

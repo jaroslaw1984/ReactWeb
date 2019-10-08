@@ -36,6 +36,12 @@ const Styles = styled.div`
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.PMd};
     }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.PDesk};
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      font-size: ${size.PDeskL};
+    }
     & > span:last-child {
       margin-left: 10px;
       color: ${color.blueGreenText};
@@ -59,8 +65,15 @@ const Styles = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    transition: all 0.3s ease;
     @media screen and (min-width: ${size.resolutionSm}) {
       width: 50%;
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      width: 30%;
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      width: 25%;
     }
     & > span {
       /* margin: 5px auto; */
@@ -73,6 +86,12 @@ const Styles = styled.div`
       @media screen and (min-width: ${size.resolutionMd}) {
         font-size: ${size.fMailIconSizeMd};
       }
+      @media screen and (min-width: ${size.resolutionDesk}) {
+        font-size: ${size.fMailIconSizeDesk};
+      }
+      @media screen and (min-width: ${size.resolutionDeskL}) {
+        font-size: ${size.fMailIconSizeDeskL};
+      }
     }
     & span:last-child {
       /* size of email adress */
@@ -82,6 +101,12 @@ const Styles = styled.div`
       }
       @media screen and (min-width: ${size.resolutionMd}) {
         font-size: ${size.fMailAdressMd};
+      }
+      @media screen and (min-width: ${size.resolutionDesk}) {
+        font-size: ${size.fMailAdressDesk};
+      }
+      @media screen and (min-width: ${size.resolutionDeskL}) {
+        font-size: ${size.fMailAdressDeskL};
       }
     }
   }
@@ -103,6 +128,12 @@ const Styles = styled.div`
       }
       @media screen and (min-width: ${size.resolutionMd}) {
         font-size: ${size.fSocialIconSizeMd};
+      }
+      @media screen and (min-width: ${size.resolutionDesk}) {
+        font-size: ${size.fSocialIconSizeDesk};
+      }
+      @media screen and (min-width: ${size.resolutionDeskL}) {
+        font-size: ${size.fSocialIconSizeDeskL};
       }
     }
     & span:hover > a {
@@ -133,6 +164,12 @@ const Styles = styled.div`
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.PMd};
     }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.PDesk};
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      font-size: ${size.PDeskL};
+    }
   }
   .link {
     text-decoration: none;
@@ -149,6 +186,12 @@ const H2 = styled.h2`
   }
   @media screen and (min-width: ${size.resolutionMd}) {
     font-size: ${size.H2Md};
+  }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    font-size: ${size.H2Desk};
+  }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    font-size: ${size.H2DeskL};
   }
 `;
 

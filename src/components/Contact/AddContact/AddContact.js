@@ -30,11 +30,26 @@ const Style = styled.div`
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.IPMd};
     }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.IPDesk};
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      font-size: ${size.IPDeskL};
+    }
     @media screen and (min-width: 600px) and (orientation: portrait) {
       width: 70%;
     }
     @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       width: 70%;
+    }
+    @media screen and (min-width: ${size.resolutionMd}) {
+      width: 50%;
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      width: 50%;
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      width: 30%;
     }
   }
   .styleTitle {
@@ -46,6 +61,9 @@ const Style = styled.div`
     }
     @media screen and (min-width: ${size.resolutionSm}) {
       font-size: ${size.IH2Md};
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.IH2Desk};
     }
     @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       font-size: ${size.IH2Sm};
@@ -67,8 +85,14 @@ const Style = styled.div`
     @media screen and (max-width: 736px) and (orientation: landscape) {
       width: 70%;
     }
-    @media screen and (max-width: ${size.resolutionLLands}) and (orientation: landscape) {
-      width: 70%;
+    @media screen and (min-width: ${size.resolutionMd}) {
+      width: 50%;
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      width: 50%;
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      width: 30%;
     }
   }
   input[type="text"],
@@ -81,6 +105,12 @@ const Style = styled.div`
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.IPMd};
     }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.IPDesk};
+    }
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      font-size: ${size.IPDeskL};
+    }
   }
   .requierdColor {
     border-color: ${color.alertForm};
@@ -92,6 +122,9 @@ const Style = styled.div`
     }
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.BtnLinkMd};
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.BtnLinkDesk};
     }
   }
 `;

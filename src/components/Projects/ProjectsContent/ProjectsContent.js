@@ -11,9 +11,19 @@ const Style = styled.div`
   -moz-box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
   box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
   margin: 0 15px;
+  transition: all 0.5s ease;
   @media screen and (min-width: ${size.resolutionMd}) {
     margin: 0 auto;
+    width: 80%;
+  }
+  @media screen and (min-width: ${size.resolutionL}) {
+    width: 80%;
+  }
+  @media screen and (min-width: ${size.resolutionDesk}) {
     width: 70%;
+  }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    width: 50%;
   }
   .wrapper {
     display: flex;
@@ -25,9 +35,6 @@ const Style = styled.div`
     margin: 40px 0;
     @media screen and (min-width: ${size.resolutionMd}) {
       justify-content: space-around;
-    }
-    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-      line-height: ${size.lineHeightLandscape};
     }
   }
   .buttonLink {
@@ -46,6 +53,9 @@ const Style = styled.div`
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.BtnLinkMd};
     }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.BtnLinkDesk};
+    }
   }
   .buttonLink:hover {
     background-color: ${color.light_blue};
@@ -53,6 +63,9 @@ const Style = styled.div`
   }
   .cardSpace {
     margin-bottom: 30px;
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      margin: 0;
+    }
   }
   .cardBody {
     margin-top: 20px;
@@ -68,6 +81,9 @@ const Style = styled.div`
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.PCCardTitleMd};
     }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.PCCardTitleDesk};
+    }
   }
   .cardText {
     margin: 20px 0;
@@ -79,13 +95,16 @@ const Style = styled.div`
         font-size: ${size.PCCardTextSm};
       }
     }
-    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-      line-height: ${size.lineHeightLandscape};
-    }
     @media screen and (min-width: ${size.resolutionMd}) {
       font-size: ${size.PCCardTextMd};
       & + span.tools {
         font-size: ${size.PCCardTextMd};
+      }
+    }
+    @media screen and (min-width: ${size.resolutionDesk}) {
+      font-size: ${size.PCCardTextDesk};
+      & + span.tools {
+        font-size: ${size.PCCardTextDesk};
       }
     }
     & + span.tools {
@@ -105,6 +124,10 @@ const Img = styled.img`
   @media screen and (min-width: ${size.resolutionMd}) {
     width: 60px;
     height: 60px;
+  }
+  @media screen and (min-width: ${size.resolutionDesk}) {
+    width: 50px;
+    height: 50px;
   }
 `;
 const ProjectsContent = ({

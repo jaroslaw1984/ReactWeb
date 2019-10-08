@@ -38,7 +38,7 @@ class App extends Component {
       if (prevScrollPos > currentScrollPos) {
         document.getElementById("scrollHide").style.top = "0";
       } else {
-        document.getElementById("scrollHide").style.top = "-80px";
+        document.getElementById("scrollHide").style.top = "-90px";
       }
       if (prevScrollPos > 100) {
         document.querySelector(".btn_wrapper").style.opacity = "1";
