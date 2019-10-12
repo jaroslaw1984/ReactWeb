@@ -316,8 +316,8 @@ const data = {
     },
     {
       id: 2,
-      title_en: "What I'm good at?",
-      title_pl: "Moje mocne strony?",
+      title_en: "My good points",
+      title_pl: "Moje mocne strony",
       description_en:
         "The biggest of my advantage is that I never give up if I have a problem, the best solution counts most. Communicability, especially in english, to better use this language and acquire new acquaintances. Tendency to learn new technologies, especially Linux. Free operating system widely used in computer hardware. I have about 5 years of experience in this system and I use it as the main operating system for everyday use and work. Organization of work is also my strength. I set a plan of the day to be able to work, learn and spend time with my family and do something for myself.",
       description_pl:
