@@ -202,7 +202,7 @@ const Jumbo = ({ checked }) => {
               )}
             />
             <Route
-              path="/czat"
+              path="/chat"
               render={() => (
                 <>
                   {titleH2(
