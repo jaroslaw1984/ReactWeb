@@ -119,7 +119,7 @@ const Styles = styled.div`
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
     margin-bottom: 20px;
-    height: 20px;
+    height: 100%;
     & > span {
       /* size of social media icons */
       font-size: ${size.fSocialIconSizeXs};
