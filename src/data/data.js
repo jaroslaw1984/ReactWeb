@@ -401,7 +401,7 @@ const data = {
     ],
     experience: {
       description_pl:
-        "Tutaj można pobrać moje udokumentowane doświadczenie zawodowe w forme Curriculum Vitae (CV).",
+        "Tutaj można pobrać moje udokumentowane doświadczenie zawodowe w formie Curriculum Vitae (CV).",
       description_en:
         "Here you can download my documented professional experience in the form of Curriculum Vitae (CV)."
     }
