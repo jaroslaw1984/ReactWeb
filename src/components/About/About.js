@@ -66,7 +66,7 @@ const Style = styled.div`
       width: 50%;
     }
     @media screen and (min-width: ${size.resolutionDeskL}) {
-      width: 30%;
+      width: 40%;
     }
   }
   .header_img_wrapper {

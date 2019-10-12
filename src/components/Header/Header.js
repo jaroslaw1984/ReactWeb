@@ -125,31 +125,7 @@ const Styles = styled.div`
     border-radius: 100px;
     transition: all 1s ease;
     @media screen and (min-width: ${size.resolutionMd}) {
-      left: 20px;
-    }
-    @media screen and (min-width: 880px) {
-      left: 80px;
-    }
-    @media screen and (min-width: ${size.resolutionDesk}) {
-      left: 100px;
-    }
-    @media screen and (min-width: 1100px) {
-      left: 180px;
-    }
-    @media screen and (min-width: 1200px) {
-      left: 220px;
-    }
-    @media screen and (min-width: 1300px) {
-      left: 280px;
-    }
-    @media screen and (min-width: 1500px) {
-      left: 380px;
-    }
-    @media screen and (min-width: 1600px) {
-      left: 410px;
-    }
-    @media screen and (min-width: 1920px) {
-      left: 510px;
+      left: -35px;
     }
   }
   .languageButtonChange label {
@@ -236,21 +212,27 @@ class Header extends Component {
             className="justify-content-end"
             id="responsive-navbar-nav"
           >
-            {menu}
-            {/* Button that allow to change language page */}
-            <div className="languageButtonChange">
-              <div className="languageButtonName">
-                <Span className={checked ? null : "spanActive"}>{langPl}</Span>
-                <Span className={checked ? "spanActive" : null}>{langEn}</Span>
+            <Nav className="mr-auto">{menu}</Nav>
+            <Nav>
+              {/* Button that allow to change language page */}
+              <div className="languageButtonChange">
+                <div className="languageButtonName">
+                  <Span className={checked ? null : "spanActive"}>
+                    {langPl}
+                  </Span>
+                  <Span className={checked ? "spanActive" : null}>
+                    {langEn}
+                  </Span>
+                </div>
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  checked={checked}
+                  onChange={change}
+                />
+                <label htmlFor="checkbox" id="checkbox" />
               </div>
-              <input
-                type="checkbox"
-                id="checkbox"
-                checked={checked}
-                onChange={change}
-              />
-              <label htmlFor="checkbox" id="checkbox" />
-            </div>
+            </Nav>
           </Navbar.Collapse>
         </Navbar>
       </Styles>

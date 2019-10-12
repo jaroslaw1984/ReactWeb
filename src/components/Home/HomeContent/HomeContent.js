@@ -1,13 +1,44 @@
-import React from "react";
+import React, { Component } from "react";
 import { Image } from "react-bootstrap";
 import styled from "styled-components";
 import size from "../../../Fonts/Fonts";
+import colors from "../../../Colors/Colors";
 
 const Div = styled.div`
   max-width: 100%;
   display: grid;
   .languageIcons {
     grid-row-start: 4;
+  }
+  .contents {
+    display: grid;
+    justify-content: center;
+    @media screen and (min-width: ${size.resolutionDeskL}) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 50px 15px 40px;
+      align-items: center;
+    }
+  }
+
+  .cell-0,
+  .cell-1,
+  .cell-2 {
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    .cell-0,
+    .cell-2 {
+      grid-row-start: 1;
+      grid-column-start: 2;
+    }
+  }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    p:nth-child(4) {
+      background-color: ${colors.white};
+      padding: 0 0 50px;
+    }
   }
   .imgMargin {
     width: 100%;
@@ -19,25 +50,11 @@ const Div = styled.div`
       width: 70%;
     }
     @media screen and (min-width: ${size.resolutionDeskL}) {
-      width: 50%;
+      width: 80%;
+      margin: 0;
     }
     @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       width: 90%;
-    }
-    &:nth-last-child(2) {
-      width: 98%;
-      @media screen and (min-width: ${size.resolutionMd}) {
-        width: 90%;
-      }
-      @media screen and (min-width: ${size.resolutionDesk}) {
-        width: 70%;
-      }
-      @media screen and (min-width: ${size.resolutionDeskL}) {
-        width: 50%;
-      }
-      @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-        width: 90%;
-      }
     }
   }
 `;
@@ -47,6 +64,7 @@ const H2 = styled.h2`
   text-align: left;
   text-transform: uppercase;
   font-size: ${size.H2Xs};
+  margin-top: 40px;
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.H2Sm};
   }
@@ -58,11 +76,12 @@ const H2 = styled.h2`
   }
   @media screen and (min-width: ${size.resolutionDeskL}) {
     font-size: ${size.H2DeskL};
+    text-align: center;
   }
 `;
 const P = styled.p`
   padding: 0 15px;
-  margin: 30px 20px;
+  /* margin: 30px 20px; */
   font-size: ${size.PXs};
   @media screen and (min-width: ${size.resolutionSm}) {
     font-size: ${size.PSm};
@@ -75,6 +94,10 @@ const P = styled.p`
   }
   @media screen and (min-width: ${size.resolutionDeskL}) {
     font-size: ${size.PDeskL};
+    padding: 50px;
+    margin: 0 100px;
+    background-color: ${colors.light_green};
+    border-radius: 1rem;
   }
 `;
 
@@ -88,6 +111,9 @@ const Span = styled.span`
   @media screen and (min-width: ${size.resolutionMd}) {
     grid-template-columns: repeat(4, 1fr);
   }
+  @media screen and (min-width: ${size.resolutionDeskL}) {
+    margin-bottom: 40px;
+  }
   @media screen and (min-width: 533px) and (orientation: landscape) {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -97,31 +123,52 @@ const Img = styled.img`
   height: 90px;
 `;
 
-const HomeContent = ({
-  h2_en,
-  h2_pl,
-  text1_en,
-  text1_pl,
-  text2_en,
-  text2_pl,
-  img,
-  checked,
-  icons
-}) => {
-  const programingIcons = [...icons].map(icon => (
-    <Img key={icon.id} src={icon.img} alt={icon.name} title={icon.name} />
-  ));
-  return (
-    <Div>
-      <H2>{checked ? h2_en : h2_pl}</H2>
-      {img === "" ? null : <Image src={img} fluid className="imgMargin" />}
-      <P>{checked ? text1_en : text1_pl}</P>
-      {icons === "" ? null : (
-        <Span className="languageIcons">{programingIcons}</Span>
-      )}
-      {text2_en === "" ? null : <P>{checked ? text2_en : text2_pl}</P>}
-    </Div>
-  );
-};
+class HomeContent extends Component {
+  state = {
+    number: 0
+  };
 
+  componentDidMount() {
+    this.setState({
+      number: this.state.number + 1
+    });
+  }
+
+  render() {
+    const {
+      h2_en,
+      h2_pl,
+      text1_en,
+      text1_pl,
+      text2_en,
+      text2_pl,
+      img,
+      checked,
+      icons,
+      class_name
+    } = this.props;
+    const programingIcons = [...icons].map(icon => (
+      <Img key={icon.id} src={icon.img} alt={icon.name} title={icon.name} />
+    ));
+    return (
+      <Div>
+        <H2>{checked ? h2_en : h2_pl}</H2>
+        <div className="contents">
+          <div className={class_name}>
+            {img === "" ? null : (
+              <Image src={img} fluid rounded className="imgMargin" />
+            )}
+          </div>
+          <div className="call-2">
+            <P>{checked ? text1_en : text1_pl}</P>
+          </div>
+        </div>
+        {icons === "" ? null : (
+          <Span className="languageIcons">{programingIcons}</Span>
+        )}
+        {text2_en === "" ? null : <P>{checked ? text2_en : text2_pl}</P>}
+      </Div>
+    );
+  }
+}
 export default HomeContent;

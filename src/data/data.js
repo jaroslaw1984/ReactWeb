@@ -2,9 +2,12 @@ import avatar from "../images/avatar.jpg";
 import page1 from "../images/my_page1.jpg";
 import m_tablet from "../images/m_tablet.jpg";
 import m_project from "../images/m_project.jpg";
-import v_all_devices from "../images/v_all_devices.jpg";
+import all_devices from "../images/all_devices.jpg";
 import all_devices_2 from "../images/all_devices_2.jpg";
+import v_all_devices from "../images/v_all_devices.jpg";
+import learn from "../images/learn.jpg";
 import portfolio from "../images/portfolio.jpg";
+import portfolio2 from "../images/portfolio2.jpg";
 import reactbootstrap from "../images/reactbootstrap.svg";
 import js from "../images/js.jpg";
 import styled from "../images/styled.jpg";
@@ -12,13 +15,11 @@ import react from "../images/react.jpg";
 import css from "../images/css.jpg";
 import jsx from "../images/jsx.jpg";
 import html from "../images/html.jpg";
-// import phone from "../images/phone.jpg";
 import git from "../images/git.jpg";
 import sass from "../images/sass.jpg";
 import yarn from "../images/yarn.jpg";
 import linux from "../images/linux.jpg";
 import gimp from "../images/gimp.jpg";
-// import progr_1 from "../images/progr_1.jpg";
 import { faAt, faUser } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -77,13 +78,14 @@ const data = {
   homeContent: [
     {
       key: 0,
-      h2_en: "Designing",
-      h2_pl: "Projektowanie",
+      class_name: "cell-0",
+      h2_en: "designing",
+      h2_pl: "projektowanie",
       text1_en:
         "I am learning programming and website design since 2018. I do projects only for myself, thanks to which I can create my visions, ideas and above all I love challenges. I am currently looking for a job as a Junior Frontend Developer.",
       text1_pl:
         "Uczę się programowania i projektowania stron internetowych od 2018. Projekty wykonuje wyłącznie dla siebie, dzięki temu mogę tworzyć swoje wizje, pomysły i przede wszystkim uwielbiam wyzwania. Aktualnie poszukuje pracy jako Junior Frontend Developer. ",
-      img: "",
+      img: learn,
       codeExample: "",
       icons: "",
       text2_en: "",
@@ -91,12 +93,13 @@ const data = {
     },
     {
       key: 1,
-      h2_en: "Programing and tools",
-      h2_pl: "Programowanie i narzędzia",
+      class_name: "cell-1",
+      h2_en: "programing and tools",
+      h2_pl: "programowanie i narzędzia",
       text1_en:
-        "Pure code is important as the page’s appearance represents the creator's style, which is why new technologies help achieve a visual goal. Below is a scrap of code on how it uses component styling in React:",
+        "JavaScript is a powerful programming tool and language. It contains a collection of complicated and diverse mechanisms which allows achieving amazing results.",
       text1_pl:
-        "Czysty kod jest ważny jak wygląd strony, który przedstawia styl twórcy, dlatego nowe technologie pomagają osiągnąc wizualny cel.",
+        "JavaScript jest potężnym narzędziem oraz językiem programowania. Zawiera kolekcję skomplikowanych i zróżnicowanych mechanizmów, co pozwala osiągnąc niesamowite efekty.",
       img: m_project,
       icons: [
         {
@@ -141,13 +144,14 @@ const data = {
     },
     {
       key: 2,
-      h2_en: "Responsive websites",
-      h2_pl: "Responsywne strony internetowe",
+      class_name: "cell-2",
+      h2_en: "responsive websites",
+      h2_pl: "responsywne strony internetowe",
       text1_en:
         "When creating websites, I stick to certain rules, such as the mobile first principle. For this I also had to use the tools which is react-bootstrap, which will allow the website to be responsive, where it will fit on most mobile phones as well as desktop devices. Another tool for handling the responsiveness of the site is CSS itself, where, with the help of flex and grid, they allow you to control the displayed graphics and components.",
       text1_pl:
         "Przy tworzeniu stron internetowych trzymam się pewnych zasad jak między innymi zasada mobile first. Do tego również przyszło mi wykorzystać narzędzi jakim jest react-bootstrap, które pozwoli aby strona była responsywna, gdzie będzie się układać na większości telefonów komórkowych jak i urządzenia desktopowe. Innym narzędziem do obsługi responsywności strony jest sam CSS, gdzie przy pomocy flex oraz grid, pozowli na kotrolowanie wyświetlających się grafik i komponentów.",
-      img: all_devices_2,
+      img: all_devices,
       codeExample: "",
       icons: "",
       text2_en: "",
@@ -201,9 +205,9 @@ const data = {
           title_en: "Technical page of omegiumfix",
           title_pl: "Strona techniczna omegiumfix",
           description_en:
-            "I wanted to take things back to the basics to get a better understand of building a website from the ground up without popular javascript libraries. With this project I also realized one doesn't necessarily need a JavaScript library to produce a professional grade website. I chose to build this OmegiumFix Website with Html5, SASS and JavaScript to create some nice animations to enhance the user experience and give the site a aesthetics.",
+            "Thanks to this project, I realized that you don't necessarily need a JavaScript library or framework to create a professional website. I decided to build this OmegiumFix site with HTML5, SASS and JavaScript to create cool animations that will improve the user experience and give the website an aesthetic.",
           description_pl:
-            "Chciałem wrócić do podstaw, aby lepiej zrozumieć budowę witryny od podstaw bez popularnych bibliotek javascript. Dzięki temu projektowi zdałem sobie również sprawę z tego, że do stworzenia profesjonalnej strony internetowej niekoniecznie jest potrzebna biblioteka JavaScript. Zdecydowałem się zbudować tę witrynę OmegiumFix z HTML5, SASS oraz JavaScript, aby stworzyć fajne animacje, które poprawią wrażenia użytkownika i nadadzą stronie estetyki.",
+            "Dzięki temu projektowi zdałem sobie sprawę z tego, że do stworzenia profesjonalnej strony internetowej niekoniecznie jest potrzebna biblioteka albo framework JavaScript. Zdecydowałem się zbudować tę witrynę OmegiumFix z HTML5, SASS oraz JavaScript, aby stworzyć fajne animacje, które poprawią wrażenia użytkownika i nadadzą stronie estetyki.",
           m_img: v_all_devices
         }
       ],
@@ -259,10 +263,10 @@ const data = {
           title_en: "Portfolio in React",
           title_pl: "Portfolio w React",
           description_en:
-            "The goal of the site was to create a portfolio using various functional tools and a powerful programming language such as JavaScript. Use the React library was obvious to me because it does something cool. The user interface is completely defined in JavaScript, so thanks to the rich functionality of this language you can do everything you can inside the template. React helps to create the most complex user interfaces.",
+            "The goal of the site was to create a portfolio using different functional tools and a powerful programming language such as JavaScript. Use the React library was a cool and creative adventure for me. The user interface is completely defined in JavaScript, so thanks to the rich functionality of this language you can do everything inside the template. React helps to create the most complex user interfaces.",
           description_pl:
-            "Celem strony było realizacja utworzenia portfolio zastosowaniem różnych funkcjonalnych narzędzi jak i mocnego języka programowania jakim jest JavaScript.  Użcie biblioteki React było dla mnie oczywiste, bo robi coś fajnego. Interfej użytkownika jest w całości zdefiniowany w JavaScript, więc dzięki bogatym funcjonalnalnością tego języka można wewnątrz szablonu robić wszystko co się da. React pomaga ona tworzyć najbardziej skomplikowane interfejsy uzytkownika.",
-          m_img: m_tablet
+            "Celem strony było realizacja utworzenia portfolio zastosowaniem różnych funkcjonalnych narzędzi jak i mocnego języka programowania jakim jest JavaScript. Użcie biblioteki React było dla mnie fajną i kreatywną przygodą . Interfej użytkownika jest w całości zdefiniowany w JavaScript, więc dzięki bogatym funcjonalnalnością tego języka można wewnątrz szablonu robić wszystko co się da. React pomaga ona tworzyć najbardziej skomplikowane interfejsy uzytkownika.",
+          m_img: portfolio2
         },
         {
           id: 1,
@@ -306,27 +310,27 @@ const data = {
       title_en: "Why I'd like to become as programer frontend?",
       title_pl: "Dlaczego chcę zostać programistą frontend?",
       description_en:
-        "I'm looking an opportunity to be a better programer as now i write UI websites in freetime day by day. Being part of team i could bring new ideas and solved many problems and achieve better knowledge",
+        "I am looking for opportunities to become a better programmer because I found a goal in my life. Being part of the team, I could bring new ideas and solve many problems and gain better knowledge",
       description_pl:
-        "Szukam możliwości, aby zostać lepszym programistą, ponieważ teraz piszę strony z interfejsem użytkownika w wolnym czasie z dnia na dzień. Będąc częścią zespołu mogłem wnieść nowe pomysły i rozwiązać wiele problemów i zdobyć lepszą wiedzę"
+        "Szukam możliwości, aby zostać lepszym programistą, ponieważ znalazłem cel w swoim życiu. Będąc częścią zespołu mogłem wnieść nowe pomysły i rozwiązać wiele problemów i zdobyć lepszą wiedzę"
     },
     {
       id: 2,
       title_en: "What I'm good at?",
       title_pl: "Moje mocne strony?",
       description_en:
-        "Well it is hard to say what I'm good at. As everyone have many skills that make him unique and my are is  that I never give up if I have problem. I'm sitting on till i will solve it. It doesn't matter whether it's life problems or programming, the best solution counts. I love talk to other people a specialty in english. Also I like experience with Linux as an open source, free to use operating system widely used for computer hardware. I got about 5 years experience on this system and i use is as a main operating system for fun and working. The organization of work is also my strength. I set the plan of the day so that I can work, learn and spend time with my family and done something to my self. The last skill is hard work and my also I call it as my weaknes. I like being a smart guy.",
+        "The biggest of my advantage is that I never give up if I have a problem I sit until I solve it. It doesn't matter if it's life problems or programming the best solution counts. Communicability, especially in english, to better use this language and acquire new acquaintances. Tendency to learn new technologies, especially Linux. Free operating system widely used in computer hardware. I have about 5 years of experience in this system and I use it as the main operating system for everyday use and work. Organization of work is also my strength. I set a plan of the day to be able to work, learn and spend time with my family and do something for myself.",
       description_pl:
-        "Trudno powiedzieć, w czym jestem dobry. Ponieważ każdy ma wiele umiejętności, które czynią go wyjątkowym, a moim jest to, że nigdy się nie poddaję, jeśli mam problem. Siedzę, dopóki go nie rozwiążę. Nie ma znaczenia, czy to problemy życiowe, czy programowanie, liczy się najlepsze rozwiązanie. Uwielbiam rozmawiać z innymi ludźmi po angielsku. Lubię też doświadczenie z Linuksem jako open source, darmowy system operacyjny szeroko stosowany w sprzęcie komputerowym. Mam około 5 lat doświadczenia w tym systemie i używam go jako głównego systemu operacyjnego do zabawy i pracy. Organizacja pracy to także moja siła. Ustalam plan dnia, aby móc pracować, uczyć się i spędzać czas z rodziną i zrobić coś dla siebie. Ostatnią umiejętnością jest ciężka praca, którą nazywam też moją słabością. Lubię być mądrym facetem."
+        "Mają największą zaletą jest to, że nigdy się nie poddaję, jeśli mam problem. Siedzę, dopóki go nie rozwiążę. Nie ma znaczenia, czy to problemy życiowe, czy programowanie, liczy się najlepsze rozwiązanie. Komunikatywność, a szczególnie po angielsku, aby lepiej posługiwać się tym językiem i nabywać nowe znajomości.  Skłonność do poznawania nowych technologii, a szczególnie Linux. Darmowy system operacyjny szeroko stosowany w sprzęcie komputerowym. Mam około 5 lat doświadczenia w tym systemie i używam go jako głównego systemu operacyjnego do codziennego użytku i pracy. Organizacja pracy to także moja siła. Ustalam plan dnia, aby móc pracować, uczyć się i spędzać czas z rodziną i zrobić coś dla siebie."
     },
     {
       id: 3,
       title_en: "What studies did you graduate from?",
       title_pl: "Jakie studia skończyłem?",
       description_en:
-        "After graduating from high school, I continued my studies at the Vocational College, where I received the title of „IT technician” . The next step was my studies, which lasted 3,5 years at the University of Computer Science in Lodz and finished with the title of engineer in the specialty of „Network computer”",
+        "I graduated from the University of Information Technology in Łódź for 3.5 years and I graduated with an engineer degree in „Computer Networks”",
       description_pl:
-        "Po ukończeniu liceum, kontynułowałem naukę w Studium Zawodowe, gdzie otrzymałem tytuł „Technik informatyk”. Następnym krokiem były studia, które trwały 3.5 roku na Wyższej Szkole Informatyki w Łodzi i skończyłem je z tytułem inżyniera na specjalności „Sieci komputerowe”"
+        "Ukończyłem studia, które trwały 3.5 roku na Wyższej Szkole Informatyki w Łodzi i skończyłem je z tytułem inżyniera na specjalności „Sieci komputerowe”"
     }
   ],
   icons: [
