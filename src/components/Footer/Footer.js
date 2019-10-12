@@ -115,11 +115,15 @@ const Styles = styled.div`
     color: ${color.orange};
   }
   .socialMediaIcons {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr);
-    text-align: center;
+    grid-gap: 20px; */
+    /* text-align: center; */
+    display: flex;
     margin-bottom: 20px;
     height: 100%;
+    width: 100%;
+    justify-content: space-around;
     & > span {
       /* size of social media icons */
       font-size: ${size.fSocialIconSizeXs};
@@ -134,6 +138,7 @@ const Styles = styled.div`
       }
       @media screen and (min-width: ${size.resolutionDeskL}) {
         font-size: ${size.fSocialIconSizeDeskL};
+        display: flex;
       }
     }
     & span:hover > a {
