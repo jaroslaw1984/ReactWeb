@@ -284,13 +284,13 @@ const data = {
           id: 0,
           name_en: "GitHub",
           name_pl: "GitHub",
-          url: "https://github.com/jaroslaw1984/web"
+          url: "https://github.com/jaroslaw1984/portfolio"
         },
         {
           id: 1,
           name_en: "Live",
           name_pl: "Na Żywo",
-          url: "http://omegiumfix.pl"
+          url: "http://www.portfolio.omegiumfix.pl/"
         }
       ]
     }
