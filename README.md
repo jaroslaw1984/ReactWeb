@@ -1,7 +1,14 @@
 # This is a project based on React and React-bootstrap
 
-<br /> In progress\_\_:
-<br /> This project started with mobile first. Mobile and medium devices are now availabe from **320 > 411 > 768**. Higher resolution views will be soon added
+In the project directory, you can run:
+
+### `yarn start`
+
+or
+
+### `npm start`
+
+This project is full RWD.
 
 # Credits
 
