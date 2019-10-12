@@ -55,7 +55,7 @@ class App extends Component {
     const change = this.handelChangeLanguage;
     const checked = this.state.changeLanguage;
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Style>
           <Container fluid className="resetMarginPadding">
             <Row className="resetMarginPadding">
