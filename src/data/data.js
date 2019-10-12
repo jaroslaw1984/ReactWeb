@@ -303,34 +303,34 @@ const data = {
       description_en:
         "Hello, my name is Jarosław Sochacki and I come from Włocławek. I have two children, a daughter named Nadia and a son, Alan. In addition to family and programming, I love rollerblading and relaxing with a good Sc-fi movie.",
       description_pl:
-        "Witam, nazywam się Jarosław Sochacki i pochodzę z Włocławka. Mam dwójkę dzieci, córkę o imieniu Nadia oraz syna Alan. Poza rodziną i programowaniem uwielbiam jeździć na rolkach i relaksować się przy dobrym filmie Sc-fi."
+        "Witam, nazywam się Jarosław Sochacki i pochodzę z Włocławka i mam dwójkę dzieci. Poza rodziną i programowaniem uwielbiam jeździć na rolkach i relaksować się przy dobrym filmie Sc-fi."
     },
     {
       id: 1,
       title_en: "Why I'd like to become as programer frontend?",
       title_pl: "Dlaczego chcę zostać programistą frontend?",
       description_en:
-        "I am looking for opportunities to become a better programmer because I found a goal in my life. Being part of the team, I could bring new ideas and solve many problems and gain better knowledge",
+        "I am looking for opportunities to become a better programmer because I found a goal in my life. Being part of the team, I could bring new ideas, solve many problems and gain better knowledge",
       description_pl:
-        "Szukam możliwości, aby zostać lepszym programistą, ponieważ znalazłem cel w swoim życiu. Będąc częścią zespołu mogłem wnieść nowe pomysły i rozwiązać wiele problemów i zdobyć lepszą wiedzę"
+        "Szukam możliwości, aby zostać lepszym programistą, ponieważ znalazłem cel w swoim życiu. Będąc częścią zespołu mógłbym wnieść nowe pomysły, rozwiązać wiele problemów i zdobyć lepszą wiedzę."
     },
     {
       id: 2,
       title_en: "What I'm good at?",
       title_pl: "Moje mocne strony?",
       description_en:
-        "The biggest of my advantage is that I never give up if I have a problem I sit until I solve it. It doesn't matter if it's life problems or programming the best solution counts. Communicability, especially in english, to better use this language and acquire new acquaintances. Tendency to learn new technologies, especially Linux. Free operating system widely used in computer hardware. I have about 5 years of experience in this system and I use it as the main operating system for everyday use and work. Organization of work is also my strength. I set a plan of the day to be able to work, learn and spend time with my family and do something for myself.",
+        "The biggest of my advantage is that I never give up if I have a problem, the best solution counts most. Communicability, especially in english, to better use this language and acquire new acquaintances. Tendency to learn new technologies, especially Linux. Free operating system widely used in computer hardware. I have about 5 years of experience in this system and I use it as the main operating system for everyday use and work. Organization of work is also my strength. I set a plan of the day to be able to work, learn and spend time with my family and do something for myself.",
       description_pl:
-        "Mają największą zaletą jest to, że nigdy się nie poddaję, jeśli mam problem. Siedzę, dopóki go nie rozwiążę. Nie ma znaczenia, czy to problemy życiowe, czy programowanie, liczy się najlepsze rozwiązanie. Komunikatywność, a szczególnie po angielsku, aby lepiej posługiwać się tym językiem i nabywać nowe znajomości.  Skłonność do poznawania nowych technologii, a szczególnie Linux. Darmowy system operacyjny szeroko stosowany w sprzęcie komputerowym. Mam około 5 lat doświadczenia w tym systemie i używam go jako głównego systemu operacyjnego do codziennego użytku i pracy. Organizacja pracy to także moja siła. Ustalam plan dnia, aby móc pracować, uczyć się i spędzać czas z rodziną i zrobić coś dla siebie."
+        "Mają największą zaletą jest to, że nigdy się nie poddaję, jeśli mam problem, to liczy się najlepsze rozwiązanie. Komunikatywność, a szczególnie po angielsku, aby lepiej posługiwać się tym językiem i nabywać nowe znajomości.  Skłonność do poznawania nowych technologii, a szczególnie Linux. Darmowy system operacyjny szeroko stosowany w sprzęcie komputerowym. Mam około 5 lat doświadczenia w tym systemie i używam go jako głównego systemu operacyjnego do codziennego użytku i pracy. Organizacja pracy to także moja siła. Ustalam plan dnia, aby móc pracować, uczyć się i spędzać czas z rodziną i zrobić coś dla siebie."
     },
     {
       id: 3,
       title_en: "What studies did you graduate from?",
       title_pl: "Jakie studia skończyłem?",
       description_en:
-        "I graduated from the University of Information Technology in Łódź for 3.5 years and I graduated with an engineer degree in „Computer Networks”",
+        "I graduated from the University of Information Technology in Łódź for 3.5 years and I graduated with an engineer degree in „Computer Networks”. My defense of engineering work was to create a shop website with CMS in PHP.",
       description_pl:
-        "Ukończyłem studia, które trwały 3.5 roku na Wyższej Szkole Informatyki w Łodzi i skończyłem je z tytułem inżyniera na specjalności „Sieci komputerowe”"
+        "Ukończyłem studia, które trwały 3.5 roku na Wyższej Szkole Informatyki w Łodzi i skończyłem je z tytułem inżyniera na specjalności „Sieci komputerowe”. Moja obrona pracy inżynierskiej polegała na utworzeniu serwisu sklepowego wraz CMS'em w języku PHP."
     }
   ],
   icons: [

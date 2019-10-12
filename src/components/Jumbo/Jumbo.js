@@ -207,7 +207,7 @@ const Jumbo = ({ checked }) => {
                 <>
                   {titleH2(
                     "Talk whit me...",
-                    "Porozmawiaj ze mna...",
+                    "Porozmawiaj ze mną...",
                     "subTitleSize"
                   )}
                 </>
