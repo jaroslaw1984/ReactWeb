@@ -177,6 +177,9 @@ const Style = styled.div`
       color: ${color.orange};
       transition: all 0.5s;
     }
+    .downloadLink {
+      color: ${color.blue};
+    }
   }
 `;
 const Img = styled.img`
@@ -328,6 +331,7 @@ class About extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://drive.google.com/file/d/1lv-1t1tbGtBCUY6YteQmqtPUDzMuZ-Zw/view?usp=sharing"
+                  className="downloadLink"
                 >
                   <FontAwesomeIcon icon={faDownload} />
                 </a>
@@ -343,6 +347,7 @@ class About extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://drive.google.com/file/d/1SKUdUbWC17nBfCevW10pZzKGLzecVl9T/view?usp=sharing"
+                  className="downloadLink"
                 >
                   <FontAwesomeIcon icon={faDownload} />
                 </a>
