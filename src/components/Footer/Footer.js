@@ -152,6 +152,9 @@ const Styles = styled.div`
     color: ${color.white};
     text-decoration: none;
   }
+  .socialIcon {
+    color: ${color.white};
+  }
   .data_section {
     height: 100px;
     display: flex;
@@ -210,6 +213,7 @@ const Footer = ({ checked }) => {
         href={item.link}
         target="_blank"
         rel="noopener noreferrer"
+        className="socialIcon"
       >
         <FontAwesomeIcon icon={item.icon} />
       </a>
