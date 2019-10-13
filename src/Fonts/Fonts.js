@@ -24,6 +24,7 @@ const fontsSize = {
   // ************
   // Landscape **
   // ************
+  resolutionMdLands: "640px",
   resolutionSmLands: "812px",
 
   // *****************************************

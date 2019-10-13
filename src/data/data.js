@@ -87,9 +87,9 @@ const data = {
       h2_en: "designing",
       h2_pl: "projektowanie",
       text1_en:
-        "I am learning programming and website design since 2018. I do projects only for myself, thanks to which I can create my visions, ideas and above all I love challenges. I am currently looking for a job as a Junior Frontend Developer.",
+        "I am learning programming and website design since 2018. I do projects only for myself, thanks to which I can create my visions and ideas. I am currently looking for a job as a Junior Frontend Developer.",
       text1_pl:
-        "Uczę się programowania i projektowania stron internetowych od 2018. Projekty wykonuje wyłącznie dla siebie, dzięki temu mogę tworzyć swoje wizje, pomysły i przede wszystkim uwielbiam wyzwania. Aktualnie poszukuje pracy jako Junior Frontend Developer. ",
+        "Uczę się programowania i projektowania stron internetowych od 2018. Projekty wykonuje wyłącznie dla siebie, dzięki temu mogę tworzyć swoje wizje, pomysły. Aktualnie poszukuje pracy jako Junior Frontend Developer.",
       img: learn,
       codeExample: "",
       icons: "",
@@ -102,9 +102,9 @@ const data = {
       h2_en: "programing and tools",
       h2_pl: "programowanie i narzędzia",
       text1_en:
-        "The main programming language that I use every day is HTML, CSS, JavaScript. I am also starting to develop my skills in C # that allowed me to create native software on any platform.",
+        "The main programming language that I use every day is HTML, CSS, JavaScript. I am also starting to develop my skills in C #, which allows me to create native software on virtually any platform.",
       text1_pl:
-        "Głównym językiem programowania, który używam na co dzień jest HTML, CSS, JavaScript. Zaczynam również rozwijać swoje umiejętności w C#, co pozowli na utworzenie natywnego oprogramowania praktycznie na każdą platformę.",
+        "Głównym językiem programowania, który używam na co dzień jest HTML, CSS, JavaScript. Zaczynam również rozwijać swoje umiejętności w C#, co pozowla na tworzenie natywnego oprogramowania praktycznie na każdą platformę.",
       img: m_project,
       icons: [
         {
@@ -143,9 +143,9 @@ const data = {
         // { id: 8, img: yarn, name: "yarn", url: "https://yarnpkg.com/" }
       ],
       text2_en:
-        "The user interface is a key element of any web application, therefore it uses the available styling tools, i.e. CSS3, Sass, style-componets and react-bootstrap if the website uses React technologies. I do not present all the tools I use, because every other project requires different solutions to facilitate work.",
+        "The user interface is a key element of any web application, therefore it uses the available styling tools, i.e. CSS3, Sass, style-componets and react-bootstrap if the website uses React technologies.",
       text2_pl:
-        "Interfejs użytkownika to kluczowy element każdej aplikacji internetowej, dlatego wykorzytuje dostępne narzędzia do stylizacji czyli CSS3, Sass, style-componets oraz react-bootstrap jeśli strona wykorzystuje technologie React. Nie przedstawiam wszystkich narzędzi jakich używam, gdyż każdy inny projekt wymaga różnych rozwiązń ułatwiające pracę."
+        "Interfejs użytkownika to kluczowy element każdej aplikacji internetowej, dlatego wykorzytuje dostępne narzędzia do stylizacji czyli CSS3, Sass, style-componets oraz react-bootstrap jeśli strona wykorzystuje technologie React."
     },
     {
       key: 2,
@@ -153,9 +153,9 @@ const data = {
       h2_en: "responsive websites",
       h2_pl: "responsywne strony internetowe",
       text1_en:
-        "When creating websites, I stick to certain rules, such as the mobile first principle. For this I also had to use the tools which is react-bootstrap, which will allow the website to be responsive, where it will fit on most mobile phones as well as desktop devices. Another tool for handling the responsiveness of the site is CSS itself, where, with the help of flex and grid, they allow you to control the displayed graphics and components.",
+        "When creating websites, I adhere to the mobile first principle. For RWD, it uses the bootstrap, CSS, Sass, flex and grid tools, which allow you to control the displayed graphics and components.",
       text1_pl:
-        "Przy tworzeniu stron internetowych trzymam się pewnych zasad jak między innymi zasada mobile first. Do tego również przyszło mi wykorzystać narzędzi jakim jest react-bootstrap, które pozwoli aby strona była responsywna, gdzie będzie się układać na większości telefonów komórkowych jak i urządzenia desktopowe. Innym narzędziem do obsługi responsywności strony jest sam CSS, gdzie przy pomocy flex oraz grid, pozowli na kotrolowanie wyświetlających się grafik i komponentów.",
+        "Przy tworzeniu stron internetowych trzymam się zasady mobile first. Do RWD wykorzystuje narzędzia bootstrap, CSS, Sass, flex oraz grid, co pozowli na kotrolowanie wyświetlających się grafik i komponentów.",
       img: all_devices,
       codeExample: "",
       icons: "",

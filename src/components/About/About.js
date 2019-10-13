@@ -134,12 +134,16 @@ const Style = styled.div`
     height: 10vh;
     margin: 30px 20px;
     padding: 0 15px;
+    /* space between file and download icon */
     @media screen and (min-width: 600px) {
       grid-template-columns: 30px 200px 50px;
     }
     @media screen and (min-width: ${size.resolutionMd}) {
       justify-content: center;
       grid-template-columns: 30px 50% 50px;
+    }
+    @media screen and (min-width: ${size.resolutionMdLands}) and (orientation: landscape) {
+      grid-template-columns: 30px 60% 150px;
     }
     & span {
       display: flex;

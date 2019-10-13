@@ -183,8 +183,8 @@ const Jumbo = ({ checked }) => {
               render={() => (
                 <>
                   {titleH2(
-                    "Completed projects",
-                    "Wykonane projekty",
+                    "Sample projects",
+                    "Przykładowe projekty",
                     "subTitleSize"
                   )}
                 </>
