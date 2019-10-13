@@ -102,7 +102,7 @@ const data = {
       h2_en: "programing and tools",
       h2_pl: "programowanie i narzędzia",
       text1_en:
-        "The main programming language that I use every day is HTML, CSS, JavaScript. I am also starting to develop my skills in C #, which allows me to create native software on virtually any platform.",
+        "The main programming language that I use every day is HTML, CSS, JavaScript. I am also starting to develop my skills in C #, which allows me to create native software on any platform.",
       text1_pl:
         "Głównym językiem programowania, który używam na co dzień jest HTML, CSS, JavaScript. Zaczynam również rozwijać swoje umiejętności w C#, co pozowla na tworzenie natywnego oprogramowania praktycznie na każdą platformę.",
       img: m_project,
@@ -143,7 +143,7 @@ const data = {
         // { id: 8, img: yarn, name: "yarn", url: "https://yarnpkg.com/" }
       ],
       text2_en:
-        "The user interface is a key element of any web application, therefore it uses the available styling tools, i.e. CSS3, Sass, style-componets and react-bootstrap if the website uses React technologies.",
+        "The user interface is a key element of any web application, that is way I uses the available styling tools, i.e. CSS3, Sass, style-componets and react-bootstrap if the website uses React technologies.",
       text2_pl:
         "Interfejs użytkownika to kluczowy element każdej aplikacji internetowej, dlatego wykorzytuje dostępne narzędzia do stylizacji czyli CSS3, Sass, style-componets oraz react-bootstrap jeśli strona wykorzystuje technologie React."
     },
@@ -153,7 +153,7 @@ const data = {
       h2_en: "responsive websites",
       h2_pl: "responsywne strony internetowe",
       text1_en:
-        "When creating websites, I adhere to the mobile first principle. For RWD, it uses the bootstrap, CSS, Sass, flex and grid tools, which allow you to control the displayed graphics and components.",
+        "When creating websites I stick to the mobile first rule. For RWD, I uses the bootstrap, CSS, Sass, flex and grid tools, that allow me to control the displayed graphics and components.",
       text1_pl:
         "Przy tworzeniu stron internetowych trzymam się zasady mobile first. Do RWD wykorzystuje narzędzia bootstrap, CSS, Sass, flex oraz grid, co pozowli na kotrolowanie wyświetlających się grafik i komponentów.",
       img: all_devices,
