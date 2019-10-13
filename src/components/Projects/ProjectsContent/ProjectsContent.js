@@ -139,9 +139,11 @@ const ProjectsContent = ({
   programingTools,
   checked
 }) => {
+  // Button text
   const buttonDetailsName_en = "Details";
   const buttonDetailsName_pl = "Szczegóły";
   const detailsPage = (
+    // Here is a link that lead to procjet and scroll to top when in
     <ScrollIntoView selector="#scrollTop">
       <Link className="buttonLink" to={`/project/${id}`.toLowerCase()}>
         {checked ? buttonDetailsName_en : buttonDetailsName_pl}

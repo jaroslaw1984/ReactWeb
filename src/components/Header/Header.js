@@ -203,7 +203,7 @@ class Header extends Component {
           <Navbar.Brand as={Link} to="/" exact="true">
             {data.nameOfPage}
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" id="">
+          <Navbar.Toggle aria-controls="responsive-navbar-nav">
             <span className="hamb_wrapper">
               <span className="hamb_inner"></span>
             </span>

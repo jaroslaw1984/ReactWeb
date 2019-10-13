@@ -149,10 +149,12 @@ const Item = ({
   link,
   checked
 }) => {
+  // This massage show when post is submit whitout any text
   const defaultDescription_en =
     "This description is default because the field message was empty";
   const defaultDescription_pl =
     "Ten opis jest domyślny, ponieważ pole wiadomości było puste";
+  // Detection if is Facebook or Twitter link given
   const buttonLink = () => {
     if (link.indexOf("https://www.facebook.com/") !== -1) return "Facebook";
     else if (link.indexOf("https://twitter.com/") !== -1) return "Twitter";

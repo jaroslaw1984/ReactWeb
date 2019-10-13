@@ -28,13 +28,16 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const data = {
+  // Title page
   nameOfPage: "OmegiumFix",
+  // Navigation links
   menu: [
     { id: 1, name_en: "Home", name_pl: "Start", path: "/", exact: true },
     { id: 2, name_en: "Projects", name_pl: "Projekty", path: "/projects" },
     { id: 3, name_en: "Chat", name_pl: "Rozmowa", path: "/chat" },
     { id: 4, name_en: "About", name_pl: "O mnie", path: "/about" }
   ],
+  // Header titles. Subpages title's are in component Jumbo.js
   jumboContent: {
     title_en: "Welcome to my portfolio",
     title_pl: "Witam na moim portfolio",
@@ -43,6 +46,7 @@ const data = {
     titleSecondParagraph_en: "Internet applications",
     titleSecondParagraph_pl: "Aplikacje internetowe"
   },
+  // Content contatct component
   dataContactItems: [
     {
       id: 0,
@@ -56,6 +60,7 @@ const data = {
       link: "https://www.facebook.com/profile.php?id=100001667016208"
     }
   ],
+  // Options that show when post is submit
   options_en: [
     "Thank you for adding",
     "I hope you will be intrested to some other pages",
@@ -74,7 +79,7 @@ const data = {
     "Hey, jak się dzisiaj czujesz ?",
     "Miło Cię widzieć!"
   ],
-
+  // Descritpion of Home component and images
   homeContent: [
     {
       key: 0,
@@ -158,6 +163,7 @@ const data = {
       text2_pl: ""
     }
   ],
+  // Project Content
   projectsContent: [
     {
       key: 0,
@@ -189,6 +195,7 @@ const data = {
         },
         { id: 3, img: sass, alt: "Sass", url: "https://sass-lang.com/" }
       ],
+      // Details content project page
       detailsContenet: [
         {
           id: 0,
@@ -211,6 +218,7 @@ const data = {
           m_img: v_all_devices
         }
       ],
+      // Links for live and github
       buttonDetails: [
         {
           id: 0,
@@ -295,7 +303,9 @@ const data = {
       ]
     }
   ],
+  // About.js component
   aboutContent: [
+    // Tags
     {
       id: 0,
       title_en: "Who am I?",
@@ -333,6 +343,7 @@ const data = {
         "Ukończyłem studia, które trwały 3.5 roku na Wyższej Szkole Informatyki w Łodzi i skończyłem je z tytułem inżyniera na specjalności „Sieci komputerowe”. Moja obrona pracy inżynierskiej polegała na utworzeniu serwisu sklepowego wraz CMS'em w języku PHP."
     }
   ],
+  // Skills icons
   icons: [
     {
       id: 0,
@@ -376,6 +387,7 @@ const data = {
     },
     { id: 10, img: gimp, name: "Gimp", url: "https://www.gimp.org/" }
   ],
+  // Footer.js
   footerContent: {
     name: { tag: "Jarosław Sochacki", icon: faUser },
     email: { tag: "inz.jaroslawsochacki@gmail.com", icon: faAt },

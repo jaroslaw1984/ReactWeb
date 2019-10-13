@@ -124,16 +124,6 @@ const Img = styled.img`
 `;
 
 class HomeContent extends Component {
-  state = {
-    number: 0
-  };
-
-  componentDidMount() {
-    this.setState({
-      number: this.state.number + 1
-    });
-  }
-
   render() {
     const {
       h2_en,

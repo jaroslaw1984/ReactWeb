@@ -65,6 +65,7 @@ class App extends Component {
               </Col>
             </Row>
             <Switch>
+              {/* All navigation links */}
               <Route
                 exact
                 path="/"

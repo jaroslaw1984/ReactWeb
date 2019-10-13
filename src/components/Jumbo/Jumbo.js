@@ -177,6 +177,7 @@ const Jumbo = ({ checked }) => {
                 </>
               )}
             />
+            {/* Deskription about site when user is in */}
             <Route
               path="/projects"
               render={() => (

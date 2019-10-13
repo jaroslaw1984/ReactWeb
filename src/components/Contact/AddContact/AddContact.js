@@ -130,6 +130,7 @@ const Style = styled.div`
 `;
 
 class AddContact extends Component {
+  // Alert messages when validation faild
   alertMessages = {
     username_faild_en: "Typed name is to short. Must have at least 3 signs.",
     username_faild_pl:

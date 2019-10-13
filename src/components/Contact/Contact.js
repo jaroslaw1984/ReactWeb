@@ -22,6 +22,7 @@ class Contact extends Component {
   };
 
   handleViewAddedContact = () => {
+    // scrolling up when post is submited whit out any error
     const validation = this.handleValidation();
     const { x } = this.state;
     if (validation.correct) {
@@ -108,6 +109,7 @@ class Contact extends Component {
     }
   };
 
+  // Validation
   handleValidation = () => {
     let username = false;
     let email = false;
