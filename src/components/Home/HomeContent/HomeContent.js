@@ -26,6 +26,7 @@ const Div = styled.div`
   .cell-2 {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   @media screen and (min-width: ${size.resolutionDeskL}) {
     .cell-0,
@@ -42,7 +43,7 @@ const Div = styled.div`
   }
   .imgMargin {
     width: 100%;
-    margin: 30px auto 30px;
+    margin: 30px 0 30px;
     @media screen and (min-width: ${size.resolutionMd}) {
       width: 90%;
     }
@@ -51,7 +52,6 @@ const Div = styled.div`
     }
     @media screen and (min-width: ${size.resolutionDeskL}) {
       width: 80%;
-      margin: 0;
     }
     @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       width: 90%;

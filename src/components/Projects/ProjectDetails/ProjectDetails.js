@@ -33,9 +33,6 @@ const Style = styled.div`
     @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
       width: 90%;
     }
-    @media screen and (max-width: ${size.resolutionSmLands}) and (orientation: landscape) {
-      width: 90%;
-    }
   }
   .button {
     flex-basis: 50%;
