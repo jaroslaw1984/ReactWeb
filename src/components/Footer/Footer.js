@@ -145,12 +145,12 @@ const Styles = styled.div`
       transition: all 0.5s;
       color: ${color.orange};
     }
-    & a:visited,
-    a:active,
-    a:focus {
-      color: ${color.white};
-      text-decoration: none;
-    }
+  }
+  span a:visited,
+  span a:active,
+  span a:focus {
+    color: ${color.white};
+    text-decoration: none;
   }
   .data_section {
     height: 100px;

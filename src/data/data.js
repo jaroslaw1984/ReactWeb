@@ -97,9 +97,9 @@ const data = {
       h2_en: "programing and tools",
       h2_pl: "programowanie i narzędzia",
       text1_en:
-        "JavaScript is a powerful programming tool and language. It contains a collection of complicated and diverse mechanisms which allows achieving amazing results.",
+        "The main programming language that I use every day is HTML, CSS, JavaScript. I am also starting to develop my skills in C # that allowed me to create native software on any platform.",
       text1_pl:
-        "JavaScript jest potężnym narzędziem oraz językiem programowania. Zawiera kolekcję skomplikowanych i zróżnicowanych mechanizmów, co pozwala osiągnąc niesamowite efekty.",
+        "Głównym językiem programowania, który używam na co dzień jest HTML, CSS, JavaScript. Zaczynam również rozwijać swoje umiejętności w C#, co pozowli na utworzenie natywnego oprogramowania praktycznie na każdą platformę.",
       img: m_project,
       icons: [
         {
@@ -346,7 +346,7 @@ const data = {
       name: "javascript",
       url: "https://developer.mozilla.org/pl/docs/Web/JavaScript"
     },
-    { id: 2, img: react, alt: "react", url: "https://reactjs.org/" },
+    { id: 2, img: react, name: "react", url: "https://reactjs.org/" },
     {
       id: 3,
       img: styled,
