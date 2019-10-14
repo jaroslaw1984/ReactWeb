@@ -304,9 +304,9 @@ class About extends Component {
           <div className="about_header">
             <div className="header_wrapper">
               <div className="tags_header_wrapper">
-                <p>{checked ? "Sophisticated." : "Wyrafionowany."}</p>
                 <p>{checked ? "Competent." : "Kompetentny."}</p>
                 <p>{checked ? "Adaptive." : "Adaptacyjny."}</p>
+                <p>{checked ? "Adequate." : "Adekwatny."}</p>
               </div>
               <div className="header_img_wrapper">
                 <Image roundedCircle className="header_img_size" src={me} />
