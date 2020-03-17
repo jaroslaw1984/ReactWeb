@@ -8,8 +8,12 @@ import v_all_devices from "../images/v_all_devices.jpg";
 import learn from "../images/learn.jpg";
 import portfolio from "../images/portfolio.jpg";
 import portfolio2 from "../images/portfolio2.jpg";
+import booklist from "../images/booklist.jpg";
+import booklist_1 from "../images/booklist_1.jpg";
+import booklist_2 from "../images/booklist_2.jpg";
 import reactbootstrap from "../images/reactbootstrap.svg";
 import js from "../images/js.jpg";
+import webpack from "../images/webpack.png";
 import styled from "../images/styled.jpg";
 import react from "../images/react.jpg";
 import css from "../images/css.jpg";
@@ -301,6 +305,62 @@ const data = {
           url: "http://www.portfolio.omegiumfix.pl/"
         }
       ]
+    },
+    {
+      key: 2,
+      img: booklist,
+      cardTitle: "Booklist REST API",
+      id: "booklist",
+      descriptionCard_en:
+        "This application is created in vanilla javascript using webpack and webpack-dev-server to compile and share. Book list have a back-end. I used a json server application for the asynchronous and managemnt.",
+      descriptionCard_pl:
+        "Ta aplikacja jest tworzona w czystym javascript przy użyciu webpack i webpack-dev-server do kompilacji i udostępniania. Lista książek posiada bazę w back-end. Użyłem aplikacji serwera json do zarządzania asynchronicznego i zarządzania.",
+      programingTools: [
+        {
+          id: 0,
+          img: js,
+          name: "javascript",
+          url: "https://developer.mozilla.org/pl/docs/Web/JavaScript"
+        },
+        {
+          id: 1,
+          img: html,
+          name: "HTML",
+          url: "https://developer.mozilla.org/pl/docs/Glossary/HTML"
+        },
+        { id: 2, img: sass, alt: "Sass", url: "https://sass-lang.com/" },
+        { id: 3, img: webpack, alt: "webpack", url: "https://webpack.js.org/" }
+      ],
+      detailsContenet: [
+        {
+          id: 0,
+          title_en: "BOOK LIST with REST API using JSON Server and Webpack",
+          title_pl: "BOOK LIST z REST API z użyciem JSON Server i Webpack",
+          description_en:
+            "With this application we can management a books that are store in json file as a database. We can add a book by a form, delete or edit from UI.",
+          description_pl:
+            "Dzięki tej aplikacji możemy zarządzać książkami przechowywanymi w pliku json jako baza danych. Możemy dodać książkę za pomocą formularza, usunąć lub edytować z interfejsu użytkownika.",
+          m_img: booklist_1
+        },
+        {
+          id: 1,
+          title_en: "How it works...",
+          title_pl: "Jak to działa...",
+          description_en:
+            "The user interface is designed to be as easy to use as possible. At right in the corner there is a plus icon that allow to add a new book it will appear a form. It contains a fields with a title, author, year, isbn and link for a cover. The form has validations secure to add a book and regular expressions were used for this, example: in the 'Year' field letters cannot be used or the field with the link must start with 'http:// or https://'. Every book that has been added have a button for editing. You can edit any field but still validation is working and checking the fields are correct field. When book is edit, delete button is current disabled it protect from delete a book while editing. If we wanna delete a book from json file, just press trash icon and application will ask you to confirm this action. The application has helpful tools such as sorting books by year of publication or sorting the list in alphabetical order. Another tool is a search engine that searches for a book by the phrase of the book title.",
+          description_pl:
+            "Interfejs użytkownika został zaprojektowany tak, aby był maksymalnie łatwy w użyciu. W prawym rogu znajduje się ikona plus, która pozwala dodać nową książkę, pojawi się formularz. Zawiera pola z tytułem, autorem, rokiem, isbn i linkiem do okładki. Formularz ma bezpieczne sprawdzania poprawności w celu dodania książki i do tego użyto wyrażeń regularnych, na przykład: w polu „Rok” nie można używać liter lub pole z linkiem musi zaczynać się od „http: // lub https: //”. Każda dodana książka ma przycisk do edycji. Możesz edytować dowolne pole, ale nadal działa sprawdzanie poprawności i sprawdzanie poprawności pól. Kiedy książka jest edytowana, przycisk usuwania jest aktualnie wyłączony, co chroni przed usunięciem książki podczas edycji. Jeśli chcemy usunąć książkę z pliku json, wystarczy nacisnąć ikonę kosza, a aplikacja poprosi o potwierdzenie tej akcji. Aplikacja posiada pomocne narzędzia, takie jak sortowanie książek według roku wydania lub sortowanie listy w kolejności alfabetycznej. Innym narzędziem jest wyszukiwarka, która wyszukuje książkę według frazy tytułu książki.",
+          m_img: booklist_2
+        }
+      ],
+      buttonDetails: [
+        {
+          id: 0,
+          name_en: "GitHub",
+          name_pl: "GitHub",
+          url: "https://github.com/jaroslaw1984/booklist"
+        }
+      ]
     }
   ],
   // About.js component
@@ -385,7 +445,8 @@ const data = {
       name: "Linux",
       url: "https://pl.wikipedia.org/wiki/Linux"
     },
-    { id: 10, img: gimp, name: "Gimp", url: "https://www.gimp.org/" }
+    { id: 10, img: gimp, name: "Gimp", url: "https://www.gimp.org/" },
+    { id: 11, img: webpack, alt: "webpack", url: "https://webpack.js.org/" }
   ],
   // Footer.js
   footerContent: {
