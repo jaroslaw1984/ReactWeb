@@ -107,7 +107,7 @@ const Styles = styled.div`
   .hamb_inner::before {
     top: 10px;
   }
-  button.navbar-toggler.collapsed .hamb_inner {
+  /* button.navbar-toggler.collapsed .hamb_inner {
     background-color: transparent;
   }
   button.navbar-toggler.collapsed .hamb_inner::after {
@@ -115,7 +115,7 @@ const Styles = styled.div`
   }
   button.navbar-toggler.collapsed .hamb_inner::before {
     transform: translateY(-10px) rotate(-45deg);
-  }
+  } */
   .languageButtonChange {
     position: relative;
     width: 40px;

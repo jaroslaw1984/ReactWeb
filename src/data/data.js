@@ -8,9 +8,11 @@ import v_all_devices from "../images/v_all_devices.jpg";
 import learn from "../images/learn.jpg";
 import portfolio from "../images/portfolio.jpg";
 import portfolio2 from "../images/portfolio2.jpg";
+// booklist project
 import booklist from "../images/booklist.jpg";
 import booklist_1 from "../images/booklist_1.jpg";
 import booklist_2 from "../images/booklist_2.jpg";
+// -------------------------------------
 import reactbootstrap from "../images/reactbootstrap.svg";
 import js from "../images/js.jpg";
 import webpack from "../images/webpack.png";
@@ -24,11 +26,17 @@ import sass from "../images/sass.jpg";
 import yarn from "../images/yarn.jpg";
 import linux from "../images/linux.jpg";
 import gimp from "../images/gimp.jpg";
+// encode_project
+import app from "../images/app.jpg";
+import decode from "../images/decode.jpg";
+import encode from "../images/encode.jpg";
+// -------------------------------
+
 import { faAt, faUser } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faTwitter,
-  faGithub
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 const data = {
@@ -39,7 +47,7 @@ const data = {
     { id: 1, name_en: "Home", name_pl: "Start", path: "/", exact: true },
     { id: 2, name_en: "Projects", name_pl: "Projekty", path: "/projects" },
     { id: 3, name_en: "Chat", name_pl: "Rozmowa", path: "/chat" },
-    { id: 4, name_en: "About", name_pl: "O mnie", path: "/about" }
+    { id: 4, name_en: "About", name_pl: "O mnie", path: "/about" },
   ],
   // Header titles. Subpages title's are in component Jumbo.js
   jumboContent: {
@@ -48,7 +56,7 @@ const data = {
     titleParagraph_en: "Web development &",
     titleParagraph_pl: "Tworzenie stron &",
     titleSecondParagraph_en: "Internet applications",
-    titleSecondParagraph_pl: "Aplikacje internetowe"
+    titleSecondParagraph_pl: "Aplikacje internetowe",
   },
   // Content contatct component
   dataContactItems: [
@@ -61,8 +69,8 @@ const data = {
         "Hello, if you want talk to me leave a message and I will answer immediately",
       description_pl:
         "Witam, jeśli chcesz ze mną porozmawiać zostaw wiadomość, a odpowiem natychmiast",
-      link: "https://www.facebook.com/profile.php?id=100001667016208"
-    }
+      link: "https://www.facebook.com/profile.php?id=100001667016208",
+    },
   ],
   // Options that show when post is submit
   options_en: [
@@ -72,7 +80,7 @@ const data = {
     "Thank you so much for a post!",
     "I hope you like here",
     "Hey how are you feel today ?",
-    "Nice to see you!"
+    "Nice to see you!",
   ],
   options_pl: [
     "Dziękuje za dodanie.",
@@ -81,7 +89,7 @@ const data = {
     "Dziękuję bardzo za korespondencje",
     "Mam nadzieję, że Ci się tu podoba.",
     "Hey, jak się dzisiaj czujesz ?",
-    "Miło Cię widzieć!"
+    "Miło Cię widzieć!",
   ],
   // Descritpion of Home component and images
   homeContent: [
@@ -98,7 +106,7 @@ const data = {
       codeExample: "",
       icons: "",
       text2_en: "",
-      text2_pl: ""
+      text2_pl: "",
     },
     {
       key: 1,
@@ -115,27 +123,27 @@ const data = {
           id: 0,
           img: reactbootstrap,
           name: "react-bootstrap",
-          url: "https://react-bootstrap.github.io/"
+          url: "https://react-bootstrap.github.io/",
         },
         {
           id: 1,
           img: js,
           name: "javascript",
-          url: "https://developer.mozilla.org/pl/docs/Web/JavaScript"
+          url: "https://developer.mozilla.org/pl/docs/Web/JavaScript",
         },
         // { id: 2, img: react, alt: "react", url: "https://reactjs.org/" }
         {
           id: 3,
           img: styled,
           name: "styled-component",
-          url: "https://www.styled-components.com/"
+          url: "https://www.styled-components.com/",
         },
         {
           id: 4,
           img: css,
           name: "CSS",
-          url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
-        }
+          url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        },
         // {
         //   id: 5,
         //   img: jsx,
@@ -149,7 +157,7 @@ const data = {
       text2_en:
         "The user interface is a key element of any web application, that is way I uses the available styling tools, i.e. CSS3, Sass, style-componets and react-bootstrap if the website uses React technologies.",
       text2_pl:
-        "Interfejs użytkownika to kluczowy element każdej aplikacji internetowej, dlatego wykorzytuje dostępne narzędzia do stylizacji czyli CSS3, Sass, style-componets oraz react-bootstrap jeśli strona wykorzystuje technologie React."
+        "Interfejs użytkownika to kluczowy element każdej aplikacji internetowej, dlatego wykorzytuje dostępne narzędzia do stylizacji czyli CSS3, Sass, style-componets oraz react-bootstrap jeśli strona wykorzystuje technologie React.",
     },
     {
       key: 2,
@@ -164,8 +172,8 @@ const data = {
       codeExample: "",
       icons: "",
       text2_en: "",
-      text2_pl: ""
-    }
+      text2_pl: "",
+    },
   ],
   // Project Content
   projectsContent: [
@@ -183,21 +191,21 @@ const data = {
           id: 0,
           img: js,
           name: "javascript",
-          url: "https://developer.mozilla.org/pl/docs/Web/JavaScript"
+          url: "https://developer.mozilla.org/pl/docs/Web/JavaScript",
         },
         {
           id: 1,
           img: css,
           name: "CSS",
-          url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+          url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
         },
         {
           id: 2,
           img: html,
           name: "HTML",
-          url: "https://developer.mozilla.org/pl/docs/Glossary/HTML"
+          url: "https://developer.mozilla.org/pl/docs/Glossary/HTML",
         },
-        { id: 3, img: sass, alt: "Sass", url: "https://sass-lang.com/" }
+        { id: 3, img: sass, alt: "Sass", url: "https://sass-lang.com/" },
       ],
       // Details content project page
       detailsContenet: [
@@ -209,7 +217,7 @@ const data = {
             "At this stage, as a beginner, I wanted to create a website that would challenge me and help me take my skills to the next level. This project taught me many aspects of problem solving in pure javascript.",
           description_pl:
             "Na tym etapie, jako początkujący, chciałem stworzyć stronę internetową, która rzuciłaby mi wyzwanie i pomogłaby przenieść moje umiejętności na wyższy poziom. Ten projekt nauczył mnie wielu aspektów rozwiązywania problemów w czystym javascript.",
-          m_img: m_tablet
+          m_img: m_tablet,
         },
         {
           id: 1,
@@ -219,8 +227,8 @@ const data = {
             "Thanks to this project, I realized that you don't necessarily need a JavaScript library or framework to create a professional website. I decided to build this OmegiumFix site with HTML5, SASS and JavaScript to create cool animations that will improve the user experience and give the website an aesthetic.",
           description_pl:
             "Dzięki temu projektowi zdałem sobie sprawę z tego, że do stworzenia profesjonalnej strony internetowej niekoniecznie jest potrzebna biblioteka albo framework JavaScript. Zdecydowałem się zbudować tę witrynę OmegiumFix z HTML5, SASS oraz JavaScript, aby stworzyć fajne animacje, które poprawią wrażenia użytkownika i nadadzą stronie estetyki.",
-          m_img: v_all_devices
-        }
+          m_img: v_all_devices,
+        },
       ],
       // Links for live and github
       buttonDetails: [
@@ -228,15 +236,15 @@ const data = {
           id: 0,
           name_en: "GitHub",
           name_pl: "GitHub",
-          url: "https://github.com/jaroslaw1984/web"
+          url: "https://github.com/jaroslaw1984/web",
         },
         {
           id: 1,
           name_en: "Live",
           name_pl: "Na Żywo",
-          url: "http://omegiumfix.pl"
-        }
-      ]
+          url: "http://omegiumfix.pl",
+        },
+      ],
     },
     {
       key: 1,
@@ -253,21 +261,21 @@ const data = {
           id: 2,
           img: jsx,
           name: "JSX",
-          url: "https://reactjs.org/docs/introducing-jsx.html"
+          url: "https://reactjs.org/docs/introducing-jsx.html",
         },
         {
           id: 3,
           img: css,
           name: "CSS",
-          url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+          url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
         },
         {
           id: 4,
           img: styled,
           name: "styled-component",
-          url: "https://www.styled-components.com/"
+          url: "https://www.styled-components.com/",
         },
-        { id: 5, img: yarn, name: "yarn", url: "https://yarnpkg.com/" }
+        { id: 5, img: yarn, name: "yarn", url: "https://yarnpkg.com/" },
       ],
       detailsContenet: [
         {
@@ -278,7 +286,7 @@ const data = {
             "The goal of the site was to create a portfolio using different functional tools and a powerful programming language such as JavaScript. Use the React library was a cool and creative adventure for me. The user interface is completely defined in JavaScript, so thanks to the rich functionality of this language you can do everything inside the template. React helps to create the most complex user interfaces.",
           description_pl:
             "Celem strony było realizacja utworzenia portfolio zastosowaniem różnych funkcjonalnych narzędzi jak i mocnego języka programowania jakim jest JavaScript. Użcie biblioteki React było dla mnie fajną i kreatywną przygodą . Interfej użytkownika jest w całości zdefiniowany w JavaScript, więc dzięki bogatym funcjonalnalnością tego języka można wewnątrz szablonu robić wszystko co się da. React pomaga ona tworzyć najbardziej skomplikowane interfejsy uzytkownika.",
-          m_img: portfolio2
+          m_img: portfolio2,
         },
         {
           id: 1,
@@ -288,23 +296,23 @@ const data = {
             "For styling I use tools like css, styled-components and react-bootstrap. Styled-component is a strong tool and useful in creating applications in React because it uses tagged template literals (the latest addition to JavaScript) and the power of CSS, styled-components allows you to write real CSS code to style components. It also removes mapping between components and styles - using components as a low-level styling structure. In contrast, the react-bootstrap component model gives me more control over the form and function of each component.",
           description_pl:
             "Do stylowania używam narzędzi jakim jest css, styled-components oraz react-bootstrap. Styled- component jest silinym narzędziem i przydanym w tworzeniu aplikacji w React dlatego, że wykorzystuje otagowane literały szablonów (najnowszy dodatek do JavaScript) i moc CSS, styled-components pozwala pisać rzeczywisty kod CSS do stylizowania komponentów. Usuwa również mapowanie między komponentami i stylami - użycie komponentów jako niskopoziomowej konstrukcji do stylizacji. Natomiast react-bootstrap model komponentu daje mi większą kontrolę nad formą i funkcją każdego komponentu.",
-          m_img: all_devices_2
-        }
+          m_img: all_devices_2,
+        },
       ],
       buttonDetails: [
         {
           id: 0,
           name_en: "GitHub",
           name_pl: "GitHub",
-          url: "https://github.com/jaroslaw1984/portfolio"
+          url: "https://github.com/jaroslaw1984/portfolio",
         },
         {
           id: 1,
           name_en: "Live",
           name_pl: "Na Żywo",
-          url: "http://www.portfolio.omegiumfix.pl/"
-        }
-      ]
+          url: "http://www.portfolio.omegiumfix.pl/",
+        },
+      ],
     },
     {
       key: 2,
@@ -320,16 +328,16 @@ const data = {
           id: 0,
           img: js,
           name: "javascript",
-          url: "https://developer.mozilla.org/pl/docs/Web/JavaScript"
+          url: "https://developer.mozilla.org/pl/docs/Web/JavaScript",
         },
         {
           id: 1,
           img: html,
           name: "HTML",
-          url: "https://developer.mozilla.org/pl/docs/Glossary/HTML"
+          url: "https://developer.mozilla.org/pl/docs/Glossary/HTML",
         },
         { id: 2, img: sass, alt: "Sass", url: "https://sass-lang.com/" },
-        { id: 3, img: webpack, alt: "webpack", url: "https://webpack.js.org/" }
+        { id: 3, img: webpack, alt: "webpack", url: "https://webpack.js.org/" },
       ],
       detailsContenet: [
         {
@@ -340,7 +348,7 @@ const data = {
             "With this application we can management a books that are store in json file as a database. We can add a book by a form, delete or edit from UI.",
           description_pl:
             "Dzięki tej aplikacji możemy zarządzać książkami przechowywanymi w pliku json jako baza danych. Możemy dodać książkę za pomocą formularza, usunąć lub edytować z interfejsu użytkownika.",
-          m_img: booklist_1
+          m_img: booklist_1,
         },
         {
           id: 1,
@@ -350,18 +358,80 @@ const data = {
             "The user interface is designed to be as easy to use as possible. At right in the corner there is a plus icon that allow to add a new book it will appear a form. It contains a fields with a title, author, year, isbn and link for a cover. The form has validations secure to add a book and regular expressions were used for this, example: in the 'Year' field letters cannot be used or the field with the link must start with 'http:// or https://'. Every book that has been added have a button for editing. You can edit any field but still validation is working and checking the fields are correct field. When book is edit, delete button is current disabled it protect from delete a book while editing. If we wanna delete a book from json file, just press trash icon and application will ask you to confirm this action. The application has helpful tools such as sorting books by year of publication or sorting the list in alphabetical order. Another tool is a search engine that searches for a book by the phrase of the book title.",
           description_pl:
             "Interfejs użytkownika został zaprojektowany tak, aby był maksymalnie łatwy w użyciu. W prawym rogu znajduje się ikona plus, która pozwala dodać nową książkę, pojawi się formularz. Zawiera pola z tytułem, autorem, rokiem, isbn i linkiem do okładki. Formularz ma bezpieczne sprawdzania poprawności w celu dodania książki i do tego użyto wyrażeń regularnych, na przykład: w polu „Rok” nie można używać liter lub pole z linkiem musi zaczynać się od „http: // lub https: //”. Każda dodana książka ma przycisk do edycji. Możesz edytować dowolne pole, ale nadal działa sprawdzanie poprawności i sprawdzanie poprawności pól. Kiedy książka jest edytowana, przycisk usuwania jest aktualnie wyłączony, co chroni przed usunięciem książki podczas edycji. Jeśli chcemy usunąć książkę z pliku json, wystarczy nacisnąć ikonę kosza, a aplikacja poprosi o potwierdzenie tej akcji. Aplikacja posiada pomocne narzędzia, takie jak sortowanie książek według roku wydania lub sortowanie listy w kolejności alfabetycznej. Innym narzędziem jest wyszukiwarka, która wyszukuje książkę według frazy tytułu książki.",
-          m_img: booklist_2
-        }
+          m_img: booklist_2,
+        },
       ],
       buttonDetails: [
         {
           id: 0,
           name_en: "GitHub",
           name_pl: "GitHub",
-          url: "https://github.com/jaroslaw1984/booklist"
-        }
-      ]
-    }
+          url: "https://github.com/jaroslaw1984/booklist",
+        },
+      ],
+    },
+    {
+      key: 3,
+      img: app,
+      cardTitle: "Base64 encoding and decoding in JavaScript",
+      id: "encode",
+      descriptionCard_en:
+        "Base64 encoding schemes are commonly used when there is a need to encode binary data that needs to be stored and transferred over media that are designed to deal with ASCII. This is to ensure that the data remain intact without modification during transport. Base64 is commonly used in a number of applications including email via MIME, and storing complex data in XML.",
+      descriptionCard_pl:
+        "Schematy kodowania Base64 są powszechnie stosowane, gdy zachodzi potrzeba kodowania danych binarnych, które muszą być przechowywane i przesyłane za pośrednictwem mediów zaprojektowanych do obsługi ASCII. Ma to zapewnić, że dane pozostaną nienaruszone bez modyfikacji podczas transportu. Base64 jest powszechnie używany w wielu aplikacjach, w tym w e-mailach przez MIME i do przechowywania złożonych danych w formacie XML.",
+      programingTools: [
+        {
+          id: 0,
+          img: js,
+          name: "javascript",
+          url: "https://developer.mozilla.org/pl/docs/Web/JavaScript",
+        },
+        {
+          id: 1,
+          img: html,
+          name: "HTML",
+          url: "https://developer.mozilla.org/pl/docs/Glossary/HTML",
+        },
+        { id: 2, img: sass, alt: "Sass", url: "https://sass-lang.com/" },
+        { id: 3, img: webpack, alt: "webpack", url: "https://webpack.js.org/" },
+      ],
+      detailsContenet: [
+        {
+          id: 0,
+          title_en: "Base64 encoding and decoding in JavaScript",
+          title_pl: "Kodowanie i dekodowanie Base64 w JavaScript",
+          description_en:
+            "With this application we can encode and decode a text that we wanna send to some one by via internet or text message by phone and use this app for decode text.",
+          description_pl:
+            "Dzięki tej aplikacji możemy kodować i dekodować tekst, który chcemy wysłać komuś przez Internet lub wiadomość tekstową przez telefon i używać tej aplikacji do dekodowania tekstu.",
+          m_img: encode,
+        },
+        {
+          id: 1,
+          title_en: "How it works...",
+          title_pl: "Jak to działa...",
+          description_en:
+            "This application is easy to use. Put a text that u wanna encode to textarea and click on the button. After the message is encoded we will see a text at the bottom in „Messages history”. We can copy this by clicking a button or delete it. Message is also located in session storage so we won't lose it after refreshing a page. If we wanna decode ouer message just change option by clicking „Decode” and paste a text in textarea then you will see in your „Messages history” a decoded text.",
+          description_pl:
+            "Ta aplikacja jest łatwa w użyciu. Umieść tekst, który chcesz zakodować, w polu tekstowym i kliknij przycisk. Po zakodowaniu wiadomości zobaczymy tekst u dołu w „Historii wiadomości”. Możemy to skopiować, klikając przycisk lub usunąć. Wiadomość znajduje się również w pamięci sesji, więc nie stracimy jej po odświeżeniu strony. Jeśli chcemy zdekodować naszą wiadomość, wystarczy zmienić opcję, klikając „Dekoduj” i wkleić tekst w obszarze tekstowym, wtedy w „Historii wiadomości” zobaczysz zdekodowany tekst.",
+          m_img: decode,
+        },
+      ],
+      buttonDetails: [
+        {
+          id: 0,
+          name_en: "GitHub",
+          name_pl: "GitHub",
+          url: "https://github.com/jaroslaw1984/encoding_decoding",
+        },
+        {
+          id: 1,
+          name_en: "Live",
+          name_pl: "Na Żywo",
+          url: "http://www.omegiumfix.pl/encode",
+        },
+      ],
+    },
   ],
   // About.js component
   aboutContent: [
@@ -373,7 +443,7 @@ const data = {
       description_en:
         "Hello, my name is Jarosław Sochacki and I come from Włocławek. I have two children, a daughter named Nadia and a son, Alan. In addition to family and programming, I love rollerblading and relaxing with a good Sc-fi movie.",
       description_pl:
-        "Witam, nazywam się Jarosław Sochacki i pochodzę z Włocławka i mam dwójkę dzieci. Poza rodziną i programowaniem uwielbiam jeździć na rolkach i relaksować się przy dobrym filmie Sc-fi."
+        "Witam, nazywam się Jarosław Sochacki i pochodzę z Włocławka i mam dwójkę dzieci. Poza rodziną i programowaniem uwielbiam jeździć na rolkach i relaksować się przy dobrym filmie Sc-fi.",
     },
     {
       id: 1,
@@ -382,7 +452,7 @@ const data = {
       description_en:
         "I am looking for opportunities to become a better programmer because I found a goal in my life. Being part of the team, I could bring new ideas, solve many problems and gain better knowledge",
       description_pl:
-        "Szukam możliwości, aby zostać lepszym programistą, ponieważ znalazłem cel w swoim życiu. Będąc częścią zespołu mógłbym wnieść nowe pomysły, rozwiązać wiele problemów i zdobyć lepszą wiedzę."
+        "Szukam możliwości, aby zostać lepszym programistą, ponieważ znalazłem cel w swoim życiu. Będąc częścią zespołu mógłbym wnieść nowe pomysły, rozwiązać wiele problemów i zdobyć lepszą wiedzę.",
     },
     {
       id: 2,
@@ -391,7 +461,7 @@ const data = {
       description_en:
         "The biggest of my advantage is that I never give up, if I have a problem, the best solution counts. Communicability, especially in English, to better use this language and acquire new acquaintances. Idealize new open source technologies, especially Linux systems. I have about 5 years of experience in this system and I use it as the main operating system for everyday use and work. Organization of work is also my strength. I set a plan of the day to be able to work, learn and spend time with my family and do something for myself.",
       description_pl:
-        "Mają największą zaletą jest to, że nigdy się nie poddaję, jeśli mam problem, to liczy się najlepsze rozwiązanie. Komunikatywność szczególnie w języku angielskim, aby pozyskać lepszą się tym językiem i nabywać nowe znajomości. Idealizować nowe technologie open source, a szczególnie systemy Linux. Mam około 5 lat doświadczenia w tym systemie i używam go jako głównego systemu operacyjnego do codziennego użytku i pracy. Organizacja pracy to także moja siła. Ustalam plan dnia, aby móc pracować, uczyć się i spędzać czas z rodziną i zrobić coś dla siebie."
+        "Mają największą zaletą jest to, że nigdy się nie poddaję, jeśli mam problem, to liczy się najlepsze rozwiązanie. Komunikatywność szczególnie w języku angielskim, aby pozyskać lepszą się tym językiem i nabywać nowe znajomości. Idealizować nowe technologie open source, a szczególnie systemy Linux. Mam około 5 lat doświadczenia w tym systemie i używam go jako głównego systemu operacyjnego do codziennego użytku i pracy. Organizacja pracy to także moja siła. Ustalam plan dnia, aby móc pracować, uczyć się i spędzać czas z rodziną i zrobić coś dla siebie.",
     },
     {
       id: 3,
@@ -400,8 +470,8 @@ const data = {
       description_en:
         "I graduated from the University of Information Technology in Łódź for 3.5 years and I graduated with an engineer degree in „Computer Networks”. My defense of engineering work was to create a shop website with CMS in PHP.",
       description_pl:
-        "Ukończyłem studia, które trwały 3.5 roku na Wyższej Szkole Informatyki w Łodzi i skończyłem je z tytułem inżyniera na specjalności „Sieci komputerowe”. Moja obrona pracy inżynierskiej polegała na utworzeniu serwisu sklepowego wraz CMS'em w języku PHP."
-    }
+        "Ukończyłem studia, które trwały 3.5 roku na Wyższej Szkole Informatyki w Łodzi i skończyłem je z tytułem inżyniera na specjalności „Sieci komputerowe”. Moja obrona pracy inżynierskiej polegała na utworzeniu serwisu sklepowego wraz CMS'em w języku PHP.",
+    },
   ],
   // Skills icons
   icons: [
@@ -409,32 +479,32 @@ const data = {
       id: 0,
       img: reactbootstrap,
       name: "react-bootstrap",
-      url: "https://react-bootstrap.github.io/"
+      url: "https://react-bootstrap.github.io/",
     },
     {
       id: 1,
       img: js,
       name: "javascript",
-      url: "https://developer.mozilla.org/pl/docs/Web/JavaScript"
+      url: "https://developer.mozilla.org/pl/docs/Web/JavaScript",
     },
     { id: 2, img: react, name: "react", url: "https://reactjs.org/" },
     {
       id: 3,
       img: styled,
       name: "styled-component",
-      url: "https://www.styled-components.com/"
+      url: "https://www.styled-components.com/",
     },
     {
       id: 4,
       img: css,
       name: "CSS",
-      url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+      url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
     {
       id: 5,
       img: jsx,
       name: "JSX",
-      url: "https://reactjs.org/docs/introducing-jsx.html"
+      url: "https://reactjs.org/docs/introducing-jsx.html",
     },
     { id: 6, img: git, name: "Github", url: "https://github.com/" },
     { id: 7, img: sass, name: "Sass", url: "https://sass-lang.com/" },
@@ -443,10 +513,10 @@ const data = {
       id: 9,
       img: linux,
       name: "Linux",
-      url: "https://pl.wikipedia.org/wiki/Linux"
+      url: "https://pl.wikipedia.org/wiki/Linux",
     },
     { id: 10, img: gimp, name: "Gimp", url: "https://www.gimp.org/" },
-    { id: 11, img: webpack, alt: "webpack", url: "https://webpack.js.org/" }
+    { id: 11, img: webpack, alt: "webpack", url: "https://webpack.js.org/" },
   ],
   // Footer.js
   footerContent: {
@@ -457,28 +527,28 @@ const data = {
         id: 0,
         name: "twitter",
         link: "https://twitter.com/JarekSochacki",
-        icon: faTwitter
+        icon: faTwitter,
       },
       {
         id: 1,
         name: "facebook",
         link: "https://www.facebook.com/profile.php?id=100001667016208",
-        icon: faFacebook
+        icon: faFacebook,
       },
       {
         id: 2,
         name: "GitHub",
         link: "https://github.com/jaroslaw1984/",
-        icon: faGithub
-      }
+        icon: faGithub,
+      },
     ],
     experience: {
       description_pl:
         "Tutaj można pobrać moje udokumentowane doświadczenie zawodowe w formie Curriculum Vitae (CV).",
       description_en:
-        "Here you can download my documented professional experience in the form of Curriculum Vitae (CV)."
-    }
-  }
+        "Here you can download my documented professional experience in the form of Curriculum Vitae (CV).",
+    },
+  },
 };
 
 export default data;
