@@ -14,7 +14,7 @@ const Div = styled.div`
 `;
 
 const Projects = ({ checked }) => {
-  const cards = data.projectsContent.map(card => (
+  const cards = data.projectsContent.map((card) => (
     <ProjectsContent key={card.key} checked={checked} {...card} />
   ));
   return <Div id="start">{cards}</Div>;

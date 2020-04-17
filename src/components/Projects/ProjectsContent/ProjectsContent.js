@@ -21,9 +21,11 @@ const Style = styled.div`
   }
   @media screen and (min-width: ${size.resolutionDesk}) {
     width: 70%;
+    margin-bottom: 50px;
   }
   @media screen and (min-width: ${size.resolutionDeskL}) {
     width: 50%;
+    margin-bottom: 50px;
   }
   .wrapper {
     display: flex;
@@ -137,7 +139,7 @@ const ProjectsContent = ({
   descriptionCard_en,
   descriptionCard_pl,
   programingTools,
-  checked
+  checked,
 }) => {
   // Button text
   const buttonDetailsName_en = "Details";
@@ -151,7 +153,7 @@ const ProjectsContent = ({
     </ScrollIntoView>
   );
 
-  const iconTools = [...programingTools].map(icon => (
+  const iconTools = [...programingTools].map((icon) => (
     <a target="_blank" rel="noopener noreferrer" key={icon.id} href={icon.url}>
       <Img src={icon.img} alt={icon.name} title={icon.name} />
     </a>
