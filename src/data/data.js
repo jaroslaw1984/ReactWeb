@@ -376,9 +376,9 @@ const data = {
       cardTitle: "Base64 encoding and decoding in JavaScript",
       id: "encode",
       descriptionCard_en:
-        "Base64 encoding schemes are commonly used when there is a need to encode binary data that needs to be stored and transferred over media that are designed to deal with ASCII. This is to ensure that the data remain intact without modification during transport. Base64 is commonly used in a number of applications including email via MIME, and storing complex data in XML.",
+        "Base64 encoding schemes are commonly used when there is a need to encode binary data that needs to be stored and transferred over media that are designed to deal with ASCII.",
       descriptionCard_pl:
-        "Schematy kodowania Base64 są powszechnie stosowane, gdy zachodzi potrzeba kodowania danych binarnych, które muszą być przechowywane i przesyłane za pośrednictwem mediów zaprojektowanych do obsługi ASCII. Ma to zapewnić, że dane pozostaną nienaruszone bez modyfikacji podczas transportu. Base64 jest powszechnie używany w wielu aplikacjach, w tym w e-mailach przez MIME i do przechowywania złożonych danych w formacie XML.",
+        "Schematy kodowania Base64 są powszechnie stosowane, gdy zachodzi potrzeba kodowania danych binarnych, które muszą być przechowywane i przesyłane za pośrednictwem mediów zaprojektowanych do obsługi ASCII.",
       programingTools: [
         {
           id: 0,
