@@ -377,6 +377,57 @@ const data = {
     },
     {
       key: 3,
+      img: dating_1,
+      cardTitle: "React API Hooks & Context",
+      id: "react_api",
+      descriptionCard_en:
+        "This application allow you search your other half that can be male or female. If you find a person that you like it, add that person to favorite bookmark or just rate the person.",
+      descriptionCard_pl:
+        "Ta aplikacja umożliwia wyszukiwanie drugiej połowy, która może być mężczyzną lub kobietą. Jeśli znajdziesz osobę, która Ci się podoba, dodaj ją do ulubionych zakładek lub po prostu oceń ją.",
+      programingTools: [
+        { id: 0, img: react, name: "react", url: "https://reactjs.org/" },
+        { id: 1, img: sass, alt: "Sass", url: "https://sass-lang.com/" },
+      ],
+      detailsContenet: [
+        {
+          id: 0,
+          title_en: "Application - Looking for a date",
+          title_pl: "Aplikacja - Szukam randki",
+          description_en:
+            "This application allow you search your other half that can be male or female. If you find a person that you like it, add that person to favorite bookmark or just rate the person. In the favorite panel you have the ability to manage people by removing them or can check details about the person you are interested in by clicking the 'More' button. You will find personal details where he/she lives, age, e-mail. If you have not rated this person before, you can do it there as well.",
+          description_pl:
+            "Ta aplikacja umożliwia wyszukiwanie drugiej połowy, która może być mężczyzną lub kobietą. Jeśli znajdziesz osobę, która Ci się podoba, dodaj ją do ulubionych zakładek lub po prostu oceń ją. W ulubionym panelu masz możliwość zarządzania ludźmi poprzez ich usunięcie lub możesz sprawdzić szczegóły dotyczące osoby, którą jesteś zainteresowany, klikając przycisk „Więcej”. Znajdziesz tam dane osobowe, w których mieszka on / ona, wiek, e-mail. Jeśli nie oceniłeś tej osoby wcześniej, możesz to zrobić również tam.",
+          m_img: dating_2,
+        },
+        {
+          id: 1,
+          title_en: "How it works...",
+          title_pl: "Jak to działa...",
+          description_en:
+            "After you select a gender you will see fetched data from outer free API for generating random user data that is call randomuser.me. The application allows you to rate people, if you add stars, the application will remember your rating when the same person is displayed again. If any person you like to add as a favorite you can do it by pressing an icon in the right corner. If you want to add the same person twice, the application will not allow to do that. Favorite panel allow to mange people that were added to this bookmark also data are added to local storage in case when browser will be close or refresh and we don't wanna lose a persons that we added. Panel allow you to see more personal details or delete that person. More details allow you see personal information about were the person lives, age, email. From details you can rate person and add to favorite panel.",
+          description_pl:
+            "Po wybraniu płci zobaczysz pobrane dane z zewnętrznego bezpłatnego interfejsu API do generowania losowych danych użytkownika o nazwie randomuser.me. Aplikacja pozwala oceniać osoby, jeśli dodasz gwiazdki, aplikacja zapamięta Twoją ocenę, gdy ta sama osoba zostanie ponownie wyświetlona. Jeśli jakaś osoba, którą chcesz dodać do ulubionych, możesz to zrobić, naciskając ikonę w prawym rogu. Jeśli chcesz dodać tę samą osobę dwa razy, aplikacja nie pozwoli na to. Ulubiony panel pozwala zarządzać osobami, które zostały dodane do tej zakładki, a także dane są dodawane do pamięci lokalnej w przypadku, gdy przeglądarka będzie zamknięta lub odświeżona i nie chcemy stracić osób, które dodaliśmy. Panel pozwala zobaczyć więcej danych osobowych lub usunąć tę osobę. Więcej szczegółów pozwala zobaczyć dane osobowe, w których znajduje się osoba, wiek, adres e-mail. Od szczegółów możesz oceniać osobę i dodawać do ulubionych paneli.",
+          m_img: dating_3,
+        },
+      ],
+      buttonDetails: [
+        {
+          id: 0,
+          name_en: "GitHub",
+          name_pl: "GitHub",
+          url: "https://github.com/jaroslaw1984/react-api-app-hooks",
+        },
+        {
+          id: 1,
+          name_en: "Live",
+          name_pl: "Na Żywo",
+          url: "http://omegiumfix.pl/api/",
+        },
+      ],
+    },
+
+    {
+      key: 4,
       img: app,
       cardTitle: "Base64 encoding and decoding in JavaScript",
       id: "encode",
@@ -434,56 +485,6 @@ const data = {
           name_en: "Live",
           name_pl: "Na Żywo",
           url: "http://www.omegiumfix.pl/encode",
-        },
-      ],
-    },
-    {
-      key: 4,
-      img: dating_1,
-      cardTitle: "React API Hooks & Context",
-      id: "react_api",
-      descriptionCard_en:
-        "This application allow you search your other half that can be male or female. If you find a person that you like it, add that person to favorite bookmark or just rate the person.",
-      descriptionCard_pl:
-        "Ta aplikacja umożliwia wyszukiwanie drugiej połowy, która może być mężczyzną lub kobietą. Jeśli znajdziesz osobę, która Ci się podoba, dodaj ją do ulubionych zakładek lub po prostu oceń ją.",
-      programingTools: [
-        { id: 0, img: react, name: "react", url: "https://reactjs.org/" },
-        { id: 1, img: sass, alt: "Sass", url: "https://sass-lang.com/" },
-      ],
-      detailsContenet: [
-        {
-          id: 0,
-          title_en: "Application - Looking for a date",
-          title_pl: "Aplikacja - Szukam randki",
-          description_en:
-            "This application allow you search your other half that can be male or female. If you find a person that you like it, add that person to favorite bookmark or just rate the person. In the favorite panel you have the ability to manage people by removing them or can check details about the person you are interested in by clicking the 'More' button. You will find personal details where he/she lives, age, e-mail. If you have not rated this person before, you can do it there as well.",
-          description_pl:
-            "Ta aplikacja umożliwia wyszukiwanie drugiej połowy, która może być mężczyzną lub kobietą. Jeśli znajdziesz osobę, która Ci się podoba, dodaj ją do ulubionych zakładek lub po prostu oceń ją. W ulubionym panelu masz możliwość zarządzania ludźmi poprzez ich usunięcie lub możesz sprawdzić szczegóły dotyczące osoby, którą jesteś zainteresowany, klikając przycisk „Więcej”. Znajdziesz tam dane osobowe, w których mieszka on / ona, wiek, e-mail. Jeśli nie oceniłeś tej osoby wcześniej, możesz to zrobić również tam.",
-          m_img: dating_2,
-        },
-        {
-          id: 1,
-          title_en: "How it works...",
-          title_pl: "Jak to działa...",
-          description_en:
-            "After you select a gender you will see fetched data from outer free API for generating random user data that is call randomuser.me. The application allows you to rate people, if you add stars, the application will remember your rating when the same person is displayed again. If any person you like to add as a favorite you can do it by pressing an icon in the right corner. If you want to add the same person twice, the application will not allow to do that. Favorite panel allow to mange people that were added to this bookmark also data are added to local storage in case when browser will be close or refresh and we don't wanna lose a persons that we added. Panel allow you to see more personal details or delete that person. More details allow you see personal information about were the person lives, age, email. From details you can rate person and add to favorite panel.",
-          description_pl:
-            "Po wybraniu płci zobaczysz pobrane dane z zewnętrznego bezpłatnego interfejsu API do generowania losowych danych użytkownika o nazwie randomuser.me. Aplikacja pozwala oceniać osoby, jeśli dodasz gwiazdki, aplikacja zapamięta Twoją ocenę, gdy ta sama osoba zostanie ponownie wyświetlona. Jeśli jakaś osoba, którą chcesz dodać do ulubionych, możesz to zrobić, naciskając ikonę w prawym rogu. Jeśli chcesz dodać tę samą osobę dwa razy, aplikacja nie pozwoli na to. Ulubiony panel pozwala zarządzać osobami, które zostały dodane do tej zakładki, a także dane są dodawane do pamięci lokalnej w przypadku, gdy przeglądarka będzie zamknięta lub odświeżona i nie chcemy stracić osób, które dodaliśmy. Panel pozwala zobaczyć więcej danych osobowych lub usunąć tę osobę. Więcej szczegółów pozwala zobaczyć dane osobowe, w których znajduje się osoba, wiek, adres e-mail. Od szczegółów możesz oceniać osobę i dodawać do ulubionych paneli.",
-          m_img: dating_3,
-        },
-      ],
-      buttonDetails: [
-        {
-          id: 0,
-          name_en: "GitHub",
-          name_pl: "GitHub",
-          url: "https://github.com/jaroslaw1984/react-api-app-hooks",
-        },
-        {
-          id: 1,
-          name_en: "Live",
-          name_pl: "Na Żywo",
-          url: "http://omegiumfix.pl/api/",
         },
       ],
     },
